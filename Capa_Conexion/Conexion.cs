@@ -7,7 +7,14 @@ using System.Data;
 using System.Data.SqlClient;
 
 namespace Capa_Conexion {
+    /*
+     * Principales comandos para las consulas a la base de datos.
+     *sp_columns
+     *sp_database
+     */
+
     class Conexion {
+
         SqlConnection objConexion = new SqlConnection ("FALTA ES STRING DE CONEXION");
 
         public bool abrirConexion() {
@@ -34,6 +41,5 @@ namespace Capa_Conexion {
                 objConexion.Close ();
             }
         }
-
     }
 }
