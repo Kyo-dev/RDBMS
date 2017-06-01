@@ -8,5 +8,32 @@ using System.Data.SqlClient;
 
 namespace Capa_Conexion {
     class Conexion {
+        SqlConnection objConexion = new SqlConnection ("FALTA ES STRING DE CONEXION");
+
+        public bool abrirConexion() {
+            try {
+                objConexion.Open();
+                return true;
+            } catch (Exception) {
+                return false;
+                throw;
+            }
+        }
+
+        public bool cerrarConexion() {
+            try {
+                if (objConexion.State == ConnectionState.Closed) {
+                    return true;
+                }
+                objConexion.Close ();
+                return true;
+            } catch (Exception) {
+
+                throw;
+            } finally {
+                objConexion.Close ();
+            }
+        }
+
     }
 }
