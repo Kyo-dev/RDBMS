@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Vista", "Capa_Vista\Capa_Vista.csproj", "{D077446F-CEB8-4A47-8415-AF48DF654FDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Negocios", "Capa_Negocios\Capa_Negocios.csproj", "{BF8A5950-D917-4CE5-BDA6-51D1DEA79F04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capa_Conexion", "Capa_Conexion\Capa_Conexion.csproj", "{6C37D10A-1D94-4265-A92C-C06941A035EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D077446F-CEB8-4A47-8415-AF48DF654FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D077446F-CEB8-4A47-8415-AF48DF654FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D077446F-CEB8-4A47-8415-AF48DF654FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8A5950-D917-4CE5-BDA6-51D1DEA79F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8A5950-D917-4CE5-BDA6-51D1DEA79F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8A5950-D917-4CE5-BDA6-51D1DEA79F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8A5950-D917-4CE5-BDA6-51D1DEA79F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C37D10A-1D94-4265-A92C-C06941A035EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C37D10A-1D94-4265-A92C-C06941A035EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C37D10A-1D94-4265-A92C-C06941A035EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C37D10A-1D94-4265-A92C-C06941A035EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
