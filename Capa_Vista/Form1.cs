@@ -13,5 +13,9 @@ namespace Capa_Vista {
         public frmLogin() {
             InitializeComponent ();
         }
+
+        private void btnSalir_Click(object sender,EventArgs e) {
+            Close ();
+        }
     }
 }
