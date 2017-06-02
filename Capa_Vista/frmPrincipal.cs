@@ -9,13 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Vista {
-    public partial class frmLogin:Form {
-        public frmLogin() {
+    public partial class frmPrincipal:Form {
+        public frmPrincipal() {
             InitializeComponent ();
-        }
-
-        private void btnSalir_Click(object sender,EventArgs e) {
-            Close ();
         }
     }
 }
