@@ -23,5 +23,6 @@ namespace Capa_Vista {
             frm.Show ();
             this.Hide (); 
         }
+
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace Capa_Conexion {
     /*
@@ -13,7 +14,7 @@ namespace Capa_Conexion {
      *sp_database
      */
 
-    class Conexion {
+    public class Conexion {
 
         SqlConnection objConexion = new SqlConnection ("FALTA ES STRING DE CONEXION");
 
@@ -40,6 +41,23 @@ namespace Capa_Conexion {
             } finally {
                 objConexion.Close ();
             }
+        }
+        public DataTable cargarBases() {
+            abrirConexion ();
+            SqlCommand SqlCom = new SqlCommand ();
+            SqlCom.Connection = objConexion;
+            SqlCom.CommandType = CommandType.StoredProcedure;
+            SqlCom.CommandText = "sp_databases";
+            SqlDataReader sqlDt;
+            sqlDt = SqlCom.ExecuteReader ();
+            DataTable Dt = new DataTable ();
+            Dt.Rows.Add (sqlDt.GetString (0));
+            cerrarConexion ();
+            return Dt;
+        }
+
+        public void ServidoresSQL() {
+            // SqlDataSourceEnumerator servises = new SqlDataSourceEnumerator ();
         }
     }
 }
