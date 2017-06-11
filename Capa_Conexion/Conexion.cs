@@ -16,7 +16,7 @@ namespace Capa_Conexion {
 
     public class Conexion {
 
-        SqlConnection objConexion = new SqlConnection ("FALTA ES STRING DE CONEXION");
+        SqlConnection objConexion = new SqlConnection ("Data Source=RIN\\SQL2016;Integrated Security=True");
 
         public bool abrirConexion() {
             try {
@@ -56,8 +56,19 @@ namespace Capa_Conexion {
             return Dt;
         }
 
-        public void ServidoresSQL() {
-            // SqlDataSourceEnumerator servises = new SqlDataSourceEnumerator ();
+        public DataTable ejecutarRutina(SqlCommand oSQLC) {
+            try {
+                oSQLC.Connection = objConexion;
+                DataTable oDT = new DataTable ();            
+                SqlDataAdapter oSQLDA = new SqlDataAdapter (oSQLC);
+                if (abrirConexion ()) {
+                    oSQLDA.Fill (oDT);
+                }
+                cerrarConexion ();
+                return oDT;
+            } catch (SqlException e) {
+                throw e;
+            }// fin del try/catch
         }
     }
 }

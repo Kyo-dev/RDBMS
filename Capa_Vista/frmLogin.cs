@@ -24,5 +24,10 @@ namespace Capa_Vista {
             this.Hide (); 
         }
 
+        private void frmLogin_Load(object sender,EventArgs e) {
+            cboDataBase.DisplayMember = "DATABASE_NAME";
+            cboDataBase.ValueMember = "DATABASE_NAME";
+            cboDataBase.DataSource = new Capa_Negocios.cargarBases ().DataBases();
+        }
     }
 }

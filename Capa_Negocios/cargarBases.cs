@@ -10,5 +10,10 @@ namespace Capa_Negocios {
         public DataTable cargarBD() {
             return new Capa_Conexion.Conexion ().cargarBases();
         }
+        public DataTable DataBases() {
+            DataTable objDT = new Capa_Conexion.DataBases ().ServidoresSQL();
+            objDT.Columns [0].ColumnName = "DATABASE_NAME";
+            return objDT;
+        }
     }
 }

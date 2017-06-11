@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboInstancia = new System.Windows.Forms.ComboBox();
+            this.cboDataBase = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -42,21 +42,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // cboInstancia
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(287, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboInstancia.FormattingEnabled = true;
+            this.cboInstancia.Location = new System.Drawing.Point(287, 45);
+            this.cboInstancia.Name = "cboInstancia";
+            this.cboInstancia.Size = new System.Drawing.Size(152, 21);
+            this.cboInstancia.TabIndex = 1;
             // 
-            // comboBox2
+            // cboDataBase
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(287, 104);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(152, 21);
-            this.comboBox2.TabIndex = 2;
+            this.cboDataBase.FormattingEnabled = true;
+            this.cboDataBase.Location = new System.Drawing.Point(287, 104);
+            this.cboDataBase.Name = "cboDataBase";
+            this.cboDataBase.Size = new System.Drawing.Size(152, 21);
+            this.cboDataBase.TabIndex = 2;
             // 
             // label1
             // 
@@ -105,11 +105,12 @@
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboDataBase);
+            this.Controls.Add(this.cboInstancia);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
             this.Text = "RDBMS";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,8 +120,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboInstancia;
+        private System.Windows.Forms.ComboBox cboDataBase;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEntrar;
