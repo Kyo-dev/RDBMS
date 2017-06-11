@@ -12,7 +12,7 @@ namespace Capa_Conexion {
         public DataTable CargarInstancias() {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.StoredProcedure;
-            objSQL.CommandText = "";
+            objSQL.CommandText = ""; // falta la rutina, sql me da errores
             return new Capa_Conexion.Conexion ().ejecutarRutina(objSQL);
         }
     }

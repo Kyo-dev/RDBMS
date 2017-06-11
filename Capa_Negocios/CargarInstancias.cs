@@ -10,7 +10,7 @@ namespace Capa_Negocios {
 
         public DataTable cargarInstancia() {
             DataTable objDT = new Capa_Conexion.InstanciasSQL ().CargarInstancias ();
-            
+            // falta agragar las columnas, no me deja ejecutar la rutina
             return objDT;
             
         }

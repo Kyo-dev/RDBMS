@@ -26,8 +26,9 @@ namespace Capa_Vista {
         }
 
         private void frmLogin_Load(object sender,EventArgs e) {
+            //Creo que este no deberia ir aqui sino el de las instancias 
             cboDataBase.DisplayMember = "DATABASE_NAME";
-            cboDataBase.ValueMember = "DATABASE_NAME";
+            cboDataBase.ValueMember = "DATABASE_NAME"; 
             cboDataBase.DataSource = new Capa_Negocios.CargarBases ().DataBases();
         }
     }
