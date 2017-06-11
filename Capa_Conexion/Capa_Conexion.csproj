@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DataBases.cs" />
+    <Compile Include="InstanciasSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

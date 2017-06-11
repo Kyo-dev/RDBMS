@@ -12,7 +12,7 @@ namespace Capa_Conexion {
             SqlCommand objSQl = new SqlCommand ();
             objSQl.CommandType = CommandType.StoredProcedure;
             objSQl.CommandText = "sp_databases";
-            return new Capa_Conexion.Conexion ().ejecutarRutina (objSQl);
+            return new Capa_Conexion.Conexion().ejecutarRutina(objSQl);
         }
     }
 }

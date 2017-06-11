@@ -19,6 +19,7 @@ namespace Capa_Vista {
         }
 
         private void btnEntrar_Click(object sender,EventArgs e) {
+            //faltan las validaciones 
             frmPrincipal frm = new frmPrincipal ();
             frm.Show ();
             this.Hide (); 
@@ -27,7 +28,7 @@ namespace Capa_Vista {
         private void frmLogin_Load(object sender,EventArgs e) {
             cboDataBase.DisplayMember = "DATABASE_NAME";
             cboDataBase.ValueMember = "DATABASE_NAME";
-            cboDataBase.DataSource = new Capa_Negocios.cargarBases ().DataBases();
+            cboDataBase.DataSource = new Capa_Negocios.CargarBases ().DataBases();
         }
     }
 }
