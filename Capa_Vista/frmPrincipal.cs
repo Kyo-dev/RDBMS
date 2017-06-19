@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace Capa_Vista {
     public partial class frmPrincipal:Form {
-        public frmPrincipal() {
+
+        public static DataTable objBase;
+
+        public frmPrincipal( DataTable objBase) {
             InitializeComponent ();
+            frmPrincipal.objBase = objBase;
         }
     }
 }

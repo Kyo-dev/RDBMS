@@ -19,10 +19,14 @@ namespace Capa_Vista {
         }
 
         private void btnEntrar_Click(object sender,EventArgs e) {
-            //faltan las validaciones 
-            frmPrincipal frm = new frmPrincipal ();
-            frm.Show ();
-            this.Hide (); 
+            //faltan las validaciones
+            DataTable objDT = new Capa_Negocios.CargarBases ().DataBases ();
+            if (objDT.Rows.Count > 0) {
+                this.Hide ();
+                new frmPrincipal (objDT).Show ();
+            } else {
+                MessageBox.Show ("Error","Instancia no encontrada",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void frmLogin_Load(object sender,EventArgs e) {
