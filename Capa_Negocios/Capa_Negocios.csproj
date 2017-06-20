@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CargarBases.cs" />
     <Compile Include="CargarInstancias.cs" />
+    <Compile Include="CargarTablas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -25,7 +25,9 @@
         private void InitializeComponent() {
             this.sc = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbTablas = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
+            this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
             this.sc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -40,6 +42,7 @@
             // sc.Panel1
             // 
             this.sc.Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.sc.Panel1.Controls.Add(this.lbTablas);
             // 
             // sc.Panel2
             // 
@@ -57,6 +60,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(685, 287);
             this.dataGridView1.TabIndex = 0;
             // 
+            // lbTablas
+            // 
+            this.lbTablas.FormattingEnabled = true;
+            this.lbTablas.Location = new System.Drawing.Point(12, 12);
+            this.lbTablas.Name = "lbTablas";
+            this.lbTablas.Size = new System.Drawing.Size(167, 472);
+            this.lbTablas.TabIndex = 0;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -66,6 +77,7 @@
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.sc.Panel1.ResumeLayout(false);
             this.sc.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sc)).EndInit();
             this.sc.ResumeLayout(false);
@@ -78,5 +90,6 @@
 
         private System.Windows.Forms.SplitContainer sc;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox lbTablas;
     }
 }
