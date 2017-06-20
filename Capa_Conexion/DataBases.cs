@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace Capa_Conexion {
     public class DataBases {
         public DataTable ServidoresSQL() {
-            SqlCommand objSQl = new SqlCommand ();
-            objSQl.CommandType = CommandType.StoredProcedure;
-            objSQl.CommandText = "sp_databases";
-            return new Capa_Conexion.Conexion().ejecutarRutina(objSQl);
+            SqlCommand objSQL = new SqlCommand ();
+            objSQL.CommandType = CommandType.StoredProcedure;
+            objSQL.CommandText = "sp_databases";
+            return new Capa_Conexion.Conexion().ejecutarRutina(objSQL);
         }
     }
 }
