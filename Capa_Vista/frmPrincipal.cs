@@ -16,6 +16,10 @@ namespace Capa_Vista {
         public frmPrincipal( DataTable objBase) {
             InitializeComponent ();
             frmPrincipal.objBase = objBase;
+            
+        }
+        private void frmPrincipal_Load(object sender,EventArgs e) {
+
         }
     }
 }

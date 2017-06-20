@@ -24,9 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cboInstancia = new System.Windows.Forms.ComboBox();
             this.cboDataBase = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -42,35 +40,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // cboInstancia
-            // 
-            this.cboInstancia.FormattingEnabled = true;
-            this.cboInstancia.Location = new System.Drawing.Point(287, 45);
-            this.cboInstancia.Name = "cboInstancia";
-            this.cboInstancia.Size = new System.Drawing.Size(152, 21);
-            this.cboInstancia.TabIndex = 1;
-            // 
             // cboDataBase
             // 
             this.cboDataBase.FormattingEnabled = true;
-            this.cboDataBase.Location = new System.Drawing.Point(287, 104);
+            this.cboDataBase.Location = new System.Drawing.Point(205, 71);
             this.cboDataBase.Name = "cboDataBase";
             this.cboDataBase.Size = new System.Drawing.Size(152, 21);
             this.cboDataBase.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(162, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nombre de instacia";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(162, 107);
+            this.label2.Location = new System.Drawing.Point(202, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 4;
@@ -78,7 +59,7 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(287, 145);
+            this.btnEntrar.Location = new System.Drawing.Point(205, 145);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 5;
@@ -88,7 +69,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(368, 145);
+            this.btnSalir.Location = new System.Drawing.Point(282, 145);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -100,13 +81,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 187);
+            this.ClientSize = new System.Drawing.Size(372, 187);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cboDataBase);
-            this.Controls.Add(this.cboInstancia);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
             this.Text = "RDBMS";
@@ -120,9 +99,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cboInstancia;
         private System.Windows.Forms.ComboBox cboDataBase;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSalir;
