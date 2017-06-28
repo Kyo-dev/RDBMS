@@ -14,17 +14,15 @@ namespace Capa_Vista {
 
         public static DataTable objBase;
 
-        public frmPrincipal( DataTable objBase) {
+        public frmPrincipal(DataTable objBase) {
             InitializeComponent ();
-            frmPrincipal.objBase = objBase;
-            
         }
         private void frmPrincipal_Load(object sender,EventArgs e) {
-            lbTablas.Items.Clear ();
-            lbTablas.DisplayMember = "name";
-            lbTablas.ValueMember = "name";
-            lbTablas.DataSource = new Capa_Negocios.CargarTablas ().Tablas ();
-            
+            Capa_Negocios.CargarTablas cs_CargarTablas = new Capa_Negocios.CargarTablas ();
+            objBase = cs_CargarTablas.Tablas (lbTablas.SelectedValue.ToString ());
+            lbTablas.DisplayMember = "Tablas";
+            lbTablas.ValueMember = "Tablas";
+            lbTablas.DataSource = objBase;
         }
     }
 }

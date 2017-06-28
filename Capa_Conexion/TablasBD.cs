@@ -18,5 +18,16 @@ namespace Capa_Conexion {
 
             return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
         }
+
+        public DataTable Cargar_Tablas(string strNombreTabla) {
+            SqlCommand objCommand = new SqlCommand ();
+            SqlConnection objConexion = new SqlConnection ();
+            objCommand.CommandType = CommandType.Text;
+            objCommand.CommandText = "SELECT CAST(table_name as varchar) Tablas " +
+                                     "FROM " + strNombreTabla + 
+                                     ".INFORMATION_SCHEMA.TABLES;";
+            return new Capa_Conexion.Conexion ().ejecutarRutina (objCommand);
+
+        }
     }
 }
