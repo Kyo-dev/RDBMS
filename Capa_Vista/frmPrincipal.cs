@@ -15,6 +15,7 @@ namespace Capa_Vista {
        DataTable objBase= new DataTable();
 
         public frmPrincipal(DataTable objBase) {
+
             InitializeComponent ();
         }
         private void frmPrincipal_Load(object sender,EventArgs e) {

@@ -13,9 +13,7 @@ namespace Capa_Conexion {
         {
             Capa_Conexion.Conexion conecta = new Capa_Conexion.Conexion();
             DataTable dtTablas;
-            SqlCommand obj = new SqlCommand();
-            obj.CommandType = CommandType.StoredProcedure;
-            dtTablas= conecta.ejecutar("SELECT name FROM sysobjects WHERE xtype = 'u'");
+            dtTablas = conecta.ejecutar("SELECT name FROM sysobjects WHERE xtype = 'u'");
             return dtTablas;
         }
 
