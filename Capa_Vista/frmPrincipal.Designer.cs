@@ -59,6 +59,7 @@
             this.lbTablas.Name = "lbTablas";
             this.lbTablas.Size = new System.Drawing.Size(184, 498);
             this.lbTablas.TabIndex = 0;
+            this.lbTablas.SelectedIndexChanged += new System.EventHandler(this.lbTablas_SelectedIndexChanged);
             // 
             // dgvInfoTablas
             // 

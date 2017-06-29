@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Capa_Conexion {
+    // Conexion para conocer Base de Datos
+
     public class DataBases {
         public DataTable ServidoresSQL() {
             SqlCommand objSQL = new SqlCommand ();
@@ -19,7 +21,7 @@ namespace Capa_Conexion {
             SqlCommand objCommand = new SqlCommand ();
             Conexion objConexion = new Conexion ();
             objCommand.CommandType = CommandType.StoredProcedure;
-            objCommand.CommandText = "sp_helpbd";
+            objCommand.CommandText = "sp_helpdb";
             return new Capa_Conexion.Conexion ().ejecutarRutina (objCommand);
         }
     }

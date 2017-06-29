@@ -12,17 +12,23 @@ using System.Windows.Forms;
 namespace Capa_Vista {
     public partial class frmPrincipal:Form {
 
-        public static DataTable objBase;
+       DataTable objBase= new DataTable();
 
         public frmPrincipal(DataTable objBase) {
             InitializeComponent ();
         }
         private void frmPrincipal_Load(object sender,EventArgs e) {
-            Capa_Negocios.CargarTablas cs_CargarTablas = new Capa_Negocios.CargarTablas ();
-            objBase = cs_CargarTablas.Tablas (lbTablas.SelectedValue.ToString ());
-            lbTablas.DisplayMember = "Tablas";
-            lbTablas.ValueMember = "Tablas";
+          
+            Capa_Negocios.CargarTablas CargarTablas = new Capa_Negocios.CargarTablas();
+
+            objBase = CargarTablas.Tablas();
             lbTablas.DataSource = objBase;
+         
+        }
+
+        private void lbTablas_SelectedIndexChanged (object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace Capa_Negocios {
     public class CargarTablas {
-        public DataTable Tablas(string strNombreTabla) {
-            Capa_Conexion.TablasBD cl_CargarTablas = new Capa_Conexion.TablasBD ();
-            return cl_CargarTablas.Cargar_Tablas(strNombreTabla);
+
+        public DataTable Tablas()
+        {
+
+            Capa_Conexion.TablasBD clCargarTablas = new Capa_Conexion.TablasBD ();
+
+            return clCargarTablas.CargarTablasBD();
         }       
     }
 }

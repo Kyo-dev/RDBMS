@@ -11,7 +11,7 @@ namespace Capa_Conexion {
 
     public class Conexion {
 
-        SqlConnection objConexion = new SqlConnection ("Data Source=RIN\\SQL2016;Integrated Security=True");
+        SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
         
         public bool abrirConexion() {
             try {
@@ -39,18 +39,48 @@ namespace Capa_Conexion {
         }
 
         public DataTable ejecutarRutina(SqlCommand oSQLC) {
+
             try {
                 oSQLC.Connection = objConexion;
                 DataTable oDT = new DataTable ();            
                 SqlDataAdapter oSQLDA = new SqlDataAdapter (oSQLC);
+
                 if (abrirConexion ()) {
                     oSQLDA.Fill (oDT);
                 }
                 cerrarConexion ();
+
                 return oDT;
+
             } catch (SqlException e) {
                 throw e;
-            }// fin del try/catch
+            }
+            // fin del try/catch
+        }
+
+        public DataTable ejecutar (String txtSelect)
+        {
+            SqlCommand cSelect = new SqlCommand();
+            DataTable oDT = new DataTable();
+            SqlDataAdapter oSQLDA = new SqlDataAdapter(cSelect);
+
+            try
+            {
+                cSelect.CommandText = txtSelect;
+                cSelect.Connection = objConexion;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            if (abrirConexion())
+            {
+                oSQLDA.Fill(oDT);
+            }
+            cerrarConexion();
+
+            return oDT;
         }
     }
 }
