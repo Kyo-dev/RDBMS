@@ -11,11 +11,14 @@ namespace Capa_Conexion {
 
     public class Conexion {
 
-        SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
-        
+        //CUANDO VAYA A PROGRAMAR DESCOMENTE LA SUYA Y COMENTE LA MIA NO LA BORRE 
+
+        SqlConnection objConexion = new SqlConnection ("Data Source=RIN\\SQL2016;Initial Catalog=AdventureWorks2014;Integrated Security=True");
+        //SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
+
         public bool abrirConexion() {
             try {
-                objConexion.Open();
+                objConexion.Open ();
                 return true;
             } catch (Exception) {
                 return false;
@@ -42,7 +45,7 @@ namespace Capa_Conexion {
 
             try {
                 oSQLC.Connection = objConexion;
-                DataTable oDT = new DataTable ();            
+                DataTable oDT = new DataTable ();
                 SqlDataAdapter oSQLDA = new SqlDataAdapter (oSQLC);
 
                 if (abrirConexion ()) {
@@ -58,27 +61,22 @@ namespace Capa_Conexion {
             // fin del try/catch
         }
 
-        public DataTable ejecutar (String txtSelect)
-        {
-            SqlCommand cSelect = new SqlCommand();
-            DataTable oDT = new DataTable();
-            SqlDataAdapter oSQLDA = new SqlDataAdapter(cSelect);
+        public DataTable ejecutar(String txtSelect) {
+            SqlCommand cSelect = new SqlCommand ();
+            DataTable oDT = new DataTable ();
+            SqlDataAdapter oSQLDA = new SqlDataAdapter (cSelect);
 
-            try
-            {
+            try {
                 cSelect.CommandText = txtSelect;
                 cSelect.Connection = objConexion;
-            }
-            catch (Exception)
-            {
+            } catch (Exception) {
 
                 throw;
             }
-            if (abrirConexion())
-            {
-                oSQLDA.Fill(oDT);
+            if (abrirConexion ()) {
+                oSQLDA.Fill (oDT);
             }
-            cerrarConexion();
+            cerrarConexion ();
 
             return oDT;
         }

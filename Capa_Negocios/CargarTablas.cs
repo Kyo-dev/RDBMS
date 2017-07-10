@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 namespace Capa_Negocios {
     public class CargarTablas {
 
-        public DataTable Tablas()
-        {
-
+        public DataTable Tablas(string strDataBase) {
             Capa_Conexion.TablasBD clCargarTablas = new Capa_Conexion.TablasBD ();
-
-            return clCargarTablas.CargarTablasBD();
-        }       
+            return clCargarTablas.CargarTablas (strDataBase);
+        }
     }
 }
