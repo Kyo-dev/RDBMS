@@ -43,7 +43,7 @@
             // 
             // sc.Panel1
             // 
-            this.sc.Panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.sc.Panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.sc.Panel1.Controls.Add(this.cboDataBases);
             this.sc.Panel1.Controls.Add(this.btnCargar);
             this.sc.Panel1.Controls.Add(this.lbTablas);
@@ -51,7 +51,7 @@
             // 
             // sc.Panel2
             // 
-            this.sc.Panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.sc.Panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.sc.Panel2.Controls.Add(this.dgvInfoTablas);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.sc.Size = new System.Drawing.Size(986, 506);
@@ -60,7 +60,8 @@
             // 
             // cboDataBases
             // 
-            this.cboDataBases.BackColor = System.Drawing.Color.RosyBrown;
+            this.cboDataBases.BackColor = System.Drawing.Color.SteelBlue;
+            this.cboDataBases.ForeColor = System.Drawing.Color.Snow;
             this.cboDataBases.FormattingEnabled = true;
             this.cboDataBases.Location = new System.Drawing.Point(88, 8);
             this.cboDataBases.Name = "cboDataBases";
@@ -69,10 +70,11 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnCargar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.Color.Snow;
             this.btnCargar.Location = new System.Drawing.Point(12, 3);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(70, 29);
@@ -83,7 +85,7 @@
             // 
             // lbTablas
             // 
-            this.lbTablas.BackColor = System.Drawing.Color.RosyBrown;
+            this.lbTablas.BackColor = System.Drawing.Color.Snow;
             this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTablas.Cursor = System.Windows.Forms.Cursors.Help;
             this.lbTablas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,7 +99,7 @@
             // 
             // dgvInfoTablas
             // 
-            this.dgvInfoTablas.BackgroundColor = System.Drawing.Color.RosyBrown;
+            this.dgvInfoTablas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvInfoTablas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInfoTablas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoTablas.Location = new System.Drawing.Point(14, 12);
@@ -109,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(986, 506);
             this.Controls.Add(this.sc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
