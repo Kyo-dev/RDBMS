@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 using System.Data;
 
 namespace Capa_Negocios {
-    class CargarColumnas {
-        public DataTable InfoColumna (string strColumnas) {
-            Capa_Conexion.ColumnasBD clColumnas = new Capa_Conexion.ColumnasBD ();
-            return clColumnas.InfoColumnas (strColumnas);
+    public class CargarColumnas {
+        public DataTable datosColumnas () {
+            DataTable objDT = new Capa_Conexion.ColumnasBD ().datosColumnas ();
+            objDT.Columns [0].ColumnName = "TABLE_CATALOG";
+            objDT.Columns [2].ColumnName = "TABLE_NAME";
+            objDT.Columns [3].ColumnName = "COLUMN_NAME";
+            objDT.Columns [7].ColumnName = "DATA_TYPE";
+            objDT.Columns [5].ColumnName = "COLUMN_DEFAULT";
+            objDT.Columns [8].ColumnName = "CHARACTER_MAXIMUM_LENGTH";
+            return objDT;
         }
     }
 }

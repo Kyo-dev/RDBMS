@@ -96,6 +96,7 @@
             this.lbTablas.Name = "lbTablas";
             this.lbTablas.Size = new System.Drawing.Size(195, 459);
             this.lbTablas.TabIndex = 0;
+            this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
             // 
             // dgvInfoTablas
             // 

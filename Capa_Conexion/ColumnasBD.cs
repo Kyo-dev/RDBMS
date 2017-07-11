@@ -8,13 +8,19 @@ using System.Threading.Tasks;
 
 namespace Capa_Conexion {
     public class ColumnasBD {
-
-        public DataTable InfoColumnas(string strColumna) {
+        //sp_columns_managed
+        public DataTable datosColumnas() {
             SqlCommand objSQL = new SqlCommand ();
-            objSQL.CommandType = CommandType.Text;
-            objSQL.CommandText = "SELECT TABLE_NAME " +
-                                 "FROM " + strColumna + ".INFORMATION_SCHEMA.COLUMNS;";
+            objSQL.CommandType = CommandType.StoredProcedure;
+            objSQL.CommandText = "sp_columns_managed";
             return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
         }
+
+        //public int ConsultarColumnas() {
+        //    SqlCommand objSQL = new SqlCommand ();
+        //    objSQL.CommandType = CommandType.StoredProcedure;
+        //    objSQL.CommandText = "sp_columns_managed";
+        //    objSQL.Parameters.Add ("@TABLE_CATALOG",SqlDbType.VarChar,100);
+        //}
     }
 }

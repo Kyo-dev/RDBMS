@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Vista {
+    
     public partial class frmPrincipal:Form {
 
-        //DataTable objBase= new DataTable();
-
+        List<Capa_Negocios.CargarColumnas> listColum = new List<Capa_Negocios.CargarColumnas> ();
         public frmPrincipal() {
             InitializeComponent ();
         }
@@ -36,6 +36,12 @@ namespace Capa_Vista {
                 MessageBox.Show ("La base de datos selecciona no contiene tablas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lbTablas.DataSource = objDT;
             }
+        }
+
+        private void lbTablas_DoubleClick(object sender,EventArgs e) {
+            //dgvInfoTablas.DataSource = (from x in listColum
+            //                            select x).ToList();
+            dgvInfoTablas.DataSource = new Capa_Negocios.CargarColumnas ().datosColumnas();
         }
     }
 }
