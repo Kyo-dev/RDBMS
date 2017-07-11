@@ -100,6 +100,7 @@
             // 
             // dgvInfoTablas
             // 
+            this.dgvInfoTablas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfoTablas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvInfoTablas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInfoTablas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

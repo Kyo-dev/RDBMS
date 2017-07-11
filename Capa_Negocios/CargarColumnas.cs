@@ -19,3 +19,11 @@ namespace Capa_Negocios {
         }
     }
 }
+ /*
+            objDT.Columns [0].ColumnName = "TABLE_CATALOG";
+            objDT.Columns [2].ColumnName = "TABLE_NAME";
+            objDT.Columns [3].ColumnName = "COLUMN_NAME";
+            objDT.Columns [7].ColumnName = "DATA_TYPE";
+            objDT.Columns [5].ColumnName = "COLUMN_DEFAULT";
+            objDT.Columns [8].ColumnName = "CHARACTER_MAXIMUM_LENGTH";
+ */

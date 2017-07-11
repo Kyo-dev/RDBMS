@@ -16,6 +16,12 @@ namespace Capa_Vista {
         List<Capa_Negocios.CargarColumnas> listColum = new List<Capa_Negocios.CargarColumnas> ();
         public frmPrincipal() {
             InitializeComponent ();
+            dgvInfoTablas.Columns.Add ("TABLE_CATALOG","Catalogo");
+            dgvInfoTablas.Columns.Add ("TABLE_NAME","Nombre de la Tabla");
+            dgvInfoTablas.Columns.Add ("COLUMN_NAME","Nombre de la Columna");
+            dgvInfoTablas.Columns.Add ("DATA_TYPE","Tipo de dato");
+            dgvInfoTablas.Columns.Add ("COLUMN_DEFAULT","Valor por Defecto");
+            dgvInfoTablas.Columns.Add ("CHARACTER_MAXIMUM_LENGTH","Largo maximo");
         }
 
         private void frmPrincipal_Load(object sender,EventArgs e) {
@@ -32,6 +38,7 @@ namespace Capa_Vista {
                 lbTablas.DisplayMember = "TABLE_NAME";
                 lbTablas.ValueMember = "TABLE_NAME";
                 lbTablas.DataSource = objDT;
+                    
             } else {
                 MessageBox.Show ("La base de datos selecciona no contiene tablas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lbTablas.DataSource = objDT;
@@ -39,9 +46,8 @@ namespace Capa_Vista {
         }
 
         private void lbTablas_DoubleClick(object sender,EventArgs e) {
-            //dgvInfoTablas.DataSource = (from x in listColum
-            //                            select x).ToList();
-            dgvInfoTablas.DataSource = new Capa_Negocios.CargarColumnas ().datosColumnas();
+            dgvInfoTablas.ClearSelection ();
+            dgvInfoTablas.DataSource = new Capa_Negocios.CargarColumnas ().datosColumnas ();   
         }
     }
 }
