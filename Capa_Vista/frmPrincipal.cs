@@ -35,7 +35,7 @@ namespace Capa_Vista {
                 lbTablas.DataSource = objDT;
                 lbTablas.DisplayMember = "TABLE_NAME";
                 lbTablas.ValueMember = "TABLE_NAME";
-
+                labNomBD.Text = "Base de Datos:\n"+cboDataBases.SelectedValue.ToString ();
             } else {
                 MessageBox.Show ("La base de datos selecciona no contiene tablas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lbTablas.Enabled = false;
@@ -56,7 +56,7 @@ namespace Capa_Vista {
                     lbColumas.DisplayMember = "COLUMN_NAME";
                     lbColumas.ValueMember = "COLUMN_NAME";
                     lbColumas.DataSource = objDT;
-                    labNomTab.Text = lbTablas.SelectedValue.ToString ();
+                    labNomTab.Text = "Columnas de la Tabla:\n"+lbTablas.SelectedValue.ToString ();
                 } else {
                     MessageBox.Show ("La tabla selecciona no contiene columas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     lbTablas.DataSource = objDT;
@@ -69,11 +69,12 @@ namespace Capa_Vista {
         }
 
         private void lbColumas_DoubleClick(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString ());
+            DataTable objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString (), lbTablas.SelectedValue.ToString());
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoTablas.DataSource = objDT;
-                    labNomColum.Text = lbColumas.SelectedValue.ToString ();
+                    labNomColum.Text = "Base de Datos: "+cboDataBases.SelectedValue.ToString () + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString ()+"\nEsquema de columna: "+lbColumas.SelectedValue.ToString();
+                    ;
                 } else {
                     MessageBox.Show ("Imposible obtener esquema de la tabla.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     lbColumas.Enabled = false;
@@ -84,5 +85,6 @@ namespace Capa_Vista {
                 }
             }
         }
+
     }
 }

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace Capa_Negocios {
     public class CargarEsquema {
 
-        public DataTable Esquemas(string strEsquema) {
+        public DataTable Esquemas(string strColumna, string strTabla) {
             Capa_Conexion.EsquemaColumna clEsquema = new Capa_Conexion.EsquemaColumna ();
-            return clEsquema.InfoEsquema (strEsquema);
+            return clEsquema.InfoEsquema (strColumna, strTabla);
         }
     }
 }
