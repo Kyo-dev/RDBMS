@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.sc = new System.Windows.Forms.SplitContainer();
+            this.lbColumas = new System.Windows.Forms.ListBox();
             this.cboDataBases = new System.Windows.Forms.ComboBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.lbTablas = new System.Windows.Forms.ListBox();
@@ -44,6 +45,7 @@
             // sc.Panel1
             // 
             this.sc.Panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.sc.Panel1.Controls.Add(this.lbColumas);
             this.sc.Panel1.Controls.Add(this.cboDataBases);
             this.sc.Panel1.Controls.Add(this.btnCargar);
             this.sc.Panel1.Controls.Add(this.lbTablas);
@@ -54,9 +56,23 @@
             this.sc.Panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.sc.Panel2.Controls.Add(this.dgvInfoTablas);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(986, 506);
-            this.sc.SplitterDistance = 221;
+            this.sc.Size = new System.Drawing.Size(907, 506);
+            this.sc.SplitterDistance = 222;
             this.sc.TabIndex = 0;
+            // 
+            // lbColumas
+            // 
+            this.lbColumas.BackColor = System.Drawing.Color.Snow;
+            this.lbColumas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbColumas.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lbColumas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbColumas.ForeColor = System.Drawing.Color.Black;
+            this.lbColumas.FormattingEnabled = true;
+            this.lbColumas.ItemHeight = 17;
+            this.lbColumas.Location = new System.Drawing.Point(12, 289);
+            this.lbColumas.Name = "lbColumas";
+            this.lbColumas.Size = new System.Drawing.Size(195, 204);
+            this.lbColumas.TabIndex = 2;
             // 
             // cboDataBases
             // 
@@ -94,7 +110,7 @@
             this.lbTablas.ItemHeight = 17;
             this.lbTablas.Location = new System.Drawing.Point(12, 38);
             this.lbTablas.Name = "lbTablas";
-            this.lbTablas.Size = new System.Drawing.Size(195, 459);
+            this.lbTablas.Size = new System.Drawing.Size(195, 221);
             this.lbTablas.TabIndex = 0;
             this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
             // 
@@ -104,9 +120,9 @@
             this.dgvInfoTablas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvInfoTablas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInfoTablas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoTablas.Location = new System.Drawing.Point(14, 12);
+            this.dgvInfoTablas.Location = new System.Drawing.Point(16, 37);
             this.dgvInfoTablas.Name = "dgvInfoTablas";
-            this.dgvInfoTablas.Size = new System.Drawing.Size(732, 287);
+            this.dgvInfoTablas.Size = new System.Drawing.Size(653, 222);
             this.dgvInfoTablas.TabIndex = 0;
             // 
             // frmPrincipal
@@ -114,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(986, 506);
+            this.ClientSize = new System.Drawing.Size(907, 506);
             this.Controls.Add(this.sc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
@@ -138,5 +154,6 @@
         private System.Windows.Forms.ListBox lbTablas;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.ComboBox cboDataBases;
+        private System.Windows.Forms.ListBox lbColumas;
     }
 }

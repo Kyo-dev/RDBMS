@@ -9,18 +9,17 @@ using System.Threading.Tasks;
 namespace Capa_Conexion {
     public class ColumnasBD {
         //sp_columns_managed
-        public DataTable datosColumnas() {
+        public DataTable datosColumnas(string strTabla) {
             SqlCommand objSQL = new SqlCommand ();
-            objSQL.CommandType = CommandType.StoredProcedure;
-            //objSQL.CommandText = "SELECT TABLE_CATALOG" +
-            //                     ",TABLE_NAME" +
-            //                     ",COLUMN_NAME" +
-            //                     ",DATA_TYPE" +
-            //                     ",COLUMN_DEFAULT" +
-            //                     ",CHARACTER_MAXIMUM_LENGTH" +
-            //                     "FROM "+strTabla+".INFORMATION_SCHEMA.COLUMNS;";
-            objSQL.CommandText = "sp_columns_managed";
+            objSQL.CommandType = CommandType.Text;
+            objSQL.CommandText = "SELECT COLUMN_NAME " +
+                                 "FROM INFORMATION_SCHEMA.COLUMNS " +
+                                 "WHERE TABLE_NAME = '"+strTabla+"';";
             return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
         }
     }
 }
+
+
+
+
