@@ -12,8 +12,6 @@ using System.Windows.Forms;
 namespace Capa_Vista {
 
     public partial class frmPrincipal:Form {
-
-        List<Capa_Negocios.CargarColumnas> listColum = new List<Capa_Negocios.CargarColumnas> ();
         public frmPrincipal() {
             InitializeComponent ();
         }
@@ -74,7 +72,6 @@ namespace Capa_Vista {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoTablas.DataSource = objDT;
                     labNomColum.Text = "Base de Datos: "+cboDataBases.SelectedValue.ToString () + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString ()+"\nEsquema de columna: "+lbColumas.SelectedValue.ToString();
-                    ;
                 } else {
                     MessageBox.Show ("Imposible obtener esquema de la tabla.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     lbColumas.Enabled = false;
@@ -85,6 +82,5 @@ namespace Capa_Vista {
                 }
             }
         }
-
     }
 }
