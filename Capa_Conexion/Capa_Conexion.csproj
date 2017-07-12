@@ -43,6 +43,7 @@
     <Compile Include="ColumnasBD.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DataBases.cs" />
+    <Compile Include="EsquemaColumna.cs" />
     <Compile Include="InstanciasSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TablasBD.cs" />

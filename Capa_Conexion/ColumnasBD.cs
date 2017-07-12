@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Capa_Conexion {
     public class ColumnasBD {
-        //sp_columns_managed
         public DataTable datosColumnas(string strTabla) {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;

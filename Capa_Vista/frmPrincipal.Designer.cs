@@ -73,6 +73,7 @@
             this.lbColumas.Name = "lbColumas";
             this.lbColumas.Size = new System.Drawing.Size(195, 204);
             this.lbColumas.TabIndex = 2;
+            this.lbColumas.DoubleClick += new System.EventHandler(this.lbColumas_DoubleClick);
             // 
             // cboDataBases
             // 
