@@ -19,9 +19,9 @@ namespace Capa_Vista {
         }
 
         private void frmPrincipal_Load(object sender,EventArgs e) {
+            cboDataBases.DataSource = new Capa_Negocios.CargarBases ().DataBases ();
             cboDataBases.DisplayMember = "DATABASE_NAME";
             cboDataBases.ValueMember = "DATABASE_NAME";
-            cboDataBases.DataSource = new Capa_Negocios.CargarBases ().DataBases ();
         }
 
         private void btnCargar_Click(object sender,EventArgs e) {
@@ -40,6 +40,8 @@ namespace Capa_Vista {
                 MessageBox.Show ("La base de datos selecciona no contiene tablas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lbTablas.Enabled = false;
                 lbColumas.Enabled = false;
+                labNomColum.Text = "";
+                dgvInfoTablas.ClearSelection ();
                 lbTablas.ClearSelected ();
                 lbColumas.ClearSelected ();
             }
@@ -54,11 +56,14 @@ namespace Capa_Vista {
                     lbColumas.DisplayMember = "COLUMN_NAME";
                     lbColumas.ValueMember = "COLUMN_NAME";
                     lbColumas.DataSource = objDT;
+                    labNomTab.Text = lbTablas.SelectedValue.ToString ();
                 } else {
                     MessageBox.Show ("La tabla selecciona no contiene columas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     lbTablas.DataSource = objDT;
                     lbColumas.Enabled = false;
+                    labNomColum.Text = "";
                     lbColumas.ClearSelected ();
+                    dgvInfoTablas.ClearSelection ();
                 }
             }
         }
@@ -68,10 +73,12 @@ namespace Capa_Vista {
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoTablas.DataSource = objDT;
+                    labNomColum.Text = lbColumas.SelectedValue.ToString ();
                 } else {
                     MessageBox.Show ("Imposible obtener esquema de la tabla.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     lbColumas.Enabled = false;
                     lbTablas.Enabled = false;
+                    labNomColum.Text = "";
                     lbColumas.ClearSelected ();
                     lbTablas.ClearSelected ();
                 }
