@@ -56,7 +56,7 @@
             this.sc.Panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.sc.Panel2.Controls.Add(this.dgvInfoTablas);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(907, 506);
+            this.sc.Size = new System.Drawing.Size(907, 501);
             this.sc.SplitterDistance = 222;
             this.sc.TabIndex = 0;
             // 
@@ -131,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(907, 506);
+            this.ClientSize = new System.Drawing.Size(907, 501);
             this.Controls.Add(this.sc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;

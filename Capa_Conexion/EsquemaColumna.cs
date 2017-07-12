@@ -11,7 +11,11 @@ namespace Capa_Conexion {
         public DataTable InfoEsquema(string strColumna) {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
-            objSQL.CommandText = "SELECT  TABLE_NAME AS [Nombre de la tabla],COLUMN_NAME AS [Nombre de la columna], DATA_TYPE AS [Tipo de dato], CHARACTER_MAXIMUM_LENGTH AS [Largo Maximo], COLUMN_DEFAULT AS [Valor por defecto] " +
+            objSQL.CommandText = "SELECT  TABLE_NAME AS [Nombre de la tabla]," +
+                                 "COLUMN_NAME AS [Nombre de la columna]" +
+                                 ",DATA_TYPE AS [Tipo de dato]" +
+                                 ",CHARACTER_MAXIMUM_LENGTH AS [Largo Maximo]" +
+                                 ",COLUMN_DEFAULT AS [Valor por defecto] " +
                                  "FROM INFORMATION_SCHEMA.COLUMNS "+
                                  "WHERE COLUMN_NAME = '"+strColumna+"';";
             return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
