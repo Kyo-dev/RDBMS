@@ -82,5 +82,13 @@ namespace Capa_Vista {
                 }
             }
         }
+        public void consultaColumna() {
+            foreach (DataGridViewRow row in dgvInfoTablas.Rows) {
+                string nomTabla = Convert.ToString (row.Cells ["TABLE_NAME"].Value);
+            }
+            DataGridViewRow rows = dgvInfoTablas.Rows [0];
+            MessageBox.Show (Convert.ToString (rows.Cells ["TABLE_NAME"].Value));
+        }
+
     }
 }

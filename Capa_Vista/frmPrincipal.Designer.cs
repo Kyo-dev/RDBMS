@@ -68,6 +68,9 @@
             // 
             // labNomBD
             // 
+            this.labNomBD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labNomBD.AutoSize = true;
             this.labNomBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomBD.ForeColor = System.Drawing.Color.White;
@@ -78,6 +81,9 @@
             // 
             // labNomTab
             // 
+            this.labNomTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labNomTab.AutoSize = true;
             this.labNomTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomTab.ForeColor = System.Drawing.Color.White;
@@ -88,6 +94,7 @@
             // 
             // lbColumas
             // 
+            this.lbColumas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbColumas.BackColor = System.Drawing.Color.Snow;
             this.lbColumas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbColumas.Cursor = System.Windows.Forms.Cursors.Help;
@@ -103,6 +110,8 @@
             // 
             // cboDataBases
             // 
+            this.cboDataBases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboDataBases.BackColor = System.Drawing.Color.SteelBlue;
             this.cboDataBases.ForeColor = System.Drawing.Color.Snow;
             this.cboDataBases.FormattingEnabled = true;
@@ -128,6 +137,8 @@
             // 
             // lbTablas
             // 
+            this.lbTablas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTablas.BackColor = System.Drawing.Color.Snow;
             this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTablas.Cursor = System.Windows.Forms.Cursors.Help;
@@ -143,6 +154,8 @@
             // 
             // labNomColum
             // 
+            this.labNomColum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labNomColum.AutoSize = true;
             this.labNomColum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomColum.ForeColor = System.Drawing.Color.White;
@@ -153,11 +166,13 @@
             // 
             // dgvInfoTablas
             // 
+            this.dgvInfoTablas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInfoTablas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfoTablas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvInfoTablas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvInfoTablas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoTablas.Location = new System.Drawing.Point(19, 72);
+            this.dgvInfoTablas.Location = new System.Drawing.Point(20, 72);
             this.dgvInfoTablas.Name = "dgvInfoTablas";
             this.dgvInfoTablas.Size = new System.Drawing.Size(653, 76);
             this.dgvInfoTablas.TabIndex = 0;
