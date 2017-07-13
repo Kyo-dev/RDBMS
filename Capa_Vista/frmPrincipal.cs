@@ -39,7 +39,7 @@ namespace Capa_Vista {
                 lbTablas.Enabled = false;
                 lbColumas.Enabled = false;
                 labNomColum.Text = "";
-                dgvInfoTablas.ClearSelection ();
+                dgvInfoEsquema.ClearSelection ();
                 lbTablas.ClearSelected ();
                 lbColumas.ClearSelected ();
             }
@@ -61,7 +61,7 @@ namespace Capa_Vista {
                     lbColumas.Enabled = false;
                     labNomColum.Text = "";
                     lbColumas.ClearSelected ();
-                    dgvInfoTablas.ClearSelection ();
+                    dgvInfoEsquema.ClearSelection ();
                 }
             }
         }
@@ -70,8 +70,9 @@ namespace Capa_Vista {
             DataTable objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString (), lbTablas.SelectedValue.ToString());
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
-                    dgvInfoTablas.DataSource = objDT;
+                    dgvInfoEsquema.DataSource = objDT;
                     labNomColum.Text = "Base de Datos: "+cboDataBases.SelectedValue.ToString () + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString ()+"\nEsquema de columna: "+lbColumas.SelectedValue.ToString();
+                    labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString ();
                 } else {
                     MessageBox.Show ("Imposible obtener esquema de la tabla.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     lbColumas.Enabled = false;
@@ -83,10 +84,10 @@ namespace Capa_Vista {
             }
         }
         public void consultaColumna() {
-            foreach (DataGridViewRow row in dgvInfoTablas.Rows) {
+            foreach (DataGridViewRow row in dgvInfoEsquema.Rows) {
                 string nomTabla = Convert.ToString (row.Cells ["TABLE_NAME"].Value);
             }
-            DataGridViewRow rows = dgvInfoTablas.Rows [0];
+            DataGridViewRow rows = dgvInfoEsquema.Rows [0];
             MessageBox.Show (Convert.ToString (rows.Cells ["TABLE_NAME"].Value));
         }
 

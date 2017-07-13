@@ -31,12 +31,15 @@
             this.btnCargar = new System.Windows.Forms.Button();
             this.lbTablas = new System.Windows.Forms.ListBox();
             this.labNomColum = new System.Windows.Forms.Label();
-            this.dgvInfoTablas = new System.Windows.Forms.DataGridView();
+            this.dgvInfoEsquema = new System.Windows.Forms.DataGridView();
+            this.labNomRegistros = new System.Windows.Forms.Label();
+            this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
             this.sc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoTablas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
             this.SuspendLayout();
             // 
             // sc
@@ -59,11 +62,13 @@
             // sc.Panel2
             // 
             this.sc.Panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.sc.Panel2.Controls.Add(this.dgvInfoRegistros);
+            this.sc.Panel2.Controls.Add(this.labNomRegistros);
             this.sc.Panel2.Controls.Add(this.labNomColum);
-            this.sc.Panel2.Controls.Add(this.dgvInfoTablas);
+            this.sc.Panel2.Controls.Add(this.dgvInfoEsquema);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(910, 543);
-            this.sc.SplitterDistance = 221;
+            this.sc.Size = new System.Drawing.Size(1095, 543);
+            this.sc.SplitterDistance = 265;
             this.sc.TabIndex = 0;
             // 
             // labNomBD
@@ -102,7 +107,7 @@
             this.lbColumas.ItemHeight = 17;
             this.lbColumas.Location = new System.Drawing.Point(12, 344);
             this.lbColumas.Name = "lbColumas";
-            this.lbColumas.Size = new System.Drawing.Size(195, 187);
+            this.lbColumas.Size = new System.Drawing.Size(239, 187);
             this.lbColumas.TabIndex = 2;
             this.lbColumas.DoubleClick += new System.EventHandler(this.lbColumas_DoubleClick);
             // 
@@ -115,7 +120,7 @@
             this.cboDataBases.FormattingEnabled = true;
             this.cboDataBases.Location = new System.Drawing.Point(88, 8);
             this.cboDataBases.Name = "cboDataBases";
-            this.cboDataBases.Size = new System.Drawing.Size(119, 21);
+            this.cboDataBases.Size = new System.Drawing.Size(163, 21);
             this.cboDataBases.TabIndex = 1;
             // 
             // btnCargar
@@ -146,7 +151,7 @@
             this.lbTablas.ItemHeight = 17;
             this.lbTablas.Location = new System.Drawing.Point(12, 72);
             this.lbTablas.Name = "lbTablas";
-            this.lbTablas.Size = new System.Drawing.Size(195, 221);
+            this.lbTablas.Size = new System.Drawing.Size(239, 221);
             this.lbTablas.TabIndex = 0;
             this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
             // 
@@ -162,25 +167,50 @@
             this.labNomColum.Size = new System.Drawing.Size(0, 16);
             this.labNomColum.TabIndex = 2;
             // 
-            // dgvInfoTablas
+            // dgvInfoEsquema
             // 
-            this.dgvInfoTablas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvInfoEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvInfoTablas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoTablas.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvInfoTablas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvInfoTablas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoTablas.Location = new System.Drawing.Point(20, 72);
-            this.dgvInfoTablas.Name = "dgvInfoTablas";
-            this.dgvInfoTablas.Size = new System.Drawing.Size(653, 76);
-            this.dgvInfoTablas.TabIndex = 0;
+            this.dgvInfoEsquema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInfoEsquema.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInfoEsquema.Location = new System.Drawing.Point(20, 72);
+            this.dgvInfoEsquema.Name = "dgvInfoEsquema";
+            this.dgvInfoEsquema.Size = new System.Drawing.Size(499, 221);
+            this.dgvInfoEsquema.TabIndex = 0;
+            // 
+            // labNomRegistros
+            // 
+            this.labNomRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labNomRegistros.AutoSize = true;
+            this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNomRegistros.ForeColor = System.Drawing.Color.White;
+            this.labNomRegistros.Location = new System.Drawing.Point(534, 35);
+            this.labNomRegistros.Name = "labNomRegistros";
+            this.labNomRegistros.Size = new System.Drawing.Size(0, 16);
+            this.labNomRegistros.TabIndex = 3;
+            // 
+            // dgvInfoRegistros
+            // 
+            this.dgvInfoRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInfoRegistros.Location = new System.Drawing.Point(537, 72);
+            this.dgvInfoRegistros.Name = "dgvInfoRegistros";
+            this.dgvInfoRegistros.Size = new System.Drawing.Size(277, 221);
+            this.dgvInfoRegistros.TabIndex = 4;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(910, 543);
+            this.ClientSize = new System.Drawing.Size(1095, 543);
             this.Controls.Add(this.sc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
@@ -194,7 +224,8 @@
             this.sc.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).EndInit();
             this.sc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoTablas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,7 +233,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer sc;
-        private System.Windows.Forms.DataGridView dgvInfoTablas;
+        private System.Windows.Forms.DataGridView dgvInfoEsquema;
         private System.Windows.Forms.ListBox lbTablas;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.ComboBox cboDataBases;
@@ -210,5 +241,7 @@
         private System.Windows.Forms.Label labNomColum;
         private System.Windows.Forms.Label labNomTab;
         private System.Windows.Forms.Label labNomBD;
+        private System.Windows.Forms.DataGridView dgvInfoRegistros;
+        private System.Windows.Forms.Label labNomRegistros;
     }
 }
