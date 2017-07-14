@@ -33,7 +33,7 @@ namespace Capa_Vista {
                 lbTablas.DataSource = objDT;
                 lbTablas.DisplayMember = "TABLE_NAME";
                 lbTablas.ValueMember = "TABLE_NAME";
-                labNomBD.Text = "Base de Datos:\n"+cboDataBases.SelectedValue.ToString ();
+                labNomBD.Text = "Base de Datos:\n" + cboDataBases.SelectedValue.ToString ();
             } else {
                 MessageBox.Show ("La base de datos selecciona no contiene tablas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 lbTablas.Enabled = false;
@@ -54,7 +54,7 @@ namespace Capa_Vista {
                     lbColumas.DisplayMember = "COLUMN_NAME";
                     lbColumas.ValueMember = "COLUMN_NAME";
                     lbColumas.DataSource = objDT;
-                    labNomTab.Text = "Columnas de la Tabla:\n"+lbTablas.SelectedValue.ToString ();
+                    labNomTab.Text = "Columnas de la Tabla:\n" + lbTablas.SelectedValue.ToString ();
                 } else {
                     MessageBox.Show ("La tabla selecciona no contiene columas","Adverencia",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     lbTablas.DataSource = objDT;
@@ -67,11 +67,13 @@ namespace Capa_Vista {
         }
 
         private void lbColumas_DoubleClick(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString (), lbTablas.SelectedValue.ToString());
+            DataTable objDT = new DataTable ();
+            objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString (),lbTablas.SelectedValue.ToString ());
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoEsquema.DataSource = objDT;
-                    labNomColum.Text = "Base de Datos: "+cboDataBases.SelectedValue.ToString () + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString ()+"\nEsquema de columna: "+lbColumas.SelectedValue.ToString();
+                    //verRegistros ();
+                    labNomColum.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString () + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString () + "\nEsquema de columna: " + lbColumas.SelectedValue.ToString ();
                     labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString ();
                 } else {
                     MessageBox.Show ("Imposible obtener esquema de la tabla.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -80,9 +82,20 @@ namespace Capa_Vista {
                     labNomColum.Text = "";
                     lbColumas.ClearSelected ();
                     lbTablas.ClearSelected ();
+                    
                 }
             }
         }
+
+        private void verRegistros() {
+            DataTable objDT = objDT = new Capa_Negocios.CargarRegistros ().registroColumna (lbColumas.SelectedValue.ToString (),lbTablas.SelectedValue.ToString ());
+            if (lbColumas.Enabled) {
+                if (objDT.Rows.Count > 0) {
+                    dgvInfoRegistros.DataSource = objDT;
+                }
+            }
+        }
+
         public void consultaColumna() {
             foreach (DataGridViewRow row in dgvInfoEsquema.Rows) {
                 string nomTabla = Convert.ToString (row.Cells ["TABLE_NAME"].Value);
@@ -90,6 +103,5 @@ namespace Capa_Vista {
             DataGridViewRow rows = dgvInfoEsquema.Rows [0];
             MessageBox.Show (Convert.ToString (rows.Cells ["TABLE_NAME"].Value));
         }
-
     }
 }

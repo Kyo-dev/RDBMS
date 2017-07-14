@@ -24,22 +24,22 @@
         /// </summary>
         private void InitializeComponent() {
             this.sc = new System.Windows.Forms.SplitContainer();
+            this.lbTablas = new System.Windows.Forms.ListBox();
             this.labNomBD = new System.Windows.Forms.Label();
             this.labNomTab = new System.Windows.Forms.Label();
             this.lbColumas = new System.Windows.Forms.ListBox();
             this.cboDataBases = new System.Windows.Forms.ComboBox();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.lbTablas = new System.Windows.Forms.ListBox();
+            this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
+            this.labNomRegistros = new System.Windows.Forms.Label();
             this.labNomColum = new System.Windows.Forms.Label();
             this.dgvInfoEsquema = new System.Windows.Forms.DataGridView();
-            this.labNomRegistros = new System.Windows.Forms.Label();
-            this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
             this.sc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
             this.SuspendLayout();
             // 
             // sc
@@ -50,18 +50,18 @@
             // 
             // sc.Panel1
             // 
-            this.sc.Panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.sc.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.sc.Panel1.Controls.Add(this.lbTablas);
             this.sc.Panel1.Controls.Add(this.labNomBD);
             this.sc.Panel1.Controls.Add(this.labNomTab);
             this.sc.Panel1.Controls.Add(this.lbColumas);
             this.sc.Panel1.Controls.Add(this.cboDataBases);
             this.sc.Panel1.Controls.Add(this.btnCargar);
-            this.sc.Panel1.Controls.Add(this.lbTablas);
             this.sc.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // sc.Panel2
             // 
-            this.sc.Panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.sc.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
             this.sc.Panel2.Controls.Add(this.dgvInfoRegistros);
             this.sc.Panel2.Controls.Add(this.labNomRegistros);
             this.sc.Panel2.Controls.Add(this.labNomColum);
@@ -70,6 +70,23 @@
             this.sc.Size = new System.Drawing.Size(1095, 543);
             this.sc.SplitterDistance = 265;
             this.sc.TabIndex = 0;
+            // 
+            // lbTablas
+            // 
+            this.lbTablas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTablas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
+            this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbTablas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbTablas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTablas.ForeColor = System.Drawing.Color.Black;
+            this.lbTablas.FormattingEnabled = true;
+            this.lbTablas.ItemHeight = 17;
+            this.lbTablas.Location = new System.Drawing.Point(12, 72);
+            this.lbTablas.Name = "lbTablas";
+            this.lbTablas.Size = new System.Drawing.Size(239, 221);
+            this.lbTablas.TabIndex = 0;
+            this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
             // 
             // labNomBD
             // 
@@ -98,9 +115,9 @@
             // lbColumas
             // 
             this.lbColumas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbColumas.BackColor = System.Drawing.Color.Snow;
+            this.lbColumas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
             this.lbColumas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbColumas.Cursor = System.Windows.Forms.Cursors.Help;
+            this.lbColumas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbColumas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbColumas.ForeColor = System.Drawing.Color.Black;
             this.lbColumas.FormattingEnabled = true;
@@ -115,7 +132,7 @@
             // 
             this.cboDataBases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboDataBases.BackColor = System.Drawing.Color.SteelBlue;
+            this.cboDataBases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
             this.cboDataBases.ForeColor = System.Drawing.Color.Snow;
             this.cboDataBases.FormattingEnabled = true;
             this.cboDataBases.Location = new System.Drawing.Point(88, 8);
@@ -125,7 +142,7 @@
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
             this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,22 +155,28 @@
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // lbTablas
+            // dgvInfoRegistros
             // 
-            this.lbTablas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTablas.BackColor = System.Drawing.Color.Snow;
-            this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbTablas.Cursor = System.Windows.Forms.Cursors.Help;
-            this.lbTablas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTablas.ForeColor = System.Drawing.Color.Black;
-            this.lbTablas.FormattingEnabled = true;
-            this.lbTablas.ItemHeight = 17;
-            this.lbTablas.Location = new System.Drawing.Point(12, 72);
-            this.lbTablas.Name = "lbTablas";
-            this.lbTablas.Size = new System.Drawing.Size(239, 221);
-            this.lbTablas.TabIndex = 0;
-            this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
+            this.dgvInfoRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInfoRegistros.Location = new System.Drawing.Point(537, 72);
+            this.dgvInfoRegistros.Name = "dgvInfoRegistros";
+            this.dgvInfoRegistros.Size = new System.Drawing.Size(277, 221);
+            this.dgvInfoRegistros.TabIndex = 4;
+            // 
+            // labNomRegistros
+            // 
+            this.labNomRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labNomRegistros.AutoSize = true;
+            this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNomRegistros.ForeColor = System.Drawing.Color.White;
+            this.labNomRegistros.Location = new System.Drawing.Point(534, 35);
+            this.labNomRegistros.Name = "labNomRegistros";
+            this.labNomRegistros.Size = new System.Drawing.Size(0, 16);
+            this.labNomRegistros.TabIndex = 3;
             // 
             // labNomColum
             // 
@@ -172,44 +195,19 @@
             this.dgvInfoEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInfoEsquema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoEsquema.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvInfoEsquema.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoEsquema.Location = new System.Drawing.Point(20, 72);
+            this.dgvInfoEsquema.Location = new System.Drawing.Point(19, 72);
             this.dgvInfoEsquema.Name = "dgvInfoEsquema";
             this.dgvInfoEsquema.Size = new System.Drawing.Size(499, 221);
             this.dgvInfoEsquema.TabIndex = 0;
-            // 
-            // labNomRegistros
-            // 
-            this.labNomRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labNomRegistros.AutoSize = true;
-            this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNomRegistros.ForeColor = System.Drawing.Color.White;
-            this.labNomRegistros.Location = new System.Drawing.Point(534, 35);
-            this.labNomRegistros.Name = "labNomRegistros";
-            this.labNomRegistros.Size = new System.Drawing.Size(0, 16);
-            this.labNomRegistros.TabIndex = 3;
-            // 
-            // dgvInfoRegistros
-            // 
-            this.dgvInfoRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoRegistros.Location = new System.Drawing.Point(537, 72);
-            this.dgvInfoRegistros.Name = "dgvInfoRegistros";
-            this.dgvInfoRegistros.Size = new System.Drawing.Size(277, 221);
-            this.dgvInfoRegistros.TabIndex = 4;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Snow;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(173)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1095, 543);
             this.Controls.Add(this.sc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -224,8 +222,8 @@
             this.sc.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).EndInit();
             this.sc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
             this.ResumeLayout(false);
 
         }

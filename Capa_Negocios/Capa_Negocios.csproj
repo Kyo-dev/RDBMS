@@ -44,6 +44,7 @@
     <Compile Include="CargarColumnas.cs" />
     <Compile Include="CargarEsquema.cs" />
     <Compile Include="CargarInstancias.cs" />
+    <Compile Include="CargarRegistros.cs" />
     <Compile Include="CargarTablas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Capa_Conexion {
     public class RegistroColumnas {
-        public DataTable cargarRegistros(string strColumna, string strTabla, string strBaseDatos) {
+        public DataTable cargarRegistros(string strColumna, string strTabla) {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
-            objSQL.CommandText = "SELECT " + strColumna + " " +
-                                 "FROM " + strBaseDatos + "." +"dbo"+"."+ strTabla + ";";
+            objSQL.CommandText = "SELECT "+strColumna+
+                                 "FROM " +strTabla+";";
             return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
         }
     }

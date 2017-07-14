@@ -46,6 +46,7 @@
     <Compile Include="EsquemaColumna.cs" />
     <Compile Include="InstanciasSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroColumnas.cs" />
     <Compile Include="TablasBD.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
