@@ -11,7 +11,7 @@ namespace Capa_Conexion {
 
     public class Conexion {
 
-        //CUANDO VAYA A PROGRAMAR DESCOMENTE LA SUYA Y COMENTE LA MIA NO LA BORRE 
+        //CUANDO VAYA A PROGRAMAR DESCOMENTE LA SUYA Y COMENTE LA MIA NO LA BORRE  >:V
 
         SqlConnection objConexion = new SqlConnection ("Data Source=RIN\\SQL2016;Initial Catalog=AdventureWorks2014;Integrated Security=True");
         //SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
