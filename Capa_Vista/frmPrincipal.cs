@@ -72,7 +72,9 @@ namespace Capa_Vista {
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoEsquema.DataSource = objDT;
-                    //verRegistros ();
+                    dgvInfoRegistros.DataSource = objDT;
+                    objDT = new Capa_Negocios.CargarRegistros ().registroColumna ("IDPerson","Person");
+                    dgvInfoRegistros.DataSource = objDT;
                     labNomColum.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString () + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString () + "\nEsquema de columna: " + lbColumas.SelectedValue.ToString ();
                     labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString ();
                 } else {
@@ -88,7 +90,7 @@ namespace Capa_Vista {
         }
 
         private void verRegistros() {
-            DataTable objDT = objDT = new Capa_Negocios.CargarRegistros ().registroColumna (lbColumas.SelectedValue.ToString (),lbTablas.SelectedValue.ToString ());
+            DataTable objDT = objDT = new Capa_Negocios.CargarRegistros ().registroColumna ("IDPerson","Person");
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoRegistros.DataSource = objDT;

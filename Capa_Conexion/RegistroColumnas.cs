@@ -11,8 +11,8 @@ namespace Capa_Conexion {
         public DataTable cargarRegistros(string strColumna, string strTabla) {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
-            objSQL.CommandText = "SELECT "+strColumna+
-                                 "FROM " +strTabla+";";
+            objSQL.CommandText = "SELECT " + strColumna+
+                                 " FROM " + strTabla+";";
             return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
         }
     }

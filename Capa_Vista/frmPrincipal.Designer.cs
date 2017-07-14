@@ -133,7 +133,7 @@
             this.cboDataBases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboDataBases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
-            this.cboDataBases.ForeColor = System.Drawing.Color.Snow;
+            this.cboDataBases.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cboDataBases.FormattingEnabled = true;
             this.cboDataBases.Location = new System.Drawing.Point(88, 8);
             this.cboDataBases.Name = "cboDataBases";
@@ -146,7 +146,7 @@
             this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.ForeColor = System.Drawing.Color.Snow;
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCargar.Location = new System.Drawing.Point(12, 3);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(70, 29);
