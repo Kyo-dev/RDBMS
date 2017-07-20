@@ -8,12 +8,11 @@ using System.Data.SqlClient;
 
 namespace Capa_Conexion {
     public class TablasBD {
-        public DataTable CargarTablas(string strDataBase) {
+        public DataTable CargarTablas(String var = "master") {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
-            objSQL.CommandText = "SELECT TABLE_NAME " +
-                                 "FROM "+strDataBase+".INFORMATION_SCHEMA.TABLES;";
-            return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
+            objSQL.CommandText = "sp_Tables";
+            return new Capa_Conexion.Conexion (var).ejecutarRutina (objSQL);
         }
     }
 }

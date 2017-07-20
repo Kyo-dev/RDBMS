@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace Capa_Conexion {
     public class ColumnasBD {
-        public DataTable datosColumnas(string strTabla) {
+        public DataTable datosColumnas(string strTabla, String var = "master") {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
-            objSQL.CommandText = "SELECT COLUMN_NAME " +
-                                 "FROM INFORMATION_SCHEMA.COLUMNS " +
-                                 "WHERE TABLE_NAME = '"+strTabla+"';";
-            return new Capa_Conexion.Conexion ().ejecutarRutina (objSQL);
+            objSQL.CommandText = "sp_columns " + strTabla;
+            return new Capa_Conexion.Conexion (var).ejecutarRutina (objSQL);
         }
     }
 }

@@ -13,8 +13,12 @@ namespace Capa_Conexion {
 
         //CUANDO VAYA A PROGRAMAR DESCOMENTE LA SUYA Y COMENTE LA MIA NO LA BORRE  >:V
 
-        SqlConnection objConexion = new SqlConnection ("Data Source=RIN\\SQL2016;Initial Catalog=AdventureWorks2014;Integrated Security=True");
+        SqlConnection objConexion;//Cadena personalizada para que haga todas las consultas a la base de datos que se escogió
         //SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
+
+        public Conexion(String var = "master") {
+            objConexion = new SqlConnection("Data Source=LHERSEY-PC;Initial Catalog=" + var + ";Integrated Security=True");
+        }
 
         public bool abrirConexion() {
             try {
@@ -41,7 +45,7 @@ namespace Capa_Conexion {
             }
         }
 
-        public DataTable ejecutarRutina(SqlCommand oSQLC) {
+        public DataTable ejecutarRutina(SqlCommand oSQLC, String var = "master") {
 
             try {
                 oSQLC.Connection = objConexion;
@@ -61,7 +65,7 @@ namespace Capa_Conexion {
             // fin del try/catch
         }
 
-        public DataTable ejecutar(String txtSelect) {
+        public DataTable ejecutar(String txtSelect, String var = "master") {
             SqlCommand cSelect = new SqlCommand ();
             DataTable oDT = new DataTable ();
             SqlDataAdapter oSQLDA = new SqlDataAdapter (cSelect);

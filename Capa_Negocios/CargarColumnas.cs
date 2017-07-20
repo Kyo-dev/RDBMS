@@ -7,9 +7,9 @@ using System.Data;
 
 namespace Capa_Negocios {
     public class CargarColumnas {
-        public DataTable datosColumnas (string strTabla) {
+        public DataTable datosColumnas (string strTabla, String var = "master") {
             Capa_Conexion.ColumnasBD clCargarColumnas = new Capa_Conexion.ColumnasBD ();
-            return clCargarColumnas.datosColumnas (strTabla);
+            return clCargarColumnas.datosColumnas (strTabla, var);
         }
     }
 }

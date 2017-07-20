@@ -17,13 +17,13 @@ namespace Capa_Vista {
         }
 
         private void frmPrincipal_Load(object sender,EventArgs e) {
-            cboDataBases.DataSource = new Capa_Negocios.CargarBases ().DataBases ();
+            cboDataBases.DataSource = new Capa_Negocios.CargarBases ().DataBases();
             cboDataBases.DisplayMember = "DATABASE_NAME";
             cboDataBases.ValueMember = "DATABASE_NAME";
         }
 
         private void btnCargar_Click(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarTablas ().Tablas (cboDataBases.SelectedValue.ToString ());
+            DataTable objDT = new Capa_Negocios.CargarTablas ().Tablas(cboDataBases.SelectedValue.ToString ());
             lbTablas.ClearSelected ();
             lbColumas.ClearSelected ();
             if (cboDataBases.Enabled) {
@@ -51,7 +51,7 @@ namespace Capa_Vista {
         }
 
         private void lbTablas_DoubleClick(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarColumnas ().datosColumnas (lbTablas.SelectedValue.ToString ());
+            DataTable objDT = new Capa_Negocios.CargarColumnas().datosColumnas (lbTablas.SelectedValue.ToString (), cboDataBases.SelectedValue.ToString());
             if (lbTablas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     lbColumas.ClearSelected ();
