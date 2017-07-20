@@ -14,10 +14,15 @@ namespace Capa_Conexion {
         //CUANDO VAYA A PROGRAMAR DESCOMENTE LA SUYA Y COMENTE LA MIA NO LA BORRE  >:V
 
         SqlConnection objConexion;//Cadena personalizada para que haga todas las consultas a la base de datos que se escogió
+
+        public DataTable instancias() {
+           return SqlDataSourceEnumerator.Instance.GetDataSources();    
+        }
+
         //SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
 
-        public Conexion(String var = "master") {
-            objConexion = new SqlConnection("Data Source=LHERSEY-PC;Initial Catalog=" + var + ";Integrated Security=True");
+        public Conexion(String instanceName, String var = "master") {
+            objConexion = new SqlConnection("Data Source="+instanceName+";Initial Catalog=" + var + ";Integrated Security=True");
         }
 
         public bool abrirConexion() {

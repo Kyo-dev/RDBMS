@@ -12,10 +12,7 @@ namespace Capa_Conexion {
         //Esta funcion es opcional, se quesa para el final
 
         public DataTable CargarInstancias() {
-            SqlCommand objSQL = new SqlCommand ();
-            objSQL.CommandType = CommandType.StoredProcedure;
-            objSQL.CommandText = ""; // falta la rutina, sql me da errores
-            return new Capa_Conexion.Conexion ().ejecutarRutina(objSQL);
+            return new Capa_Conexion.Conexion(null).instancias();
         }
     }
 }

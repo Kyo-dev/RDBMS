@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Capa_Negocios {
     public class CargarBases {
-        public DataTable DataBases() {
+        public DataTable DataBases(String instanceName) {
             Capa_Conexion.DataBases cl_CargarBases = new Capa_Conexion.DataBases ();
-            return cl_CargarBases.SQLDataBase ();
+            return cl_CargarBases.SQLDataBase (instanceName: instanceName);
         }
     }
 }

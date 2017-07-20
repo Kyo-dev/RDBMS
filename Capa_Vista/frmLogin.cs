@@ -19,19 +19,21 @@ namespace Capa_Vista {
         }
 
         private void btnEntrar_Click(object sender,EventArgs e) {
-            //faltan las validaciones
-            //DataTable objDT = new Capa_Negocios.CargarBases ().DataBases ();
-            //if (objDT.Rows.Count > 0) {
-            //    this.Hide ();
-            //    new frmPrincipal (objDT).Show ();
-            //} else {
-            //    MessageBox.Show ("Error","Instancia no encontrada",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            //}
+            if(cboInstancias.Text.ToString() != String.Empty) {
+                if(new Capa_Negocios.CargarInstancias().conecctionTest(cboInstancias.Text.ToString())) {
+                    MessageBox.Show(this, "Conexión existosa", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
+                    this.Hide();
+                } else {
+                    MessageBox.Show(this, "Conexión erronea, verifique el nombre de la instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } else {
+                MessageBox.Show(this, "Por favor, ingrese o seleccione una instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        private void frmLogin_Load(object sender,EventArgs e) {
-            cboDataBase.DisplayMember = "DATABASE_NAME";
-            cboDataBase.ValueMember = "DATABASE_NAME"; 
-            cboDataBase.DataSource = new Capa_Negocios.CargarBases().DataBases();
+
+        private void btnInstancias_Click(object sender, EventArgs e) {
+            cboInstancias.DataSource = new Capa_Negocios.CargarInstancias().cargarInstancia();
         }
     }
 }

@@ -12,18 +12,27 @@ using System.Windows.Forms;
 namespace Capa_Vista {
 
     public partial class frmPrincipal:Form {
-        public frmPrincipal() {
+        public frmPrincipal(String instanceName, Form login) {
             InitializeComponent ();
+            this.instanceName = instanceName;
+            this.login = login;
         }
 
+        public String instanceName { get; set; }
+        public Form login { get; set; }
+
         private void frmPrincipal_Load(object sender,EventArgs e) {
-            cboDataBases.DataSource = new Capa_Negocios.CargarBases ().DataBases();
+            cboDataBases.DataSource = new Capa_Negocios.CargarBases ().DataBases(instanceName);
             cboDataBases.DisplayMember = "DATABASE_NAME";
             cboDataBases.ValueMember = "DATABASE_NAME";
         }
 
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e) {
+            login.Show();
+        }
+
         private void btnCargar_Click(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarTablas ().Tablas(cboDataBases.SelectedValue.ToString ());
+            DataTable objDT = new Capa_Negocios.CargarTablas ().Tablas(instanceName, cboDataBases.SelectedValue.ToString ());
             lbTablas.ClearSelected ();
             lbColumas.ClearSelected ();
             if (cboDataBases.Enabled) {
@@ -51,7 +60,7 @@ namespace Capa_Vista {
         }
 
         private void lbTablas_DoubleClick(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarColumnas().datosColumnas (lbTablas.SelectedValue.ToString (), cboDataBases.SelectedValue.ToString());
+            DataTable objDT = new Capa_Negocios.CargarColumnas().datosColumnas (lbTablas.SelectedValue.ToString (), instanceName, cboDataBases.SelectedValue.ToString());
             if (lbTablas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     lbColumas.ClearSelected ();
@@ -73,7 +82,7 @@ namespace Capa_Vista {
         }
 
         private void lbColumas_DoubleClick(object sender,EventArgs e) {
-            DataTable objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString (),lbTablas.SelectedValue.ToString ());
+            DataTable objDT = new Capa_Negocios.CargarEsquema ().Esquemas (lbColumas.SelectedValue.ToString (),lbTablas.SelectedValue.ToString (), instanceName, cboDataBases.SelectedValue.ToString());
             if (lbColumas.Enabled) {
                 if (objDT.Rows.Count > 0) {
                     dgvInfoEsquema.DataSource = objDT;

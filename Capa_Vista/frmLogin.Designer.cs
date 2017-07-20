@@ -24,10 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cboDataBase = new System.Windows.Forms.ComboBox();
+            this.cboInstancias = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnInstancias = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,22 +41,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // cboDataBase
+            // cboInstancias
             // 
-            this.cboDataBase.FormattingEnabled = true;
-            this.cboDataBase.Location = new System.Drawing.Point(205, 71);
-            this.cboDataBase.Name = "cboDataBase";
-            this.cboDataBase.Size = new System.Drawing.Size(152, 21);
-            this.cboDataBase.TabIndex = 2;
+            this.cboInstancias.FormattingEnabled = true;
+            this.cboInstancias.Location = new System.Drawing.Point(205, 71);
+            this.cboInstancias.Name = "cboInstancias";
+            this.cboInstancias.Size = new System.Drawing.Size(152, 21);
+            this.cboInstancias.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(202, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Nombre base de datos";
+            this.label2.Text = "Instancias";
             // 
             // btnEntrar
             // 
@@ -77,19 +78,29 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnInstancias
+            // 
+            this.btnInstancias.Location = new System.Drawing.Point(365, 71);
+            this.btnInstancias.Name = "btnInstancias";
+            this.btnInstancias.Size = new System.Drawing.Size(75, 23);
+            this.btnInstancias.TabIndex = 7;
+            this.btnInstancias.Text = "Cargar";
+            this.btnInstancias.UseVisualStyleBackColor = true;
+            this.btnInstancias.Click += new System.EventHandler(this.btnInstancias_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 187);
+            this.ClientSize = new System.Drawing.Size(452, 187);
+            this.Controls.Add(this.btnInstancias);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cboDataBase);
+            this.Controls.Add(this.cboInstancias);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
             this.Text = "RDBMS";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,10 +110,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cboDataBase;
+        private System.Windows.Forms.ComboBox cboInstancias;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnInstancias;
     }
 }
 

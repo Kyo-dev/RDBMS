@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Capa_Conexion {
     public class EsquemaColumna {
-        public DataTable InfoEsquema(string strColumna, string strTabla, String var = "master") {
+        public DataTable InfoEsquema(string strColumna, string strTabla, String instanceName, String var = "master") {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
             objSQL.CommandText = "SELECT TABLE_NAME AS [Nombre de la tabla]," +
@@ -18,7 +18,7 @@ namespace Capa_Conexion {
                                  ",COLUMN_DEFAULT AS [Valor por defecto] " +
                                  "FROM INFORMATION_SCHEMA.COLUMNS "+
                                  "WHERE COLUMN_NAME = '"+strColumna+"' AND TABLE_NAME = '"+strTabla+"';";
-            return new Capa_Conexion.Conexion (var).ejecutarRutina (objSQL);
+            return new Capa_Conexion.Conexion (instanceName, var).ejecutarRutina (objSQL);
         }
     }
 }

@@ -6,13 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Capa_Negocios {
-    class CargarInstancias {
+    public class CargarInstancias {
 
-        public DataTable cargarInstancia() {
-            DataTable objDT = new Capa_Conexion.InstanciasSQL ().CargarInstancias ();
-            // falta agragar las columnas, no me deja ejecutar la rutina
-            return objDT;
-            
+        public List<String> cargarInstancia() {
+            DataTable oDT =  new Capa_Conexion.InstanciasSQL ().CargarInstancias ();
+            List<String> instance = new List<String>();
+            foreach(DataRow source in oDT.Rows) {
+                string servername;
+                string instanceName = source["InstanceName"].ToString();
+
+                if(!string.IsNullOrEmpty(instanceName)) {
+                    servername = source["InstanceName"] + "\\" + source["ServerName"];
+                } else {
+                    servername = source["ServerName"].ToString();
+                }
+                instance.Add(servername);
+            }
+
+            return instance;
+        }
+
+        public bool conecctionTest(String instanceName) {
+            return new Capa_Conexion.Conexion(instanceName: instanceName).abrirConexion();
         }
 
     }

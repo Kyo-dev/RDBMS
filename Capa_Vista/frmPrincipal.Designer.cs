@@ -157,6 +157,10 @@
             // 
             // dgvInfoRegistros
             // 
+            this.dgvInfoRegistros.AllowUserToAddRows = false;
+            this.dgvInfoRegistros.AllowUserToDeleteRows = false;
+            this.dgvInfoRegistros.AllowUserToResizeColumns = false;
+            this.dgvInfoRegistros.AllowUserToResizeRows = false;
             this.dgvInfoRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
@@ -164,6 +168,7 @@
             this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoRegistros.Location = new System.Drawing.Point(537, 72);
             this.dgvInfoRegistros.Name = "dgvInfoRegistros";
+            this.dgvInfoRegistros.RowHeadersVisible = false;
             this.dgvInfoRegistros.Size = new System.Drawing.Size(277, 221);
             this.dgvInfoRegistros.TabIndex = 4;
             // 
@@ -192,6 +197,10 @@
             // 
             // dgvInfoEsquema
             // 
+            this.dgvInfoEsquema.AllowUserToAddRows = false;
+            this.dgvInfoEsquema.AllowUserToDeleteRows = false;
+            this.dgvInfoEsquema.AllowUserToResizeColumns = false;
+            this.dgvInfoEsquema.AllowUserToResizeRows = false;
             this.dgvInfoEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInfoEsquema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -200,6 +209,7 @@
             this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoEsquema.Location = new System.Drawing.Point(19, 72);
             this.dgvInfoEsquema.Name = "dgvInfoEsquema";
+            this.dgvInfoEsquema.RowHeadersVisible = false;
             this.dgvInfoEsquema.Size = new System.Drawing.Size(499, 221);
             this.dgvInfoEsquema.TabIndex = 0;
             // 
@@ -215,6 +225,7 @@
             this.Name = "frmPrincipal";
             this.Text = "RDBMS";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.sc.Panel1.ResumeLayout(false);
             this.sc.Panel1.PerformLayout();

@@ -10,11 +10,11 @@ namespace Capa_Conexion {
     // Conexion para conocer Base de Datos
 
     public class DataBases {
-        public DataTable SQLDataBase() {
+        public DataTable SQLDataBase(String instanceName) {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.StoredProcedure;
             objSQL.CommandText = "sp_databases";
-            return new Capa_Conexion.Conexion().ejecutarRutina(objSQL);
+            return new Capa_Conexion.Conexion(instanceName: instanceName).ejecutarRutina(objSQL);
         }
     }
 }
