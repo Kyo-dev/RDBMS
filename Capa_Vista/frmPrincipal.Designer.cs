@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             this.sc = new System.Windows.Forms.SplitContainer();
             this.lbTablas = new System.Windows.Forms.ListBox();
-            this.labNomBD = new System.Windows.Forms.Label();
             this.labNomTab = new System.Windows.Forms.Label();
             this.lbColumas = new System.Windows.Forms.ListBox();
             this.cboDataBases = new System.Windows.Forms.ComboBox();
@@ -34,12 +33,16 @@
             this.labNomRegistros = new System.Windows.Forms.Label();
             this.labNomColum = new System.Windows.Forms.Label();
             this.dgvInfoEsquema = new System.Windows.Forms.DataGridView();
+            this.gb = new System.Windows.Forms.GroupBox();
+            this.gb1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
             this.sc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
+            this.gb.SuspendLayout();
+            this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sc
@@ -51,12 +54,9 @@
             // sc.Panel1
             // 
             this.sc.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
-            this.sc.Panel1.Controls.Add(this.lbTablas);
-            this.sc.Panel1.Controls.Add(this.labNomBD);
+            this.sc.Panel1.Controls.Add(this.gb1);
+            this.sc.Panel1.Controls.Add(this.gb);
             this.sc.Panel1.Controls.Add(this.labNomTab);
-            this.sc.Panel1.Controls.Add(this.lbColumas);
-            this.sc.Panel1.Controls.Add(this.cboDataBases);
-            this.sc.Panel1.Controls.Add(this.btnCargar);
             this.sc.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // sc.Panel2
@@ -67,7 +67,7 @@
             this.sc.Panel2.Controls.Add(this.labNomColum);
             this.sc.Panel2.Controls.Add(this.dgvInfoEsquema);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(1095, 543);
+            this.sc.Size = new System.Drawing.Size(1095, 593);
             this.sc.SplitterDistance = 265;
             this.sc.TabIndex = 0;
             // 
@@ -82,24 +82,11 @@
             this.lbTablas.ForeColor = System.Drawing.Color.Black;
             this.lbTablas.FormattingEnabled = true;
             this.lbTablas.ItemHeight = 17;
-            this.lbTablas.Location = new System.Drawing.Point(12, 72);
+            this.lbTablas.Location = new System.Drawing.Point(9, 230);
             this.lbTablas.Name = "lbTablas";
             this.lbTablas.Size = new System.Drawing.Size(239, 221);
             this.lbTablas.TabIndex = 0;
             this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
-            // 
-            // labNomBD
-            // 
-            this.labNomBD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labNomBD.AutoSize = true;
-            this.labNomBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNomBD.ForeColor = System.Drawing.Color.White;
-            this.labNomBD.Location = new System.Drawing.Point(12, 35);
-            this.labNomBD.Name = "labNomBD";
-            this.labNomBD.Size = new System.Drawing.Size(0, 16);
-            this.labNomBD.TabIndex = 6;
             // 
             // labNomTab
             // 
@@ -107,7 +94,7 @@
             this.labNomTab.AutoSize = true;
             this.labNomTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomTab.ForeColor = System.Drawing.Color.White;
-            this.labNomTab.Location = new System.Drawing.Point(12, 308);
+            this.labNomTab.Location = new System.Drawing.Point(12, 333);
             this.labNomTab.Name = "labNomTab";
             this.labNomTab.Size = new System.Drawing.Size(0, 16);
             this.labNomTab.TabIndex = 4;
@@ -122,7 +109,7 @@
             this.lbColumas.ForeColor = System.Drawing.Color.Black;
             this.lbColumas.FormattingEnabled = true;
             this.lbColumas.ItemHeight = 17;
-            this.lbColumas.Location = new System.Drawing.Point(12, 344);
+            this.lbColumas.Location = new System.Drawing.Point(9, 37);
             this.lbColumas.Name = "lbColumas";
             this.lbColumas.Size = new System.Drawing.Size(239, 187);
             this.lbColumas.TabIndex = 2;
@@ -132,22 +119,22 @@
             // 
             this.cboDataBases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboDataBases.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
+            this.cboDataBases.BackColor = System.Drawing.Color.White;
             this.cboDataBases.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cboDataBases.FormattingEnabled = true;
-            this.cboDataBases.Location = new System.Drawing.Point(88, 8);
+            this.cboDataBases.Location = new System.Drawing.Point(22, 23);
             this.cboDataBases.Name = "cboDataBases";
-            this.cboDataBases.Size = new System.Drawing.Size(163, 21);
+            this.cboDataBases.Size = new System.Drawing.Size(190, 24);
             this.cboDataBases.TabIndex = 1;
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
+            this.btnCargar.BackColor = System.Drawing.Color.White;
             this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCargar.Location = new System.Drawing.Point(12, 3);
+            this.btnCargar.Location = new System.Drawing.Point(72, 60);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(70, 29);
             this.btnCargar.TabIndex = 1;
@@ -215,12 +202,37 @@
             this.dgvInfoEsquema.Size = new System.Drawing.Size(499, 221);
             this.dgvInfoEsquema.TabIndex = 0;
             // 
+            // gb
+            // 
+            this.gb.Controls.Add(this.btnCargar);
+            this.gb.Controls.Add(this.cboDataBases);
+            this.gb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb.ForeColor = System.Drawing.SystemColors.Control;
+            this.gb.Location = new System.Drawing.Point(18, 12);
+            this.gb.Name = "gb";
+            this.gb.Size = new System.Drawing.Size(233, 104);
+            this.gb.TabIndex = 5;
+            this.gb.TabStop = false;
+            this.gb.Text = "Seleccionar Base:";
+            // 
+            // gb1
+            // 
+            this.gb1.Controls.Add(this.lbTablas);
+            this.gb1.Controls.Add(this.lbColumas);
+            this.gb1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb1.ForeColor = System.Drawing.SystemColors.Control;
+            this.gb1.Location = new System.Drawing.Point(3, 122);
+            this.gb1.Name = "gb1";
+            this.gb1.Size = new System.Drawing.Size(259, 464);
+            this.gb1.TabIndex = 6;
+            this.gb1.TabStop = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(173)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1095, 543);
+            this.ClientSize = new System.Drawing.Size(1095, 593);
             this.Controls.Add(this.sc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
@@ -237,6 +249,8 @@
             this.sc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
+            this.gb.ResumeLayout(false);
+            this.gb1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -251,8 +265,9 @@
         private System.Windows.Forms.ListBox lbColumas;
         private System.Windows.Forms.Label labNomColum;
         private System.Windows.Forms.Label labNomTab;
-        private System.Windows.Forms.Label labNomBD;
         private System.Windows.Forms.DataGridView dgvInfoRegistros;
         private System.Windows.Forms.Label labNomRegistros;
+        private System.Windows.Forms.GroupBox gb1;
+        private System.Windows.Forms.GroupBox gb;
     }
 }
