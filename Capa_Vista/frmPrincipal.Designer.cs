@@ -163,7 +163,7 @@
             this.dgvInfoRegistros.AllowUserToResizeRows = false;
             this.dgvInfoRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoRegistros.Location = new System.Drawing.Point(537, 72);
@@ -176,6 +176,7 @@
             // 
             this.labNomRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labNomRegistros.AutoSize = true;
+            this.labNomRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomRegistros.ForeColor = System.Drawing.Color.White;
             this.labNomRegistros.Location = new System.Drawing.Point(534, 35);
@@ -188,6 +189,7 @@
             this.labNomColum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labNomColum.AutoSize = true;
+            this.labNomColum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labNomColum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomColum.ForeColor = System.Drawing.Color.White;
             this.labNomColum.Location = new System.Drawing.Point(16, 16);
@@ -204,7 +206,7 @@
             this.dgvInfoEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInfoEsquema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoEsquema.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.dgvInfoEsquema.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInfoEsquema.Location = new System.Drawing.Point(19, 72);
