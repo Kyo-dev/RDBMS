@@ -1,5 +1,7 @@
-﻿namespace Capa_Vista {
-    partial class frmPrincipal {
+﻿namespace Capa_Vista
+{
+    partial class frmPrincipal
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,11 +11,13 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
-                components.Dispose ();
+        protected override void Dispose (bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
             }
-            base.Dispose (disposing);
+            base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
@@ -22,60 +26,75 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent ()
+        {
             this.sc = new System.Windows.Forms.SplitContainer();
+            this.gb1 = new System.Windows.Forms.GroupBox();
             this.lbTablas = new System.Windows.Forms.ListBox();
-            this.labNomTab = new System.Windows.Forms.Label();
             this.lbColumas = new System.Windows.Forms.ListBox();
-            this.cboDataBases = new System.Windows.Forms.ComboBox();
-            this.btnCargar = new System.Windows.Forms.Button();
+            this.labNomTab = new System.Windows.Forms.Label();
             this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
             this.labNomRegistros = new System.Windows.Forms.Label();
             this.labNomColum = new System.Windows.Forms.Label();
             this.dgvInfoEsquema = new System.Windows.Forms.DataGridView();
+            this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.cboDataBases = new MetroFramework.Controls.MetroComboBox();
             this.gb = new System.Windows.Forms.GroupBox();
-            this.gb1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
             this.sc.SuspendLayout();
+            this.gb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
             this.gb.SuspendLayout();
-            this.gb1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sc
             // 
             this.sc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sc.Location = new System.Drawing.Point(0, 0);
+            this.sc.Location = new System.Drawing.Point(20, 60);
             this.sc.Name = "sc";
             // 
             // sc.Panel1
             // 
-            this.sc.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
-            this.sc.Panel1.Controls.Add(this.gb1);
+            this.sc.Panel1.BackColor = System.Drawing.Color.Gray;
             this.sc.Panel1.Controls.Add(this.gb);
+            this.sc.Panel1.Controls.Add(this.gb1);
             this.sc.Panel1.Controls.Add(this.labNomTab);
             this.sc.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // sc.Panel2
             // 
-            this.sc.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.sc.Panel2.BackColor = System.Drawing.Color.White;
+            this.sc.Panel2.Controls.Add(this.metroUserControl1);
             this.sc.Panel2.Controls.Add(this.dgvInfoRegistros);
             this.sc.Panel2.Controls.Add(this.labNomRegistros);
             this.sc.Panel2.Controls.Add(this.labNomColum);
             this.sc.Panel2.Controls.Add(this.dgvInfoEsquema);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(1095, 593);
-            this.sc.SplitterDistance = 265;
+            this.sc.Size = new System.Drawing.Size(1055, 513);
+            this.sc.SplitterDistance = 253;
             this.sc.TabIndex = 0;
+            // 
+            // gb1
+            // 
+            this.gb1.Controls.Add(this.lbTablas);
+            this.gb1.Controls.Add(this.lbColumas);
+            this.gb1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb1.ForeColor = System.Drawing.SystemColors.Control;
+            this.gb1.Location = new System.Drawing.Point(3, 122);
+            this.gb1.Name = "gb1";
+            this.gb1.Size = new System.Drawing.Size(259, 464);
+            this.gb1.TabIndex = 6;
+            this.gb1.TabStop = false;
             // 
             // lbTablas
             // 
             this.lbTablas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbTablas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
+            this.lbTablas.BackColor = System.Drawing.Color.Gray;
             this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTablas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbTablas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,59 +107,32 @@
             this.lbTablas.TabIndex = 0;
             this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
             // 
-            // labNomTab
-            // 
-            this.labNomTab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labNomTab.AutoSize = true;
-            this.labNomTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNomTab.ForeColor = System.Drawing.Color.White;
-            this.labNomTab.Location = new System.Drawing.Point(12, 333);
-            this.labNomTab.Name = "labNomTab";
-            this.labNomTab.Size = new System.Drawing.Size(0, 16);
-            this.labNomTab.TabIndex = 4;
-            // 
             // lbColumas
             // 
             this.lbColumas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbColumas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(127)))), ((int)(((byte)(141)))));
+            this.lbColumas.BackColor = System.Drawing.Color.Gray;
             this.lbColumas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbColumas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbColumas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbColumas.ForeColor = System.Drawing.Color.Black;
             this.lbColumas.FormattingEnabled = true;
             this.lbColumas.ItemHeight = 17;
-            this.lbColumas.Location = new System.Drawing.Point(9, 37);
+            this.lbColumas.Location = new System.Drawing.Point(8, 24);
             this.lbColumas.Name = "lbColumas";
             this.lbColumas.Size = new System.Drawing.Size(239, 187);
             this.lbColumas.TabIndex = 2;
             this.lbColumas.DoubleClick += new System.EventHandler(this.lbColumas_DoubleClick);
             // 
-            // cboDataBases
+            // labNomTab
             // 
-            this.cboDataBases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboDataBases.BackColor = System.Drawing.Color.White;
-            this.cboDataBases.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cboDataBases.FormattingEnabled = true;
-            this.cboDataBases.Location = new System.Drawing.Point(22, 23);
-            this.cboDataBases.Name = "cboDataBases";
-            this.cboDataBases.Size = new System.Drawing.Size(190, 24);
-            this.cboDataBases.TabIndex = 1;
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.Color.White;
-            this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCargar.Location = new System.Drawing.Point(72, 60);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(70, 29);
-            this.btnCargar.TabIndex = 1;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.labNomTab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labNomTab.AutoSize = true;
+            this.labNomTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNomTab.ForeColor = System.Drawing.Color.White;
+            this.labNomTab.Location = new System.Drawing.Point(12, 293);
+            this.labNomTab.Name = "labNomTab";
+            this.labNomTab.Size = new System.Drawing.Size(0, 16);
+            this.labNomTab.TabIndex = 4;
             // 
             // dgvInfoRegistros
             // 
@@ -153,7 +145,7 @@
             this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInfoRegistros.Location = new System.Drawing.Point(537, 72);
+            this.dgvInfoRegistros.Location = new System.Drawing.Point(509, 72);
             this.dgvInfoRegistros.Name = "dgvInfoRegistros";
             this.dgvInfoRegistros.RowHeadersVisible = false;
             this.dgvInfoRegistros.Size = new System.Drawing.Size(277, 221);
@@ -166,7 +158,7 @@
             this.labNomRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomRegistros.ForeColor = System.Drawing.Color.White;
-            this.labNomRegistros.Location = new System.Drawing.Point(534, 35);
+            this.labNomRegistros.Location = new System.Drawing.Point(506, 35);
             this.labNomRegistros.Name = "labNomRegistros";
             this.labNomRegistros.Size = new System.Drawing.Size(0, 16);
             this.labNomRegistros.TabIndex = 3;
@@ -199,45 +191,62 @@
             this.dgvInfoEsquema.Location = new System.Drawing.Point(19, 72);
             this.dgvInfoEsquema.Name = "dgvInfoEsquema";
             this.dgvInfoEsquema.RowHeadersVisible = false;
-            this.dgvInfoEsquema.Size = new System.Drawing.Size(499, 221);
+            this.dgvInfoEsquema.Size = new System.Drawing.Size(471, 221);
             this.dgvInfoEsquema.TabIndex = 0;
+            // 
+            // metroUserControl1
+            // 
+            this.metroUserControl1.Location = new System.Drawing.Point(270, 406);
+            this.metroUserControl1.Name = "metroUserControl1";
+            this.metroUserControl1.Size = new System.Drawing.Size(150, 150);
+            this.metroUserControl1.TabIndex = 5;
+            this.metroUserControl1.UseSelectable = true;
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.Color.White;
+            this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCargar.Location = new System.Drawing.Point(64, 60);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(110, 29);
+            this.btnCargar.TabIndex = 1;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // cboDataBases
+            // 
+            this.cboDataBases.FormattingEnabled = true;
+            this.cboDataBases.ItemHeight = 23;
+            this.cboDataBases.Location = new System.Drawing.Point(9, 25);
+            this.cboDataBases.Name = "cboDataBases";
+            this.cboDataBases.Size = new System.Drawing.Size(229, 29);
+            this.cboDataBases.TabIndex = 2;
+            this.cboDataBases.UseSelectable = true;
             // 
             // gb
             // 
-            this.gb.Controls.Add(this.btnCargar);
             this.gb.Controls.Add(this.cboDataBases);
+            this.gb.Controls.Add(this.btnCargar);
             this.gb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb.ForeColor = System.Drawing.SystemColors.Control;
-            this.gb.Location = new System.Drawing.Point(18, 12);
+            this.gb.Location = new System.Drawing.Point(3, 16);
             this.gb.Name = "gb";
-            this.gb.Size = new System.Drawing.Size(233, 104);
+            this.gb.Size = new System.Drawing.Size(247, 104);
             this.gb.TabIndex = 5;
             this.gb.TabStop = false;
             this.gb.Text = "Seleccionar Base:";
-            // 
-            // gb1
-            // 
-            this.gb1.Controls.Add(this.lbTablas);
-            this.gb1.Controls.Add(this.lbColumas);
-            this.gb1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb1.ForeColor = System.Drawing.SystemColors.Control;
-            this.gb1.Location = new System.Drawing.Point(3, 122);
-            this.gb1.Name = "gb1";
-            this.gb1.Size = new System.Drawing.Size(259, 464);
-            this.gb1.TabIndex = 6;
-            this.gb1.TabStop = false;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(173)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1095, 593);
             this.Controls.Add(this.sc);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.HelpButton = true;
             this.Name = "frmPrincipal";
-            this.Text = "RDBMS";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
@@ -247,10 +256,10 @@
             this.sc.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).EndInit();
             this.sc.ResumeLayout(false);
+            this.gb1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
             this.gb.ResumeLayout(false);
-            this.gb1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -260,14 +269,15 @@
         private System.Windows.Forms.SplitContainer sc;
         private System.Windows.Forms.DataGridView dgvInfoEsquema;
         private System.Windows.Forms.ListBox lbTablas;
-        private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.ComboBox cboDataBases;
         private System.Windows.Forms.ListBox lbColumas;
         private System.Windows.Forms.Label labNomColum;
         private System.Windows.Forms.Label labNomTab;
         private System.Windows.Forms.DataGridView dgvInfoRegistros;
         private System.Windows.Forms.Label labNomRegistros;
         private System.Windows.Forms.GroupBox gb1;
+        private MetroFramework.Controls.MetroUserControl metroUserControl1;
         private System.Windows.Forms.GroupBox gb;
+        private MetroFramework.Controls.MetroComboBox cboDataBases;
+        private System.Windows.Forms.Button btnCargar;
     }
 }

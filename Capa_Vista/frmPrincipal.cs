@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace Capa_Vista
 {
 
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipal : MetroFramework.Forms.MetroForm
     {
         public frmPrincipal (String instanceName, Form login)
         {
