@@ -53,7 +53,6 @@ namespace Capa_Vista
                     lbTablas.ValueMember = "TABLE_NAME";
                     //lb = listBox
                     //lab = label
-                    gb1.Text =  cboDataBases.SelectedValue.ToString();
                 }
                 else
                 {
