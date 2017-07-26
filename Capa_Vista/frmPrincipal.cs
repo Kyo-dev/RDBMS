@@ -77,12 +77,14 @@ namespace Capa_Vista
                 {
                     if (objDT.Rows.Count > 0)
                     {
+
                         lbColumas.ClearSelected();
                         lbColumas.Enabled = true;
                         lbColumas.DisplayMember = "COLUMN_NAME";
                         lbColumas.ValueMember = "COLUMN_NAME";
                         lbColumas.DataSource = objDT;
                         labNomTab.Text = "Columnas de la Tabla:\n" + lbTablas.SelectedValue.ToString();
+                        dgvInfoRegistros.DataSource = new Capa_Negocios.CargarRegistros().cargarRegistros(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                     }
                     else
                     {
@@ -113,7 +115,6 @@ namespace Capa_Vista
                     if (objDT.Rows.Count > 0)
                     {
                         dgvInfoEsquema.DataSource = objDT;
-                        dgvInfoRegistros.DataSource = objDT;
                         labNomColum.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString() + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString() + "\nEsquema de columna: " + lbColumas.SelectedValue.ToString();
                         labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString();
                     }
@@ -134,18 +135,6 @@ namespace Capa_Vista
 
             }
 
-        }
-
-        private void verRegistros ()
-        {
-            DataTable objDT = objDT = new Capa_Negocios.CargarRegistros().registroColumna(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString());
-            if (lbColumas.Enabled)
-            {
-                if (objDT.Rows.Count > 0)
-                {
-                    dgvInfoRegistros.DataSource = objDT;
-                }
-            }
         }
 
         public void consultaColumna ()
