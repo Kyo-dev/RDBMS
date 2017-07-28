@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Capa_Vista {
-    public partial class frmLogin:Form {
+    public partial class frmLogin : MetroFramework.Forms.MetroForm
+    {
         public frmLogin() {
             InitializeComponent ();
         }

@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cboInstancias = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -34,10 +35,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Capa_Vista.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 23);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 138);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -46,21 +48,22 @@
             this.cboInstancias.FormattingEnabled = true;
             this.cboInstancias.Location = new System.Drawing.Point(205, 71);
             this.cboInstancias.Name = "cboInstancias";
-            this.cboInstancias.Size = new System.Drawing.Size(152, 21);
+            this.cboInstancias.Size = new System.Drawing.Size(112, 21);
             this.cboInstancias.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(202, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Instancias";
+            this.label2.Text = "Nombre de la instancia";
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(205, 145);
+            this.btnEntrar.Location = new System.Drawing.Point(205, 138);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 5;
@@ -70,7 +73,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(282, 145);
+            this.btnSalir.Location = new System.Drawing.Point(323, 138);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -80,7 +83,7 @@
             // 
             // btnInstancias
             // 
-            this.btnInstancias.Location = new System.Drawing.Point(365, 71);
+            this.btnInstancias.Location = new System.Drawing.Point(323, 71);
             this.btnInstancias.Name = "btnInstancias";
             this.btnInstancias.Size = new System.Drawing.Size(75, 23);
             this.btnInstancias.TabIndex = 7;
@@ -92,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 187);
+            this.ClientSize = new System.Drawing.Size(417, 182);
             this.Controls.Add(this.btnInstancias);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
@@ -100,8 +103,8 @@
             this.Controls.Add(this.cboInstancias);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RDBMS";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
