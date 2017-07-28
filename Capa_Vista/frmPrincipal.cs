@@ -59,7 +59,7 @@ namespace Capa_Vista
                     MessageBox.Show("La base de datos selecciona no contiene tablas", "Adverencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     lbTablas.Enabled = false;
                     lbColumas.Enabled = false;
-                    labNomColum.Text = "";
+                    labDataBase.Text = "";
                     // limpiar textos falta :V
                     dgvInfoEsquema.ClearSelection();
                     lbTablas.ClearSelected();
@@ -73,6 +73,7 @@ namespace Capa_Vista
             if (cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null)
             {
                 DataTable objDT = new Capa_Negocios.CargarColumnas().datosColumnas(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                
                 if (lbTablas.Enabled)
                 {
                     if (objDT.Rows.Count > 0)
@@ -85,6 +86,7 @@ namespace Capa_Vista
                         lbColumas.DataSource = objDT;
                         labNomTab.Text = "Columnas de la Tabla:\n" + lbTablas.SelectedValue.ToString();
                         dgvInfoRegistros.DataSource = new Capa_Negocios.CargarRegistros().cargarRegistros(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        labCantRegistros.Text = "Cantidad de registros: " + dgvInfoRegistros.Rows.Count;
                     }
                     else
                     {
@@ -92,7 +94,7 @@ namespace Capa_Vista
                         //pequeño error
                         lbTablas.DataSource = objDT;
                         lbColumas.Enabled = false;
-                        labNomColum.Text = "";
+                        labDataBase.Text = "";
                         lbColumas.ClearSelected();
                         dgvInfoEsquema.ClearSelection();
                     }
@@ -115,7 +117,9 @@ namespace Capa_Vista
                     if (objDT.Rows.Count > 0)
                     {
                         dgvInfoEsquema.DataSource = objDT;
-                        labNomColum.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString() + "\nTabla seleccionada: " + lbTablas.SelectedValue.ToString() + "\nEsquema de columna: " + lbColumas.SelectedValue.ToString();
+                        labDataBase.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString();
+                        labTable.Text = "Tabla seleccionada: " + lbTablas.SelectedValue.ToString();
+                        labEsquema.Text = "Esquema de columna: " + lbColumas.SelectedValue.ToString();
                         labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString();
                     }
                     else
@@ -123,7 +127,7 @@ namespace Capa_Vista
                         MessageBox.Show("Imposible obtener esquema de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         lbColumas.Enabled = false;
                         lbTablas.Enabled = false;
-                        labNomColum.Text = "";
+                        labDataBase.Text = "";
                         lbColumas.ClearSelected();
                         lbTablas.ClearSelected();
                     }
