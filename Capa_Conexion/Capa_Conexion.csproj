@@ -55,6 +55,7 @@
     <Compile Include="DataBases.cs" />
     <Compile Include="EsquemaColumna.cs" />
     <Compile Include="InstanciasSQL.cs" />
+    <Compile Include="MaxMin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TablasBD.cs" />
   </ItemGroup>
