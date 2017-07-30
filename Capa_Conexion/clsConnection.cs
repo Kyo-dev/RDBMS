@@ -18,7 +18,7 @@ namespace Capa_Conexion {
         //SqlConnection objConexion = new SqlConnection ("Data Source=DESKTOP-JJF4ANO\\SQLEXPRESS;Integrated Security=True");
 
         public clsConnection(String instanceName, String database = "master") {
-            objConexion = new SqlConnection("Data Source={instanceName};Initial Catalog={database};Integrated Security=True");
+            objConexion = new SqlConnection(String.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", instanceName, database));
         }
 
         public bool openConnection() {

@@ -16,8 +16,7 @@ namespace Capa_Negocios {
 
         public Task<DataTable> getTables(String strInstanceName, String strDatabase = "master") {
             return Task.Run(() => {
-                Capa_Conexion.TablasBD clCargarTablas = new Capa_Conexion.TablasBD();
-                DataTable oDT = clCargarTablas.CargarTablas(strInstanceName, strDatabase);
+                DataTable oDT = new Capa_Conexion.clsTables().getTables(strInstanceName, strDatabase);
 
                 List<DataRow> deleteRows = new List<DataRow>();
                 foreach(DataRow item in oDT.Rows) {
