@@ -54,7 +54,6 @@
     <Compile Include="clsTables.cs" />
     <Compile Include="clsConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TablasBD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

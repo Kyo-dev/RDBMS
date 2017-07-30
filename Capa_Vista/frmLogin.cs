@@ -21,7 +21,7 @@ namespace Capa_Vista {
         }
 
         private async void btnEntrar_Click(object sender,EventArgs e) {
-            if(cboInstancias.Text.ToString().Trim() != String.Empty) {
+            if(cboInstancias.Text.ToString() != String.Empty) {
                 if(await new  Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString())) {
                     this.Hide();
                     new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
