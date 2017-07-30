@@ -35,8 +35,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(151, 138);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -45,17 +46,19 @@
             // 
             // cboInstancias
             // 
+            this.cboInstancias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboInstancias.FormattingEnabled = true;
-            this.cboInstancias.Location = new System.Drawing.Point(205, 71);
+            this.cboInstancias.Location = new System.Drawing.Point(197, 81);
             this.cboInstancias.Name = "cboInstancias";
             this.cboInstancias.Size = new System.Drawing.Size(112, 21);
             this.cboInstancias.TabIndex = 2;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(202, 23);
+            this.label2.Location = new System.Drawing.Point(194, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 13);
             this.label2.TabIndex = 4;
@@ -63,7 +66,8 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(205, 138);
+            this.btnEntrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEntrar.Location = new System.Drawing.Point(197, 143);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 5;
@@ -73,7 +77,8 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(323, 138);
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Location = new System.Drawing.Point(315, 143);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -83,7 +88,8 @@
             // 
             // btnInstancias
             // 
-            this.btnInstancias.Location = new System.Drawing.Point(323, 71);
+            this.btnInstancias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInstancias.Location = new System.Drawing.Point(315, 81);
             this.btnInstancias.Name = "btnInstancias";
             this.btnInstancias.Size = new System.Drawing.Size(75, 23);
             this.btnInstancias.TabIndex = 7;
@@ -95,15 +101,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 182);
+            this.ClientSize = new System.Drawing.Size(401, 186);
             this.Controls.Add(this.btnInstancias);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboInstancias);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "frmLogin";
-            this.Text = "RDBMS";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
