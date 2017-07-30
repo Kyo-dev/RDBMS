@@ -53,7 +53,7 @@
             this.btnEntrar.TabIndex = 8;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseSelectable = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSalir
             // 
@@ -64,7 +64,7 @@
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseSelectable = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnInstancias
             // 

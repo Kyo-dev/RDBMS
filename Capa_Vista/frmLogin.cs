@@ -22,11 +22,11 @@ namespace Capa_Vista {
             cboInstancias.DataSource = await new Capa_Negocios.clsDatabases().getInstancesName();
         }
 
-        private async  void btnEntrar_Click_1 (object sender, EventArgs e)
+        private async void btnEntrar_Click (object sender, EventArgs e)
         {
             if (cboInstancias.Text.ToString().Trim() != String.Empty)
             {
-                if (await new Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString()))
+                if (await new Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString().Trim()))
                 {
                     this.Hide();
                     new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
@@ -42,9 +42,9 @@ namespace Capa_Vista {
             }
         }
 
-        private void btnSalir_Click_1 (object sender, EventArgs e)
+        private void btnSalir_Click (object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }
