@@ -12,7 +12,7 @@ namespace Capa_Conexion {
             SqlCommand objSQL = new SqlCommand ();
             objSQL.CommandType = CommandType.Text;
             objSQL.CommandText = "sp_Tables";
-            return new Capa_Conexion.Conexion (instanceName, var).ejecutarRutina (objSQL);
+            return new clsConnection (instanceName, var).Select (objSQL);
         }
     }
 }

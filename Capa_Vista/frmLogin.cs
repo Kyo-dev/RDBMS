@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,12 +20,11 @@ namespace Capa_Vista {
             Close ();
         }
 
-        private void btnEntrar_Click(object sender,EventArgs e) {
-            if(cboInstancias.Text.ToString() != String.Empty) {
-                if(new Capa_Negocios.CargarInstancias().conecctionTest(cboInstancias.Text.ToString())) {
-                    MessageBox.Show(this, "Conexión existosa", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
+        private async void btnEntrar_Click(object sender,EventArgs e) {
+            if(cboInstancias.Text.ToString().Trim() != String.Empty) {
+                if(await new  Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString())) {
                     this.Hide();
+                    new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
                 } else {
                     MessageBox.Show(this, "Conexión erronea, verifique el nombre de la instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -33,8 +33,8 @@ namespace Capa_Vista {
             }
         }
 
-        private void btnInstancias_Click(object sender, EventArgs e) {
-            cboInstancias.DataSource = new Capa_Negocios.CargarInstancias().cargarInstancia();
+        private async void btnInstancias_Click(object sender, EventArgs e) {
+             cboInstancias.DataSource = await new Capa_Negocios.clsDatabases().getInstancesName();
         }
     }
 }

@@ -49,14 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CargarBases.cs" />
-    <Compile Include="CargarColumnas.cs" />
-    <Compile Include="CargarEsquema.cs" />
-    <Compile Include="CargarInstancias.cs" />
-    <Compile Include="CargarMaxMin.cs" />
-    <Compile Include="CargarRegistros.cs" />
-    <Compile Include="CargarTablas.cs" />
+    <Compile Include="clsColumns.cs" />
+    <Compile Include="clsDatabases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="clsTables.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Conexion\Capa_Conexion.csproj">

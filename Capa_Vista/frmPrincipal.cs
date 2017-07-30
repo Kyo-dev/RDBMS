@@ -14,6 +14,10 @@ namespace Capa_Vista
 
     public partial class frmPrincipal : MetroFramework.Forms.MetroForm
     {
+        public String instanceName { get; set; }
+        public Form login { get; set; }
+
+
         public frmPrincipal (String instanceName, Form login)
         {
             InitializeComponent();
@@ -21,12 +25,9 @@ namespace Capa_Vista
             this.login = login;
         }
 
-        public String instanceName { get; set; }
-        public Form login { get; set; }
-
-        private void frmPrincipal_Load (object sender, EventArgs e)
+        private async void frmPrincipal_Load (object sender, EventArgs e)
         {
-            cboDataBases.DataSource = new Capa_Negocios.CargarBases().DataBases(instanceName);
+            cboDataBases.DataSource = await new Capa_Negocios.clsDatabases().getDatabases(instanceName);
             cboDataBases.DisplayMember = "DATABASE_NAME";
             cboDataBases.ValueMember = "DATABASE_NAME";
         }
@@ -36,9 +37,9 @@ namespace Capa_Vista
             login.Show();
         }
 
-        private void btnCargar_Click (object sender, EventArgs e)
+        private async void btnCargar_Click (object sender, EventArgs e)
         {
-            DataTable objDT = new Capa_Negocios.CargarTablas().Tablas(instanceName, cboDataBases.SelectedValue.ToString());
+            DataTable objDT = await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString());
             lbTablas.ClearSelected();
             lbColumas.ClearSelected();
             if (cboDataBases.Enabled)
@@ -68,11 +69,11 @@ namespace Capa_Vista
             }
         }
 
-        private void lbTablas_DoubleClick (object sender, EventArgs e)
+        private async void lbTablas_DoubleClick (object sender, EventArgs e)
         {
             if (cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null)
             {
-                DataTable objDT = new Capa_Negocios.CargarColumnas().datosColumnas(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                DataTable objDT = await new Capa_Negocios.clsColumns().getColumns(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                 
                 if (lbTablas.Enabled)
                 {
@@ -85,7 +86,7 @@ namespace Capa_Vista
                         lbColumas.ValueMember = "COLUMN_NAME";
                         lbColumas.DataSource = objDT;
                         labNomTab.Text = "Columnas de la Tabla:\n" + lbTablas.SelectedValue.ToString();
-                        dgvInfoRegistros.DataSource = new Capa_Negocios.CargarRegistros().cargarRegistros(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        dgvInfoRegistros.DataSource = await new Capa_Negocios.clsTables().loadRegisters(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                         labCantRegistros.Text = "Cantidad de registros: " + dgvInfoRegistros.Rows.Count;
                     }
                     else
@@ -107,11 +108,12 @@ namespace Capa_Vista
 
             }
         }
-        private void lbColumas_DoubleClick (object sender, EventArgs e)
+
+        private async void lbColumas_DoubleClick (object sender, EventArgs e)
         {
             if (lbTablas.SelectedItem != null)
             {
-                DataTable objDT = new Capa_Negocios.CargarEsquema().Esquemas(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                DataTable objDT = await new Capa_Negocios.clsColumns().EsquemeInfo(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                 if (lbColumas.Enabled)
                 {
                     if (objDT.Rows.Count > 0)
