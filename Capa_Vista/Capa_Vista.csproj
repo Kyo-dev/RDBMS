@@ -107,5 +107,32 @@
   <ItemGroup>
     <None Include="Resources\Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_sync_1891404.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_sync_18914041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud-reload_icon-icons.com_52175.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud-reload_icon-icons.com_52175 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-page-arrow-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-page-arrow-button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clockwise-refresh-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clockwise-refresh-arrow1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

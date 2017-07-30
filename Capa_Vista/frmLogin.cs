@@ -16,25 +16,35 @@ namespace Capa_Vista {
             InitializeComponent ();
         }
 
-        private void btnSalir_Click(object sender,EventArgs e) {
-            Close ();
+
+        private async void btnCargar_Click (object sender, EventArgs e)
+        {
+            cboInstancias.DataSource = await new Capa_Negocios.clsDatabases().getInstancesName();
         }
 
-        private async void btnEntrar_Click(object sender,EventArgs e) {
-            if(cboInstancias.Text.ToString().Trim() != String.Empty) {
-                if(await new  Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString())) {
+        private async  void btnEntrar_Click_1 (object sender, EventArgs e)
+        {
+            if (cboInstancias.Text.ToString().Trim() != String.Empty)
+            {
+                if (await new Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString()))
+                {
                     this.Hide();
                     new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
-                } else {
+                }
+                else
+                {
                     MessageBox.Show(this, "Conexión erronea, verifique el nombre de la instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } else {
+            }
+            else
+            {
                 MessageBox.Show(this, "Por favor, ingrese o seleccione una instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private async void btnInstancias_Click(object sender, EventArgs e) {
-             cboInstancias.DataSource = await new Capa_Negocios.clsDatabases().getInstancesName();
+        private void btnSalir_Click_1 (object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
