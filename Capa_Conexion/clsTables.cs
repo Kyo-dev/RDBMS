@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace Capa_Conexion {
     public class clsTables {
 
+        //Explicarme
         public DataTable loadRegisters(String strTable, String instanceName, String database = "master") {
             SqlCommand oCM = new SqlCommand(String.Format("SELECT * FROM {0}", strTable));
             oCM.CommandType = CommandType.Text;
