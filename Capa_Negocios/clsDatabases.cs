@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 
 namespace Capa_Negocios {
     public class clsDatabases {
+        //Explicarme
 
         public Task<DataTable> getDatabases(String instanceName) {
             return Task.Run(() => {

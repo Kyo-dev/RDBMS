@@ -8,6 +8,8 @@ using System.Data;
 
 namespace Capa_Negocios {
     public class clsTables {
+
+        //Explicarme
         public Task<DataTable> loadRegisters(String strTable, String strInstanceName, String strDataBase = "master") {
             return Task.Run(() => {
                 return new Capa_Conexion.clsTables().loadRegisters(strTable, strInstanceName, strDataBase);

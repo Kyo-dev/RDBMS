@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 namespace Capa_Negocios {
     public class clsColumns {
 
+        //Explicarme
         public Task<DataTable> EsquemeInfo(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
             return Task.Run(() => {
                 return new Capa_Conexion.clsColumns().EsquemeInfo(strColumn, strTable, instanceName, strDataBase);
