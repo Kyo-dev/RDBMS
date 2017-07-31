@@ -51,6 +51,8 @@
             this.labTable = new System.Windows.Forms.Label();
             this.labDataBase = new System.Windows.Forms.Label();
             this.labNomRegistros = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
@@ -65,6 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
             this.gbInfo.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // sc
@@ -111,9 +115,9 @@
             this.groupBox2.Controls.Add(this.lbColumas);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(3, 306);
+            this.groupBox2.Location = new System.Drawing.Point(3, 300);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(244, 204);
+            this.groupBox2.Size = new System.Drawing.Size(244, 210);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Columnas";
@@ -130,7 +134,7 @@
             this.lbColumas.ItemHeight = 17;
             this.lbColumas.Location = new System.Drawing.Point(3, 18);
             this.lbColumas.Name = "lbColumas";
-            this.lbColumas.Size = new System.Drawing.Size(238, 183);
+            this.lbColumas.Size = new System.Drawing.Size(238, 189);
             this.lbColumas.TabIndex = 5;
             this.lbColumas.DoubleClick += new System.EventHandler(this.lbColumas_DoubleClick);
             // 
@@ -139,7 +143,7 @@
             this.groupBox1.Controls.Add(this.lbTablas);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 118);
+            this.groupBox1.Location = new System.Drawing.Point(3, 112);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(244, 188);
             this.groupBox1.TabIndex = 6;
@@ -173,7 +177,7 @@
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(3, 18);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(244, 100);
+            this.metroPanel1.Size = new System.Drawing.Size(244, 94);
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -237,7 +241,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(799, 439);
+            this.groupBox3.Size = new System.Drawing.Size(799, 383);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Esquema de columnas";
@@ -247,9 +251,9 @@
             this.groupBox4.Controls.Add(this.dgvInfoEsquema);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(3, 219);
+            this.groupBox4.Location = new System.Drawing.Point(3, 196);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(793, 217);
+            this.groupBox4.Size = new System.Drawing.Size(793, 184);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
@@ -260,7 +264,7 @@
             this.dgvInfoEsquema.AllowUserToDeleteRows = false;
             this.dgvInfoEsquema.AllowUserToResizeRows = false;
             this.dgvInfoEsquema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoEsquema.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvInfoEsquema.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -279,7 +283,7 @@
             this.dgvInfoEsquema.ReadOnly = true;
             this.dgvInfoEsquema.RowHeadersVisible = false;
             this.dgvInfoEsquema.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfoEsquema.Size = new System.Drawing.Size(787, 196);
+            this.dgvInfoEsquema.Size = new System.Drawing.Size(787, 163);
             this.dgvInfoEsquema.TabIndex = 7;
             // 
             // dgvInfoRegistros
@@ -288,7 +292,7 @@
             this.dgvInfoRegistros.AllowUserToDeleteRows = false;
             this.dgvInfoRegistros.AllowUserToResizeRows = false;
             this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Black;
             this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -307,23 +311,20 @@
             this.dgvInfoRegistros.ReadOnly = true;
             this.dgvInfoRegistros.RowHeadersVisible = false;
             this.dgvInfoRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfoRegistros.Size = new System.Drawing.Size(793, 197);
+            this.dgvInfoRegistros.Size = new System.Drawing.Size(793, 187);
             this.dgvInfoRegistros.TabIndex = 8;
             // 
             // gbInfo
             // 
-            this.gbInfo.BackColor = System.Drawing.Color.Transparent;
-            this.gbInfo.Controls.Add(this.labCantRegistros);
-            this.gbInfo.Controls.Add(this.labEsquema);
-            this.gbInfo.Controls.Add(this.labTable);
-            this.gbInfo.Controls.Add(this.labDataBase);
-            this.gbInfo.Controls.Add(this.labNomRegistros);
+            this.gbInfo.BackColor = System.Drawing.Color.Black;
+            this.gbInfo.Controls.Add(this.groupBox5);
+            this.gbInfo.Controls.Add(this.groupBox6);
             this.gbInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbInfo.ForeColor = System.Drawing.Color.White;
-            this.gbInfo.Location = new System.Drawing.Point(0, 439);
+            this.gbInfo.Location = new System.Drawing.Point(0, 383);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Size = new System.Drawing.Size(799, 74);
+            this.gbInfo.Size = new System.Drawing.Size(799, 130);
             this.gbInfo.TabIndex = 8;
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Información";
@@ -335,7 +336,7 @@
             this.labCantRegistros.BackColor = System.Drawing.Color.Transparent;
             this.labCantRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCantRegistros.ForeColor = System.Drawing.Color.White;
-            this.labCantRegistros.Location = new System.Drawing.Point(480, 33);
+            this.labCantRegistros.Location = new System.Drawing.Point(6, 18);
             this.labCantRegistros.Name = "labCantRegistros";
             this.labCantRegistros.Size = new System.Drawing.Size(145, 16);
             this.labCantRegistros.TabIndex = 6;
@@ -349,7 +350,7 @@
             this.labEsquema.BackColor = System.Drawing.Color.Transparent;
             this.labEsquema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labEsquema.ForeColor = System.Drawing.Color.White;
-            this.labEsquema.Location = new System.Drawing.Point(6, 48);
+            this.labEsquema.Location = new System.Drawing.Point(6, 50);
             this.labEsquema.Name = "labEsquema";
             this.labEsquema.Size = new System.Drawing.Size(142, 16);
             this.labEsquema.TabIndex = 5;
@@ -363,7 +364,7 @@
             this.labTable.BackColor = System.Drawing.Color.Transparent;
             this.labTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTable.ForeColor = System.Drawing.Color.White;
-            this.labTable.Location = new System.Drawing.Point(6, 32);
+            this.labTable.Location = new System.Drawing.Point(6, 80);
             this.labTable.Name = "labTable";
             this.labTable.Size = new System.Drawing.Size(132, 16);
             this.labTable.TabIndex = 4;
@@ -377,7 +378,7 @@
             this.labDataBase.BackColor = System.Drawing.Color.Transparent;
             this.labDataBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDataBase.ForeColor = System.Drawing.Color.White;
-            this.labDataBase.Location = new System.Drawing.Point(6, 16);
+            this.labDataBase.Location = new System.Drawing.Point(6, 18);
             this.labDataBase.Name = "labDataBase";
             this.labDataBase.Size = new System.Drawing.Size(104, 16);
             this.labDataBase.TabIndex = 2;
@@ -390,11 +391,35 @@
             this.labNomRegistros.BackColor = System.Drawing.Color.Transparent;
             this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNomRegistros.ForeColor = System.Drawing.Color.White;
-            this.labNomRegistros.Location = new System.Drawing.Point(271, 33);
+            this.labNomRegistros.Location = new System.Drawing.Point(6, 63);
             this.labNomRegistros.Name = "labNomRegistros";
             this.labNomRegistros.Size = new System.Drawing.Size(156, 16);
             this.labNomRegistros.TabIndex = 3;
             this.labNomRegistros.Text = "Registros de la columna:";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.labTable);
+            this.groupBox6.Controls.Add(this.labEsquema);
+            this.groupBox6.Controls.Add(this.labDataBase);
+            this.groupBox6.ForeColor = System.Drawing.Color.Black;
+            this.groupBox6.Location = new System.Drawing.Point(17, 16);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(345, 108);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.labCantRegistros);
+            this.groupBox5.Controls.Add(this.labNomRegistros);
+            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox5.Location = new System.Drawing.Point(442, 16);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(330, 108);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // frmPrincipal
             // 
@@ -424,7 +449,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
             this.gbInfo.ResumeLayout(false);
-            this.gbInfo.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -452,5 +480,7 @@
         private System.Windows.Forms.Label labTable;
         private System.Windows.Forms.Label labEsquema;
         private System.Windows.Forms.Label labCantRegistros;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
