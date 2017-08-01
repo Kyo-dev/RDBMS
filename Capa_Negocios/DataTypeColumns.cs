@@ -115,7 +115,7 @@ namespace Capa_Negocios
         {
             bool cantBe = true;
             foreach (DataRow row in dC.Table.Rows)
-            { 
+            {
 
                 bool isNumber = true;
                 foreach (char c in (String)row[dC])
@@ -127,17 +127,16 @@ namespace Capa_Negocios
                     }
 
                 }
-                    Int64 num = Convert.ToInt64(row[dC]);
-                    if ((num < Convert.ToInt16(-32.767) || num > 32.767) && isNumber)
-                    {
-                        cantBe = false;
-                    }
+                Int64 num = Convert.ToInt64(row[dC]);
+                if ((num < Convert.ToInt16(-32.767) || num > 32.767) && isNumber)
+                {
+                    cantBe = false;
                 }
-                return cantBe;
             }
-            #endregion
-
-
+            return cantBe;
         }
+        #endregion
+
     }
 }
+
