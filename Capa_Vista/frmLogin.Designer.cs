@@ -114,6 +114,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLogin";
+            this.Resizable = false;
             this.Text = "DataBases Manager";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Right;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;

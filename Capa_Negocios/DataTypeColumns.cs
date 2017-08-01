@@ -77,7 +77,7 @@ namespace Capa_Negocios
             foreach (DataRow row in dC.Table.Rows)
             { //Recorre cada registro.
 
-                if (!row.Equals(1) || !row.Equals(0))
+                if (!row.Equals(1) && !row.Equals(0))
                 {
                     cantBe = false;
                 }
@@ -136,6 +136,12 @@ namespace Capa_Negocios
             return cantBe;
         }
         #endregion
+
+        #region Max y Min
+        public String SelectMax(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
+            return 
+        }
+#endregion
 
     }
 }
