@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent ()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.sc = new System.Windows.Forms.SplitContainer();
             this.gb = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,13 +47,13 @@
             this.dgvInfoEsquema = new System.Windows.Forms.DataGridView();
             this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
             this.gbInfo = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.labCantRegistros = new System.Windows.Forms.Label();
-            this.labEsquema = new System.Windows.Forms.Label();
-            this.labTable = new System.Windows.Forms.Label();
-            this.labDataBase = new System.Windows.Forms.Label();
             this.labNomRegistros = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labTable = new System.Windows.Forms.Label();
+            this.labEsquema = new System.Windows.Forms.Label();
+            this.labDataBase = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
@@ -67,8 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
             this.gbInfo.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // sc
@@ -267,14 +268,14 @@
             this.dgvInfoEsquema.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInfoEsquema.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInfoEsquema.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInfoEsquema.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInfoEsquema.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvInfoEsquema.Location = new System.Drawing.Point(3, 18);
@@ -295,14 +296,14 @@
             this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Black;
             this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInfoRegistros.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInfoRegistros.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInfoRegistros.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvInfoRegistros.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvInfoRegistros.Location = new System.Drawing.Point(3, 18);
@@ -329,6 +330,18 @@
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Información";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.labCantRegistros);
+            this.groupBox5.Controls.Add(this.labNomRegistros);
+            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox5.Location = new System.Drawing.Point(442, 16);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(330, 108);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
             // labCantRegistros
             // 
             this.labCantRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -341,48 +354,6 @@
             this.labCantRegistros.Size = new System.Drawing.Size(145, 16);
             this.labCantRegistros.TabIndex = 6;
             this.labCantRegistros.Text = "Cantidad de Registros:";
-            // 
-            // labEsquema
-            // 
-            this.labEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labEsquema.AutoSize = true;
-            this.labEsquema.BackColor = System.Drawing.Color.Transparent;
-            this.labEsquema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEsquema.ForeColor = System.Drawing.Color.White;
-            this.labEsquema.Location = new System.Drawing.Point(6, 50);
-            this.labEsquema.Name = "labEsquema";
-            this.labEsquema.Size = new System.Drawing.Size(142, 16);
-            this.labEsquema.TabIndex = 5;
-            this.labEsquema.Text = "Esquema de columna:";
-            // 
-            // labTable
-            // 
-            this.labTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labTable.AutoSize = true;
-            this.labTable.BackColor = System.Drawing.Color.Transparent;
-            this.labTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTable.ForeColor = System.Drawing.Color.White;
-            this.labTable.Location = new System.Drawing.Point(6, 80);
-            this.labTable.Name = "labTable";
-            this.labTable.Size = new System.Drawing.Size(132, 16);
-            this.labTable.TabIndex = 4;
-            this.labTable.Text = "Tabla seleccionada:";
-            // 
-            // labDataBase
-            // 
-            this.labDataBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labDataBase.AutoSize = true;
-            this.labDataBase.BackColor = System.Drawing.Color.Transparent;
-            this.labDataBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDataBase.ForeColor = System.Drawing.Color.White;
-            this.labDataBase.Location = new System.Drawing.Point(6, 18);
-            this.labDataBase.Name = "labDataBase";
-            this.labDataBase.Size = new System.Drawing.Size(104, 16);
-            this.labDataBase.TabIndex = 2;
-            this.labDataBase.Text = "Base de Datos: ";
             // 
             // labNomRegistros
             // 
@@ -409,17 +380,47 @@
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             // 
-            // groupBox5
+            // labTable
             // 
-            this.groupBox5.Controls.Add(this.labCantRegistros);
-            this.groupBox5.Controls.Add(this.labNomRegistros);
-            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox5.Location = new System.Drawing.Point(442, 16);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(330, 108);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            this.labTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labTable.AutoSize = true;
+            this.labTable.BackColor = System.Drawing.Color.Transparent;
+            this.labTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTable.ForeColor = System.Drawing.Color.White;
+            this.labTable.Location = new System.Drawing.Point(6, 80);
+            this.labTable.Name = "labTable";
+            this.labTable.Size = new System.Drawing.Size(132, 16);
+            this.labTable.TabIndex = 4;
+            this.labTable.Text = "Tabla seleccionada:";
+            // 
+            // labEsquema
+            // 
+            this.labEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labEsquema.AutoSize = true;
+            this.labEsquema.BackColor = System.Drawing.Color.Transparent;
+            this.labEsquema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEsquema.ForeColor = System.Drawing.Color.White;
+            this.labEsquema.Location = new System.Drawing.Point(6, 50);
+            this.labEsquema.Name = "labEsquema";
+            this.labEsquema.Size = new System.Drawing.Size(142, 16);
+            this.labEsquema.TabIndex = 5;
+            this.labEsquema.Text = "Esquema de columna:";
+            // 
+            // labDataBase
+            // 
+            this.labDataBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labDataBase.AutoSize = true;
+            this.labDataBase.BackColor = System.Drawing.Color.Transparent;
+            this.labDataBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDataBase.ForeColor = System.Drawing.Color.White;
+            this.labDataBase.Location = new System.Drawing.Point(6, 18);
+            this.labDataBase.Name = "labDataBase";
+            this.labDataBase.Size = new System.Drawing.Size(104, 16);
+            this.labDataBase.TabIndex = 2;
+            this.labDataBase.Text = "Base de Datos: ";
             // 
             // frmPrincipal
             // 
@@ -428,6 +429,7 @@
             this.ClientSize = new System.Drawing.Size(1095, 593);
             this.Controls.Add(this.sc);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.Text = "Bases de Datos";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -449,10 +451,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
             this.gbInfo.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
