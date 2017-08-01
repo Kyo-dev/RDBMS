@@ -53,6 +53,7 @@
     <Compile Include="clsDatabases.cs" />
     <Compile Include="clsTables.cs" />
     <Compile Include="clsConnection.cs" />
+    <Compile Include="DataTypeColumns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
