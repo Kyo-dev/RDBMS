@@ -56,7 +56,6 @@ namespace Capa_Vista
                 }
                 else
                 {
-                    // aqui
                     if (await new Capa_Negocios.clsTables ().getTables (instanceName , cboDataBases.SelectedValue.ToString ()) == null) {
                         frmError.Close ();
                         frmMessageBoxError.Show ("Error");

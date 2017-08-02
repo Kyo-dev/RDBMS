@@ -188,6 +188,7 @@
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.Color.LightGray;
+            this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,6 +204,7 @@
             // cboDataBases
             // 
             this.cboDataBases.BackColor = System.Drawing.Color.LightGray;
+            this.cboDataBases.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboDataBases.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboDataBases.FormattingEnabled = true;
             this.cboDataBases.ItemHeight = 23;

@@ -54,7 +54,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.LightGray;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Location = new System.Drawing.Point(356, 148);
+            this.btnCancel.Location = new System.Drawing.Point(438, 148);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(85, 23);
             this.btnCancel.TabIndex = 9;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 194);
+            this.ClientSize = new System.Drawing.Size(546, 194);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbMsg);

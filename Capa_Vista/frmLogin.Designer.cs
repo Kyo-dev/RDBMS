@@ -39,7 +39,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(227, 25);
+            this.label2.Location = new System.Drawing.Point(227, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(142, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,6 +96,7 @@
             // 
             // cboInstancias
             // 
+            this.cboInstancias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboInstancias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboInstancias.FormattingEnabled = true;
             this.cboInstancias.Location = new System.Drawing.Point(220, 89);
@@ -107,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 205);
+            this.ClientSize = new System.Drawing.Size(450, 201);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cboInstancias);
             this.Controls.Add(this.btnInstancias);
