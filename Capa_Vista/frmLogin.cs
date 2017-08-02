@@ -21,6 +21,7 @@ namespace Capa_Vista {
             cboInstancias.DataSource = await new Capa_Negocios.clsDatabases().getInstancesName();
             frm.Close ();
         }
+        //kas
 
         private async void btnEntrar_Click(object sender, EventArgs e) {
             frmMessageBoxError frmError = new frmMessageBoxError ("Error");
