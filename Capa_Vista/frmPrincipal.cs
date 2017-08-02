@@ -33,8 +33,9 @@ namespace Capa_Vista {
         }
 
         private async void btnCargar_Click(object sender, EventArgs e) {
-            frmMessageBoxError frmError = new frmMessageBoxError("Error... ");
+            frmLoad frm = new frmLoad ("Cargando bases de datos... ");
             DataTable objDT = await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString());
+            frm.Close ();
             lbTablas.Items.Clear();
             lbColumas.Items.Clear();
             if (cboDataBases.Enabled)
@@ -49,8 +50,7 @@ namespace Capa_Vista {
                     lbTablas.DisplayMember = "TABLE_NAME";
                     lbTablas.ValueMember = "TABLE_NAME";
                 } else {
-                    if(await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString()) == null) {
-                        frmError.Close();
+                    if(objDT == null) {
                         frmMessageBoxError.Show("Error");
                     }
 
@@ -65,9 +65,10 @@ namespace Capa_Vista {
         }
 
         private async void lbTablas_DoubleClick(object sender, EventArgs e) {
-            frmMessageBoxError frmError = new frmMessageBoxError("Error...  ");
-            if(cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null) {
+            if (cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null) {
+                frmLoad frm = new frmLoad ("Cargando columnas... ");
                 DataTable objDT = await new Capa_Negocios.clsColumns().getColumns(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                frm.Close ();
                 if (objDT is null) {
                     frmMessageBoxError.Show ("Error al cargar las columnas");
                     return;
@@ -81,28 +82,26 @@ namespace Capa_Vista {
                         lbColumas.DisplayMember = "COLUMN_NAME";
                         lbColumas.ValueMember = "COLUMN_NAME";
                         lbColumas.DataSource = objDT;
-                        dgvInfoRegistros.DataSource = await new Capa_Negocios.clsTables().loadRegisters(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        DataTable Dt =  await new Capa_Negocios.clsTables().loadRegisters(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        dgvInfoRegistros.DataSource = Dt;
                         labCantRegistros.Text = "Cantidad de registros: " + dgvInfoRegistros.Rows.Count;
                     } else {
-                        if(await new Capa_Negocios.clsTables().loadRegisters(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString()) == null) {
-                            frmError.Close();
-                            frmMessageBoxError.Show("Error");
-                        }
                         lbTablas.DataSource = objDT;
                         lbColumas.Enabled = false;
                         labDataBase.Text = "";
-                        lbColumas.Items.Clear();
+                        lbColumas.DataSource = null;
                     }
                 }
             } else {
                 frmMessageBoxError.Show("Seleccione una base de datos");
-                frmError.Close();
             }
         }
 
         private async void lbColumas_DoubleClick(object sender, EventArgs e) {
             if(lbTablas.SelectedItem != null) {
+                frmLoad frm = new frmLoad ("Cargando esquema... ");
                 DataTable objDT = await new Capa_Negocios.clsColumns().EsquemeInfo(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                frm.Close ();
                 if(lbColumas.Enabled) {
                     if(objDT.Rows.Count > 0) {
                         labDataBase.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString();
