@@ -66,6 +66,12 @@
     <Compile Include="frmMessageBoxError.Designer.cs">
       <DependentUpon>frmMessageBoxError.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPorcentajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPorcentajes.Designer.cs">
+      <DependentUpon>frmPorcentajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMessageBoxError.resx">
       <DependentUpon>frmMessageBoxError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPorcentajes.resx">
+      <DependentUpon>frmPorcentajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

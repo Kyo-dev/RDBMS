@@ -35,8 +35,10 @@ namespace Capa_Vista {
         private async void btnCargar_Click(object sender, EventArgs e) {
             frmMessageBoxError frmError = new frmMessageBoxError("Error... ");
             DataTable objDT = await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString());
-            lbTablas.Items.Clear();
-            lbColumas.Items.Clear();
+
+
+            lbTablas.DataSource = null;
+            lbColumas.DataSource = null;
             if (cboDataBases.Enabled)
             {
                 if (objDT.Rows.Count > 0)
@@ -109,7 +111,6 @@ namespace Capa_Vista {
                         labDataBase.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString();
                         labTable.Text = "Tabla seleccionada: " + lbTablas.SelectedValue.ToString();
                         labEsquema.Text = "Esquema de columna: " + lbColumas.SelectedValue.ToString();
-                        labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString();
                         DataTable minimo = await new Capa_Negocios.DataTypeColumns().SelectMin(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                         if(minimo is null) {
                             frmMessageBoxError.Show("Error al extraer dato minimo, es correcto el tipo de dato?");
