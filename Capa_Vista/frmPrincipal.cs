@@ -66,6 +66,7 @@ namespace Capa_Vista {
 
         private async void lbTablas_DoubleClick(object sender, EventArgs e) {
             if (cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null) {
+                limpiar ();
                 frmLoad frm = new frmLoad ("Cargando columnas... ");
                 DataTable objDT = await new Capa_Negocios.clsColumns().getColumns(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                 frm.Close ();
@@ -129,14 +130,21 @@ namespace Capa_Vista {
                         lbTablas.Enabled = false;
                         lbColumas.Items.Clear ();
                         lbTablas.Items.Clear ();
-                        labDataBase.Text = "";
-                        
-                    }
+                        labDataBase.Text = "";           
+                    } 
                 }
             } else {
                 frmMessageBoxError.Show("Seleccione una base de datos.");
-
             }
+        }
+        public void limpiar() {
+
+            labDataBase.Text = "Base de Datos: ";
+            labEsquema.Text = "Esquema de columna: ";
+            labTable.Text = "Tabla seleccionada";
+            labCantRegistros.Text = "Cantidad de registros";
+            labMax.Text = "Dato Maximo";
+            labMin.Text = "Dato Mínimo";
         }
     }
 }
