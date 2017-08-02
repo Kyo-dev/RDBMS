@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.lbMsg = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,16 +40,6 @@
             this.lbMsg.TabIndex = 0;
             this.lbMsg.Text = "Texto de error:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Capa_Vista.Properties.Resources.Advertencia1;
-            this.pictureBox1.Location = new System.Drawing.Point(85, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.LightGray;
@@ -59,8 +49,19 @@
             this.btnCancel.Size = new System.Drawing.Size(85, 23);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Aceptar";
+            this.btnCancel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Capa_Vista.Properties.Resources.Advertencia1;
+            this.pictureBox1.Location = new System.Drawing.Point(508, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmMessageBoxError
             // 

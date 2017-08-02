@@ -88,7 +88,6 @@ namespace Capa_Vista {
                             frmError.Close();
                             frmMessageBoxError.Show("Error");
                         }
-                        //pequeño error
                         lbTablas.DataSource = objDT;
                         lbColumas.Enabled = false;
                         labDataBase.Text = "";
