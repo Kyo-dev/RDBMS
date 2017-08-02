@@ -39,16 +39,14 @@
             this.lbTablas = new System.Windows.Forms.ListBox();
             this.cboDataBases = new MetroFramework.Controls.MetroComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.labMin = new MetroFramework.Controls.MetroLabel();
             this.labMax = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.labTipoRec = new MetroFramework.Controls.MetroLabel();
             this.labCantRegistros = new MetroFramework.Controls.MetroLabel();
             this.labTable = new MetroFramework.Controls.MetroLabel();
             this.labEsquema = new MetroFramework.Controls.MetroLabel();
             this.labDataBase = new MetroFramework.Controls.MetroLabel();
             this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
@@ -177,8 +175,6 @@
             this.panel1.Controls.Add(this.metroButton2);
             this.panel1.Controls.Add(this.labMin);
             this.panel1.Controls.Add(this.labMax);
-            this.panel1.Controls.Add(this.metroButton1);
-            this.panel1.Controls.Add(this.labTipoRec);
             this.panel1.Controls.Add(this.labCantRegistros);
             this.panel1.Controls.Add(this.labTable);
             this.panel1.Controls.Add(this.labEsquema);
@@ -189,6 +185,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(935, 513);
             this.panel1.TabIndex = 0;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackColor = System.Drawing.Color.LightGray;
+            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.metroButton2.Location = new System.Drawing.Point(758, 210);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(159, 29);
+            this.metroButton2.TabIndex = 19;
+            this.metroButton2.Text = "Mostrar Porcentajes";
+            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton2.UseSelectable = true;
             // 
             // labMin
             // 
@@ -203,35 +212,12 @@
             // labMax
             // 
             this.labMax.AutoSize = true;
-            this.labMax.Location = new System.Drawing.Point(415, 146);
+            this.labMax.Location = new System.Drawing.Point(411, 33);
             this.labMax.Name = "labMax";
             this.labMax.Size = new System.Drawing.Size(92, 19);
             this.labMax.TabIndex = 17;
             this.labMax.Text = "Dato Máximo:";
             this.labMax.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.Color.LightGray;
-            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButton1.Location = new System.Drawing.Point(763, 209);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(159, 29);
-            this.metroButton1.TabIndex = 12;
-            this.metroButton1.Text = "Cambiar tipo de dato";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1.UseSelectable = true;
-            // 
-            // labTipoRec
-            // 
-            this.labTipoRec.AutoSize = true;
-            this.labTipoRec.Location = new System.Drawing.Point(415, 33);
-            this.labTipoRec.Name = "labTipoRec";
-            this.labTipoRec.Size = new System.Drawing.Size(175, 19);
-            this.labTipoRec.TabIndex = 16;
-            this.labTipoRec.Text = "Tipo de dato recomendado:";
-            this.labTipoRec.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // labCantRegistros
             // 
@@ -302,19 +288,6 @@
             this.dgvInfoRegistros.Size = new System.Drawing.Size(935, 244);
             this.dgvInfoRegistros.TabIndex = 8;
             // 
-            // metroButton2
-            // 
-            this.metroButton2.BackColor = System.Drawing.Color.LightGray;
-            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButton2.Location = new System.Drawing.Point(598, 209);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(159, 29);
-            this.metroButton2.TabIndex = 19;
-            this.metroButton2.Text = "Mostrar Porcentajes";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.UseSelectable = true;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,8 +329,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel labEsquema;
         private MetroFramework.Controls.MetroLabel labDataBase;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroLabel labTipoRec;
         private MetroFramework.Controls.MetroLabel labCantRegistros;
         private MetroFramework.Controls.MetroLabel labTable;
         private MetroFramework.Controls.MetroLabel labMin;
