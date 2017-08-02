@@ -24,7 +24,6 @@ namespace Capa_Vista {
         //kas
 
         private async void btnEntrar_Click(object sender, EventArgs e) {
-            frmMessageBoxError frmError = new frmMessageBoxError ("Error");
             if(cboInstancias.Text.ToString().Trim() != String.Empty) {
                 if(await new Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString().Trim())) {
                     this.Hide();

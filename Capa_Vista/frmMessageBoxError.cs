@@ -12,16 +12,16 @@ using System.Windows.Forms;
 namespace Capa_Vista {
     public partial class frmMessageBoxError : MetroForm {
         public frmMessageBoxError(String strMessage) {
-            InitializeComponent ();
+            InitializeComponent();
             lbMsg.Text = strMessage;
         }
 
         public static void Show(String strMensaje) {
-            new frmMessageBoxError (strMensaje).ShowDialog ();
+            new frmMessageBoxError(strMensaje).Show();
         }
 
-        private void btnCancel_Click(object sender , EventArgs e) {
-            this.Close ();
+        private void btnCancel_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }
