@@ -35,6 +35,7 @@ namespace Capa_Vista {
         private async void btnCargar_Click(object sender, EventArgs e) {
             frmLoad frm = new frmLoad ("Cargando bases de datos... ");
             DataTable objDT = await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString());
+            frm.Close ();
             lbTablas.DataSource = null;
             lbColumas.DataSource = null;
             if (cboDataBases.Enabled)
