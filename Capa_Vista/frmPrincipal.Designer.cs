@@ -91,7 +91,7 @@
             this.sc.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sc.Panel2.Controls.Add(this.panel1);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(1055, 513);
+            this.sc.Size = new System.Drawing.Size(1059, 513);
             this.sc.SplitterDistance = 252;
             this.sc.TabIndex = 0;
             // 
@@ -230,7 +230,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 513);
+            this.panel1.Size = new System.Drawing.Size(803, 513);
             this.panel1.TabIndex = 0;
             // 
             // groupBox3
@@ -242,7 +242,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(799, 383);
+            this.groupBox3.Size = new System.Drawing.Size(803, 383);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Esquema de columnas";
@@ -254,7 +254,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(3, 196);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(793, 184);
+            this.groupBox4.Size = new System.Drawing.Size(797, 184);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos";
@@ -284,7 +284,7 @@
             this.dgvInfoEsquema.ReadOnly = true;
             this.dgvInfoEsquema.RowHeadersVisible = false;
             this.dgvInfoEsquema.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfoEsquema.Size = new System.Drawing.Size(787, 163);
+            this.dgvInfoEsquema.Size = new System.Drawing.Size(791, 163);
             this.dgvInfoEsquema.TabIndex = 7;
             // 
             // dgvInfoRegistros
@@ -312,7 +312,7 @@
             this.dgvInfoRegistros.ReadOnly = true;
             this.dgvInfoRegistros.RowHeadersVisible = false;
             this.dgvInfoRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfoRegistros.Size = new System.Drawing.Size(793, 187);
+            this.dgvInfoRegistros.Size = new System.Drawing.Size(797, 187);
             this.dgvInfoRegistros.TabIndex = 8;
             // 
             // gbInfo
@@ -325,7 +325,7 @@
             this.gbInfo.ForeColor = System.Drawing.Color.White;
             this.gbInfo.Location = new System.Drawing.Point(0, 383);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Size = new System.Drawing.Size(799, 130);
+            this.gbInfo.Size = new System.Drawing.Size(803, 130);
             this.gbInfo.TabIndex = 8;
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Información";
@@ -426,11 +426,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 593);
+            this.ClientSize = new System.Drawing.Size(1099, 593);
             this.Controls.Add(this.sc);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Bases de Datos";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));

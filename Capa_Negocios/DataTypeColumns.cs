@@ -167,11 +167,11 @@ namespace Capa_Negocios {
         #endregion
 
         #region Max y Min
-        public String SelectMax(String strColumn , String strTable , String instanceName , String strDataBase = "master") {
-            return
-                    }
+        //public String SelectMax(String strColumn , String strTable , String instanceName , String strDataBase = "master") {
+        //    return
+        //            }
         #endregion
-
     }
 }
+
 
