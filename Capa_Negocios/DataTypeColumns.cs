@@ -224,7 +224,7 @@ namespace Capa_Negocios {
         }
 
         public bool ChangeToSmallINT(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
-            return new Capa_Conexion.DataTypeColumns().ChangeDataType("BYTE", strColumn, strTable, instanceName, strDataBase);
+            return new Capa_Conexion.DataTypeColumns().ChangeDataType("SMALLINT", strColumn, strTable, instanceName, strDataBase);
         }
         #endregion
     }
