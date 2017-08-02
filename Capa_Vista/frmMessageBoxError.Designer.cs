@@ -70,7 +70,10 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbMsg);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMessageBoxError";
+            this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Error!";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;

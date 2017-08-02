@@ -77,7 +77,10 @@ namespace Capa_Vista
             if (cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null)
             {
                 DataTable objDT = await new Capa_Negocios.clsColumns().getColumns(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
-                
+                if (objDT is null) {
+                    frmMessageBoxError.Show ("Error al cargar las columnas");
+                    return;
+                }
                 if (lbTablas.Enabled)
                 {
                     if (objDT.Rows.Count > 0)
