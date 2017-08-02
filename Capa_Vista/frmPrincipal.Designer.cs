@@ -29,47 +29,32 @@
         private void InitializeComponent ()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.sc = new System.Windows.Forms.SplitContainer();
-            this.gb = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lbColumas = new System.Windows.Forms.ListBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCargar = new MetroFramework.Controls.MetroButton();
             this.lbTablas = new System.Windows.Forms.ListBox();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.btnCargar = new System.Windows.Forms.Button();
             this.cboDataBases = new MetroFramework.Controls.MetroComboBox();
-            this.labNomTab = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dgvInfoEsquema = new System.Windows.Forms.DataGridView();
+            this.labMin = new MetroFramework.Controls.MetroLabel();
+            this.labMax = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.labTipoRec = new MetroFramework.Controls.MetroLabel();
+            this.labNomRegistros = new MetroFramework.Controls.MetroLabel();
+            this.labCantRegistros = new MetroFramework.Controls.MetroLabel();
+            this.labTable = new MetroFramework.Controls.MetroLabel();
+            this.labEsquema = new MetroFramework.Controls.MetroLabel();
+            this.labDataBase = new MetroFramework.Controls.MetroLabel();
             this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
-            this.gbInfo = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.labCantRegistros = new System.Windows.Forms.Label();
-            this.labNomRegistros = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.labTable = new System.Windows.Forms.Label();
-            this.labEsquema = new System.Windows.Forms.Label();
-            this.labDataBase = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
             this.sc.SuspendLayout();
-            this.gb.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.metroPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).BeginInit();
-            this.gbInfo.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // sc
@@ -81,8 +66,13 @@
             // sc.Panel1
             // 
             this.sc.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.sc.Panel1.Controls.Add(this.gb);
-            this.sc.Panel1.Controls.Add(this.labNomTab);
+            this.sc.Panel1.Controls.Add(this.metroLabel3);
+            this.sc.Panel1.Controls.Add(this.metroLabel2);
+            this.sc.Panel1.Controls.Add(this.metroLabel1);
+            this.sc.Panel1.Controls.Add(this.lbColumas);
+            this.sc.Panel1.Controls.Add(this.btnCargar);
+            this.sc.Panel1.Controls.Add(this.lbTablas);
+            this.sc.Panel1.Controls.Add(this.cboDataBases);
             this.sc.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // sc.Panel2
@@ -91,201 +81,207 @@
             this.sc.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sc.Panel2.Controls.Add(this.panel1);
             this.sc.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sc.Size = new System.Drawing.Size(1055, 513);
-            this.sc.SplitterDistance = 252;
+            this.sc.Size = new System.Drawing.Size(1232, 513);
+            this.sc.SplitterDistance = 293;
             this.sc.TabIndex = 0;
             // 
-            // gb
+            // metroLabel3
             // 
-            this.gb.BackColor = System.Drawing.Color.Transparent;
-            this.gb.Controls.Add(this.groupBox2);
-            this.gb.Controls.Add(this.groupBox1);
-            this.gb.Controls.Add(this.metroPanel1);
-            this.gb.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb.ForeColor = System.Drawing.Color.White;
-            this.gb.Location = new System.Drawing.Point(0, 0);
-            this.gb.Name = "gb";
-            this.gb.Size = new System.Drawing.Size(250, 513);
-            this.gb.TabIndex = 5;
-            this.gb.TabStop = false;
-            this.gb.Text = "Seleccionar Base:";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(12, 107);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel3.TabIndex = 11;
+            this.metroLabel3.Text = "Tablas";
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // groupBox2
+            // metroLabel2
             // 
-            this.groupBox2.Controls.Add(this.lbColumas);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(3, 300);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(244, 210);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Columnas";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(12, 338);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel2.TabIndex = 10;
+            this.metroLabel2.Text = "Columnas";
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(12, 18);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(95, 19);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "Base de Datos:";
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // lbColumas
             // 
-            this.lbColumas.BackColor = System.Drawing.Color.LightGray;
+            this.lbColumas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.lbColumas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbColumas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbColumas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbColumas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbColumas.ForeColor = System.Drawing.Color.Black;
+            this.lbColumas.ForeColor = System.Drawing.Color.White;
             this.lbColumas.FormattingEnabled = true;
             this.lbColumas.ItemHeight = 17;
-            this.lbColumas.Location = new System.Drawing.Point(3, 18);
+            this.lbColumas.Location = new System.Drawing.Point(12, 360);
             this.lbColumas.Name = "lbColumas";
-            this.lbColumas.Size = new System.Drawing.Size(238, 189);
+            this.lbColumas.Size = new System.Drawing.Size(263, 136);
             this.lbColumas.TabIndex = 5;
             this.lbColumas.DoubleClick += new System.EventHandler(this.lbColumas_DoubleClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lbTablas);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 112);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 188);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tablas";
-            // 
-            // lbTablas
-            // 
-            this.lbTablas.BackColor = System.Drawing.Color.LightGray;
-            this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbTablas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbTablas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbTablas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTablas.ForeColor = System.Drawing.Color.Black;
-            this.lbTablas.FormattingEnabled = true;
-            this.lbTablas.ItemHeight = 17;
-            this.lbTablas.Location = new System.Drawing.Point(3, 18);
-            this.lbTablas.Name = "lbTablas";
-            this.lbTablas.Size = new System.Drawing.Size(238, 167);
-            this.lbTablas.TabIndex = 5;
-            this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackColor = System.Drawing.Color.DarkGray;
-            this.metroPanel1.Controls.Add(this.btnCargar);
-            this.metroPanel1.Controls.Add(this.cboDataBases);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(3, 18);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(244, 94);
-            this.metroPanel1.TabIndex = 5;
-            this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // btnCargar
             // 
             this.btnCargar.BackColor = System.Drawing.Color.LightGray;
-            this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCargar.Location = new System.Drawing.Point(64, 51);
+            this.btnCargar.Location = new System.Drawing.Point(180, 49);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(103, 29);
             this.btnCargar.TabIndex = 1;
             this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnCargar.UseSelectable = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // lbTablas
+            // 
+            this.lbTablas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.lbTablas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbTablas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbTablas.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTablas.ForeColor = System.Drawing.Color.White;
+            this.lbTablas.FormattingEnabled = true;
+            this.lbTablas.ItemHeight = 17;
+            this.lbTablas.Location = new System.Drawing.Point(12, 129);
+            this.lbTablas.Name = "lbTablas";
+            this.lbTablas.Size = new System.Drawing.Size(263, 136);
+            this.lbTablas.TabIndex = 5;
+            this.lbTablas.DoubleClick += new System.EventHandler(this.lbTablas_DoubleClick);
             // 
             // cboDataBases
             // 
             this.cboDataBases.BackColor = System.Drawing.Color.LightGray;
+            this.cboDataBases.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboDataBases.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboDataBases.FormattingEnabled = true;
             this.cboDataBases.ItemHeight = 23;
-            this.cboDataBases.Location = new System.Drawing.Point(12, 16);
+            this.cboDataBases.Location = new System.Drawing.Point(12, 49);
             this.cboDataBases.Name = "cboDataBases";
-            this.cboDataBases.Size = new System.Drawing.Size(220, 29);
+            this.cboDataBases.Size = new System.Drawing.Size(162, 29);
             this.cboDataBases.TabIndex = 2;
             this.cboDataBases.UseSelectable = true;
             // 
-            // labNomTab
-            // 
-            this.labNomTab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labNomTab.AutoSize = true;
-            this.labNomTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNomTab.ForeColor = System.Drawing.Color.White;
-            this.labNomTab.Location = new System.Drawing.Point(12, 293);
-            this.labNomTab.Name = "labNomTab";
-            this.labNomTab.Size = new System.Drawing.Size(0, 16);
-            this.labNomTab.TabIndex = 4;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.gbInfo);
+            this.panel1.Controls.Add(this.labMin);
+            this.panel1.Controls.Add(this.labMax);
+            this.panel1.Controls.Add(this.metroButton1);
+            this.panel1.Controls.Add(this.labTipoRec);
+            this.panel1.Controls.Add(this.labNomRegistros);
+            this.panel1.Controls.Add(this.labCantRegistros);
+            this.panel1.Controls.Add(this.labTable);
+            this.panel1.Controls.Add(this.labEsquema);
+            this.panel1.Controls.Add(this.labDataBase);
+            this.panel1.Controls.Add(this.dgvInfoRegistros);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 513);
+            this.panel1.Size = new System.Drawing.Size(935, 513);
             this.panel1.TabIndex = 0;
             // 
-            // groupBox3
+            // labMin
             // 
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.dgvInfoRegistros);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(799, 383);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Esquema de columnas";
+            this.labMin.AutoSize = true;
+            this.labMin.Location = new System.Drawing.Point(416, 146);
+            this.labMin.Name = "labMin";
+            this.labMin.Size = new System.Drawing.Size(88, 19);
+            this.labMin.TabIndex = 18;
+            this.labMin.Text = "Data Mínimo:";
+            this.labMin.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // groupBox4
+            // labMax
             // 
-            this.groupBox4.Controls.Add(this.dgvInfoEsquema);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(3, 196);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(793, 184);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Datos";
+            this.labMax.AutoSize = true;
+            this.labMax.Location = new System.Drawing.Point(416, 199);
+            this.labMax.Name = "labMax";
+            this.labMax.Size = new System.Drawing.Size(92, 19);
+            this.labMax.TabIndex = 17;
+            this.labMax.Text = "Dato Máximo:";
+            this.labMax.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // dgvInfoEsquema
+            // metroButton1
             // 
-            this.dgvInfoEsquema.AllowUserToAddRows = false;
-            this.dgvInfoEsquema.AllowUserToDeleteRows = false;
-            this.dgvInfoEsquema.AllowUserToResizeRows = false;
-            this.dgvInfoEsquema.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoEsquema.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvInfoEsquema.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvInfoEsquema.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInfoEsquema.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInfoEsquema.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInfoEsquema.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvInfoEsquema.Location = new System.Drawing.Point(3, 18);
-            this.dgvInfoEsquema.MultiSelect = false;
-            this.dgvInfoEsquema.Name = "dgvInfoEsquema";
-            this.dgvInfoEsquema.ReadOnly = true;
-            this.dgvInfoEsquema.RowHeadersVisible = false;
-            this.dgvInfoEsquema.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfoEsquema.Size = new System.Drawing.Size(787, 163);
-            this.dgvInfoEsquema.TabIndex = 7;
+            this.metroButton1.BackColor = System.Drawing.Color.LightGray;
+            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.metroButton1.Location = new System.Drawing.Point(664, 86);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(159, 29);
+            this.metroButton1.TabIndex = 12;
+            this.metroButton1.Text = "Cambiar";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            // 
+            // labTipoRec
+            // 
+            this.labTipoRec.AutoSize = true;
+            this.labTipoRec.Location = new System.Drawing.Point(416, 86);
+            this.labTipoRec.Name = "labTipoRec";
+            this.labTipoRec.Size = new System.Drawing.Size(172, 19);
+            this.labTipoRec.TabIndex = 16;
+            this.labTipoRec.Text = "Tipo de dato recomendado";
+            this.labTipoRec.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // labNomRegistros
+            // 
+            this.labNomRegistros.AutoSize = true;
+            this.labNomRegistros.Location = new System.Drawing.Point(416, 33);
+            this.labNomRegistros.Name = "labNomRegistros";
+            this.labNomRegistros.Size = new System.Drawing.Size(152, 19);
+            this.labNomRegistros.TabIndex = 15;
+            this.labNomRegistros.Text = "Registros de la columna:";
+            this.labNomRegistros.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // labCantRegistros
+            // 
+            this.labCantRegistros.AutoSize = true;
+            this.labCantRegistros.Location = new System.Drawing.Point(18, 199);
+            this.labCantRegistros.Name = "labCantRegistros";
+            this.labCantRegistros.Size = new System.Drawing.Size(141, 19);
+            this.labCantRegistros.TabIndex = 14;
+            this.labCantRegistros.Text = "Cantidad de Registros:";
+            this.labCantRegistros.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // labTable
+            // 
+            this.labTable.AutoSize = true;
+            this.labTable.Location = new System.Drawing.Point(18, 140);
+            this.labTable.Name = "labTable";
+            this.labTable.Size = new System.Drawing.Size(120, 19);
+            this.labTable.TabIndex = 13;
+            this.labTable.Text = "Tabla seleccionada:";
+            this.labTable.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // labEsquema
+            // 
+            this.labEsquema.AutoSize = true;
+            this.labEsquema.Location = new System.Drawing.Point(18, 86);
+            this.labEsquema.Name = "labEsquema";
+            this.labEsquema.Size = new System.Drawing.Size(142, 19);
+            this.labEsquema.TabIndex = 12;
+            this.labEsquema.Text = "Esquema de  columna:";
+            this.labEsquema.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // labDataBase
+            // 
+            this.labDataBase.AutoSize = true;
+            this.labDataBase.Location = new System.Drawing.Point(18, 33);
+            this.labDataBase.Name = "labDataBase";
+            this.labDataBase.Size = new System.Drawing.Size(95, 19);
+            this.labDataBase.TabIndex = 12;
+            this.labDataBase.Text = "Base de Datos:";
+            this.labDataBase.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // dgvInfoRegistros
             // 
@@ -293,145 +289,40 @@
             this.dgvInfoRegistros.AllowUserToDeleteRows = false;
             this.dgvInfoRegistros.AllowUserToResizeRows = false;
             this.dgvInfoRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvInfoRegistros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.dgvInfoRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvInfoRegistros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvInfoRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInfoRegistros.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInfoRegistros.Dock = System.Windows.Forms.DockStyle.Top;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInfoRegistros.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInfoRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvInfoRegistros.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvInfoRegistros.Location = new System.Drawing.Point(3, 18);
+            this.dgvInfoRegistros.Location = new System.Drawing.Point(0, 269);
             this.dgvInfoRegistros.MultiSelect = false;
             this.dgvInfoRegistros.Name = "dgvInfoRegistros";
             this.dgvInfoRegistros.ReadOnly = true;
             this.dgvInfoRegistros.RowHeadersVisible = false;
             this.dgvInfoRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInfoRegistros.Size = new System.Drawing.Size(793, 187);
+            this.dgvInfoRegistros.Size = new System.Drawing.Size(935, 244);
             this.dgvInfoRegistros.TabIndex = 8;
-            // 
-            // gbInfo
-            // 
-            this.gbInfo.BackColor = System.Drawing.Color.Black;
-            this.gbInfo.Controls.Add(this.groupBox5);
-            this.gbInfo.Controls.Add(this.groupBox6);
-            this.gbInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbInfo.ForeColor = System.Drawing.Color.White;
-            this.gbInfo.Location = new System.Drawing.Point(0, 383);
-            this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Size = new System.Drawing.Size(799, 130);
-            this.gbInfo.TabIndex = 8;
-            this.gbInfo.TabStop = false;
-            this.gbInfo.Text = "Información";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.labCantRegistros);
-            this.groupBox5.Controls.Add(this.labNomRegistros);
-            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox5.Location = new System.Drawing.Point(442, 16);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(330, 108);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
-            // 
-            // labCantRegistros
-            // 
-            this.labCantRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labCantRegistros.AutoSize = true;
-            this.labCantRegistros.BackColor = System.Drawing.Color.Transparent;
-            this.labCantRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCantRegistros.ForeColor = System.Drawing.Color.White;
-            this.labCantRegistros.Location = new System.Drawing.Point(6, 18);
-            this.labCantRegistros.Name = "labCantRegistros";
-            this.labCantRegistros.Size = new System.Drawing.Size(145, 16);
-            this.labCantRegistros.TabIndex = 6;
-            this.labCantRegistros.Text = "Cantidad de Registros:";
-            // 
-            // labNomRegistros
-            // 
-            this.labNomRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labNomRegistros.AutoSize = true;
-            this.labNomRegistros.BackColor = System.Drawing.Color.Transparent;
-            this.labNomRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNomRegistros.ForeColor = System.Drawing.Color.White;
-            this.labNomRegistros.Location = new System.Drawing.Point(6, 63);
-            this.labNomRegistros.Name = "labNomRegistros";
-            this.labNomRegistros.Size = new System.Drawing.Size(156, 16);
-            this.labNomRegistros.TabIndex = 3;
-            this.labNomRegistros.Text = "Registros de la columna:";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.labTable);
-            this.groupBox6.Controls.Add(this.labEsquema);
-            this.groupBox6.Controls.Add(this.labDataBase);
-            this.groupBox6.ForeColor = System.Drawing.Color.Black;
-            this.groupBox6.Location = new System.Drawing.Point(17, 16);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(345, 108);
-            this.groupBox6.TabIndex = 8;
-            this.groupBox6.TabStop = false;
-            // 
-            // labTable
-            // 
-            this.labTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labTable.AutoSize = true;
-            this.labTable.BackColor = System.Drawing.Color.Transparent;
-            this.labTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTable.ForeColor = System.Drawing.Color.White;
-            this.labTable.Location = new System.Drawing.Point(6, 80);
-            this.labTable.Name = "labTable";
-            this.labTable.Size = new System.Drawing.Size(132, 16);
-            this.labTable.TabIndex = 4;
-            this.labTable.Text = "Tabla seleccionada:";
-            // 
-            // labEsquema
-            // 
-            this.labEsquema.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labEsquema.AutoSize = true;
-            this.labEsquema.BackColor = System.Drawing.Color.Transparent;
-            this.labEsquema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEsquema.ForeColor = System.Drawing.Color.White;
-            this.labEsquema.Location = new System.Drawing.Point(6, 50);
-            this.labEsquema.Name = "labEsquema";
-            this.labEsquema.Size = new System.Drawing.Size(142, 16);
-            this.labEsquema.TabIndex = 5;
-            this.labEsquema.Text = "Esquema de columna:";
-            // 
-            // labDataBase
-            // 
-            this.labDataBase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labDataBase.AutoSize = true;
-            this.labDataBase.BackColor = System.Drawing.Color.Transparent;
-            this.labDataBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDataBase.ForeColor = System.Drawing.Color.White;
-            this.labDataBase.Location = new System.Drawing.Point(6, 18);
-            this.labDataBase.Name = "labDataBase";
-            this.labDataBase.Size = new System.Drawing.Size(104, 16);
-            this.labDataBase.TabIndex = 2;
-            this.labDataBase.Text = "Base de Datos: ";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 593);
+            this.ClientSize = new System.Drawing.Size(1272, 593);
             this.Controls.Add(this.sc);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
-            this.Text = "Bases de Datos";
+            this.Style = MetroFramework.MetroColorStyle.White;
+            this.Text = "Esquema de Bases de Datos";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
@@ -441,20 +332,9 @@
             this.sc.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sc)).EndInit();
             this.sc.ResumeLayout(false);
-            this.gb.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.metroPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInfoEsquema)).EndInit();
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfoRegistros)).EndInit();
-            this.gbInfo.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -462,27 +342,23 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer sc;
-        private System.Windows.Forms.Label labNomTab;
-        private System.Windows.Forms.GroupBox gb;
         private MetroFramework.Controls.MetroComboBox cboDataBases;
-        private System.Windows.Forms.Button btnCargar;
+        private MetroFramework.Controls.MetroButton btnCargar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox gbInfo;
-        private System.Windows.Forms.Label labDataBase;
-        private System.Windows.Forms.Label labNomRegistros;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox lbColumas;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox lbTablas;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dgvInfoEsquema;
         private System.Windows.Forms.DataGridView dgvInfoRegistros;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.Label labTable;
-        private System.Windows.Forms.Label labEsquema;
-        private System.Windows.Forms.Label labCantRegistros;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel labEsquema;
+        private MetroFramework.Controls.MetroLabel labDataBase;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroLabel labTipoRec;
+        private MetroFramework.Controls.MetroLabel labNomRegistros;
+        private MetroFramework.Controls.MetroLabel labCantRegistros;
+        private MetroFramework.Controls.MetroLabel labTable;
+        private MetroFramework.Controls.MetroLabel labMin;
+        private MetroFramework.Controls.MetroLabel labMax;
     }
 }

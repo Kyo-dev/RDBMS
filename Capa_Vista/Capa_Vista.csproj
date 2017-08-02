@@ -60,6 +60,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMessageBoxError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBoxError.Designer.cs">
+      <DependentUpon>frmMessageBoxError.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBoxError.resx">
+      <DependentUpon>frmMessageBoxError.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -133,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clockwise-refresh-arrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advertencia1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

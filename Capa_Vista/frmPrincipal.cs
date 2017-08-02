@@ -39,6 +39,7 @@ namespace Capa_Vista
 
         private async void btnCargar_Click (object sender, EventArgs e)
         {
+            frmMessageBoxError frmError = new frmMessageBoxError ("Error... ");
             DataTable objDT = await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString());
             lbTablas.ClearSelected();
             lbColumas.ClearSelected();
@@ -52,17 +53,18 @@ namespace Capa_Vista
                     lbTablas.DataSource = objDT;
                     lbTablas.DisplayMember = "TABLE_NAME";
                     lbTablas.ValueMember = "TABLE_NAME";
-                    //lb = listBox
-                    //lab = label
                 }
                 else
                 {
-                    MessageBox.Show("La base de datos selecciona no contiene tablas", "Adverencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (await new Capa_Negocios.clsTables ().getTables (instanceName , cboDataBases.SelectedValue.ToString ()) == null) {
+                        frmError.Close ();
+                        frmMessageBoxError.Show ("Error");
+                    }
+
+                    frmMessageBoxError.Show("La base de datos selecciona no contiene tablas");
                     lbTablas.Enabled = false;
                     lbColumas.Enabled = false;
-                    labDataBase.Text = "";
-                    // limpiar textos falta :V
-                    dgvInfoEsquema.ClearSelection();
+                    labDataBase.Text = String.Empty;
                     lbTablas.ClearSelected();
                     lbColumas.ClearSelected();
                 }
@@ -71,6 +73,7 @@ namespace Capa_Vista
 
         private async void lbTablas_DoubleClick (object sender, EventArgs e)
         {
+            frmMessageBoxError frmError = new frmMessageBoxError ("Error...  ");
             if (cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null)
             {
                 DataTable objDT = await new Capa_Negocios.clsColumns().getColumns(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
@@ -85,32 +88,33 @@ namespace Capa_Vista
                         lbColumas.DisplayMember = "COLUMN_NAME";
                         lbColumas.ValueMember = "COLUMN_NAME";
                         lbColumas.DataSource = objDT;
-                        labNomTab.Text = "Columnas de la Tabla:\n" + lbTablas.SelectedValue.ToString();
                         dgvInfoRegistros.DataSource = await new Capa_Negocios.clsTables().loadRegisters(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
                         labCantRegistros.Text = "Cantidad de registros: " + dgvInfoRegistros.Rows.Count;
                     }
                     else
                     {
-                        MessageBox.Show("La tabla selecciona no contiene columas", "Adverencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (await new Capa_Negocios.clsTables ().loadRegisters (lbTablas.SelectedValue.ToString (), instanceName , cboDataBases.SelectedValue.ToString ())== null) {
+                            frmError.Close ();
+                            frmMessageBoxError.Show ("Error");
+                        }
                         //pequeño error
                         lbTablas.DataSource = objDT;
                         lbColumas.Enabled = false;
                         labDataBase.Text = "";
                         lbColumas.ClearSelected();
-                        dgvInfoEsquema.ClearSelection();
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No hay tablas seleccionadas","Adverencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
+                frmMessageBoxError.Show ("Seleccione una base de datos");
+                frmError.Close ();
             }
         }
 
         private async void lbColumas_DoubleClick (object sender, EventArgs e)
         {
+            frmMessageBoxError frmError = new frmMessageBoxError ("Error... ");
             if (lbTablas.SelectedItem != null)
             {
                 DataTable objDT = await new Capa_Negocios.clsColumns().EsquemeInfo(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
@@ -118,15 +122,31 @@ namespace Capa_Vista
                 {
                     if (objDT.Rows.Count > 0)
                     {
-                        dgvInfoEsquema.DataSource = objDT;
                         labDataBase.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString();
                         labTable.Text = "Tabla seleccionada: " + lbTablas.SelectedValue.ToString();
                         labEsquema.Text = "Esquema de columna: " + lbColumas.SelectedValue.ToString();
                         labNomRegistros.Text = "Registros de la columna: " + lbTablas.SelectedValue.ToString();
+                        String minimo = await new Capa_Negocios.DataTypeColumns().SelectMin(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        if(minimo is null) {
+                            frmMessageBoxError.Show("Error al extraer dato minimo, es correcto el tipo de dato?");
+                        } else {
+                            labMin.Text = "Dato Mínimo: " + minimo;
+                        }
+
+                        String maximo = await new Capa_Negocios.DataTypeColumns().SelectMax(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        if(maximo is null) {
+                            frmMessageBoxError.Show("Error al extraer dato máximo, es correcto el tipo de dato?");
+                        } else {
+                            labMax.Text = "Dato Máximo: " + maximo;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Imposible obtener esquema de la tabla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (await new Capa_Negocios.clsColumns ().EsquemeInfo (lbColumas.SelectedValue.ToString () , lbTablas.SelectedValue.ToString () , instanceName , cboDataBases.SelectedValue.ToString ()) == null) {
+                            frmError.Close ();
+                            frmMessageBoxError.Show ("Error");
+                        }
+                        frmMessageBoxError.Show("Imposible obtener esquema de la tabla.");
                         lbColumas.Enabled = false;
                         lbTablas.Enabled = false;
                         labDataBase.Text = "";
@@ -137,24 +157,9 @@ namespace Capa_Vista
             }
             else
             {
-                MessageBox.Show("Seleccione una base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                frmMessageBoxError.Show ("Seleccione una base de datos.");
 
             }
-
-        }
-
-        public void consultaColumna ()
-        {
-            foreach (DataGridViewRow row in dgvInfoEsquema.Rows)
-            {
-                string nomTabla = Convert.ToString(row.Cells["TABLE_NAME"].Value);
-            }
-            DataGridViewRow rows = dgvInfoEsquema.Rows[0];
-            MessageBox.Show(Convert.ToString(rows.Cells["TABLE_NAME"].Value));
-        }
-
-        private void groupBox5_Enter (object sender, EventArgs e)
-        {
 
         }
     }

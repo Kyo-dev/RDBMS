@@ -21,15 +21,16 @@ namespace Capa_Vista {
         }
 
         private async void btnEntrar_Click(object sender, EventArgs e) {
+            frmMessageBoxError frmError = new frmMessageBoxError ("Error");
             if(cboInstancias.Text.ToString().Trim() != String.Empty) {
                 if(await new Capa_Negocios.clsDatabases().conecctionTest(cboInstancias.Text.ToString().Trim())) {
                     this.Hide();
                     new frmPrincipal(cboInstancias.Text.ToString(), this).Show();
                 } else {
-                    MessageBox.Show(this, "Conexión erronea, verifique el nombre de la instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    frmMessageBoxError.Show("Conexión erronea, verifique el nombre de la instancia");
                 }
             } else {
-                MessageBox.Show(this, "Por favor, ingrese o seleccione una instancia", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                frmMessageBoxError.Show ("Por favor, ingrese o seleccione una instancia");
             }
         }
 

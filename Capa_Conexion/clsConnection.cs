@@ -46,7 +46,7 @@ namespace Capa_Conexion {
             }
         }
 
-        public DataTable Select(SqlCommand oSQLC, String database = "master") {
+        public DataTable Select(SqlCommand oSQLC) {
 
             try {
                 oSQLC.Connection = objConexion;
@@ -61,9 +61,26 @@ namespace Capa_Conexion {
                 return oDT;
 
             } catch(SqlException e) {
-                throw e;
+                Console.Write(e.Message);
+                return null;
             }
-            // fin del try/catch
+        }
+
+        public bool CMD(SqlCommand oSQLC) {
+            try{
+                oSQLC.Connection = objConexion;
+                if(openConnection()) {
+                    oSQLC.ExecuteNonQuery();
+                    closeConnection();
+                    return true;
+                }
+                closeConnection();
+                return false;
+            }
+            catch{
+                closeConnection();
+                return false;
+            }
         }
 
     }

@@ -39,7 +39,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(227, 32);
+            this.label2.Location = new System.Drawing.Point(227, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 4;
@@ -47,6 +47,7 @@
             // btnEntrar
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.LightGray;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.Location = new System.Drawing.Point(220, 152);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(85, 23);
@@ -58,6 +59,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.LightGray;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(324, 152);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(85, 23);
@@ -68,6 +70,7 @@
             // 
             // btnInstancias
             // 
+            this.btnInstancias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInstancias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInstancias.FlatAppearance.BorderSize = 0;
             this.btnInstancias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -84,15 +87,16 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 174);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // cboInstancias
             // 
+            this.cboInstancias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboInstancias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboInstancias.FormattingEnabled = true;
             this.cboInstancias.Location = new System.Drawing.Point(220, 89);
@@ -104,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 219);
+            this.ClientSize = new System.Drawing.Size(450, 201);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cboInstancias);
             this.Controls.Add(this.btnInstancias);
@@ -115,6 +119,7 @@
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "DataBases Manager";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Right;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
