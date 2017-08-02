@@ -22,13 +22,13 @@ namespace Capa_Negocios {
         public static double porcentDate(DataColumn dC) {
             int intTotal = dC.Table.Rows.Count;
             int isDate = 0;
+            double douResultado;
             foreach (DataRow row in dC.Table.Rows) {
                 if (!Regex.IsMatch ((String) row[dC] , @"(?<!\d)(?:(?:(?:1[6-9]|[2-9]\d)?\d{2})(?:(?:(?:0[13578]|1[02])31)|(?:(?:0[1,3-9]|1[0-2])(?:29|30)))|(?:(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))0229)|(?:(?:1[6-9]|[2-9]\d)?\d{2})(?:(?:0?[1-9])|(?:1[0-2]))(?:0?[1-9]|1\d|2[0-8]))(?!\d)")) {//Obviamente expresion regular de internet :v
                     isDate++;
                 }
             }
-
-            return intTotal / isDate * 100;
+            return douResultado = intTotal / isDate * 100;
         }
 
         //public static bool convertColumnDate(String strTable, String strColumn, String instance, String database = "master") {
@@ -57,8 +57,9 @@ namespace Capa_Negocios {
         }
 
         public static double porcentInt(DataColumn dC) {
-            int intTotal = dC.Table.Rows.Count;
-            double isInt = 0;
+            int douTotal = dC.Table.Rows.Count;
+            int isInt = 0;
+            double douResultado;
             foreach (DataRow row in dC.Table.Rows) { //Recorre cada registro.
                 foreach (char c in (String) row[dC]) { //Valida que cada char sea numerico
                     if (!Char.IsNumber (c)) {
@@ -66,7 +67,7 @@ namespace Capa_Negocios {
                     }
                 }
             }
-            return intTotal / isInt * 100;
+            return douResultado = douTotal / isInt * 100;
         }
 
         #endregion
@@ -83,11 +84,11 @@ namespace Capa_Negocios {
             return cantBe;
         }
 
-        public static double porcenByte (DataColumn dC){
+        public static double porcenByte(DataColumn dC) {
             int intTotal = dC.Table.Rows.Count;
             int isByte = 0;
             foreach (DataRow row in dC.Table.Rows) {
-                if (!row.Equals(1) && !row.Equals(0)) {
+                if (!row.Equals (1) && !row.Equals (0)) {
                     isByte++;
                 }
             }
@@ -113,6 +114,20 @@ namespace Capa_Negocios {
             }
             return cantBe;
         }
+
+        public static double porcenTinyInt(DataColumn dC) {
+            int intTotal = dC.Table.Rows.Count;
+            int isTiniIny = 0;
+            double douResultado;
+            foreach (DataRow row in dC.Table.Rows) {
+                foreach (char c in (string) row[dC]) {
+                    if (!Char.IsNumber (c)) {
+                        isTiniIny++;
+                    }
+                }
+            }
+            return intTotal / isTiniIny * 100;
+        }
         #endregion
 
         #region DataType SmallInt
@@ -124,7 +139,6 @@ namespace Capa_Negocios {
                 foreach (char c in (String) row[dC]) {
                     if (!Char.IsNumber (c)) {
                         isNumber = false;
-
                     }
 
                 }
@@ -135,6 +149,21 @@ namespace Capa_Negocios {
             }
             return cantBe;
         }
+
+        public static double porcentSmallIntn(DataColumn dC) {
+            int intTotal = dC.Table.Rows.Count;
+            int isSmallInt = 0;
+            double douResultado;
+            foreach (DataRow row in dC.Table.Rows) {
+                foreach (char c in (string) row[dC]) {
+                    if (!Char.IsNumber (c)) {
+                        isSmallInt++;
+                    }
+                }
+            }
+            return douResultado = intTotal / isSmallInt * 100;
+        }
+
         #endregion
 
         #region Max y Min
