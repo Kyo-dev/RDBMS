@@ -187,25 +187,15 @@ namespace Capa_Negocios {
         #endregion
 
         #region Max y Min
-        public Task<String> SelectMax(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
+        public Task<DataTable> SelectMax(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
             return Task.Run(() => {
-                object o = new Capa_Conexion.DataTypeColumns().SelectMax(strColumn, strTable, instanceName, strDataBase).Rows[0]["Maximo"]; 
-                if(o is null) {
-                    return null;
-                } else {
-                    return Convert.ToString(o);
-                }
+                return new Capa_Conexion.DataTypeColumns().SelectMax(strColumn, strTable, instanceName, strDataBase); 
             });
         }
 
-        public Task<String> SelectMin(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
+        public Task<DataTable> SelectMin(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
             return Task.Run(() => {
-                object o = new Capa_Conexion.DataTypeColumns().SelectMin(strColumn, strTable, instanceName, strDataBase).Rows[0]["Minimo"];
-                if(o is null) {
-                    return null;
-                } else {
-                    return Convert.ToString(o);
-                }
+                return new Capa_Conexion.DataTypeColumns().SelectMin(strColumn, strTable, instanceName, strDataBase);
             });
         }
         #endregion
@@ -224,7 +214,7 @@ namespace Capa_Negocios {
         }
 
         public bool ChangeToSmallINT(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
-            return new Capa_Conexion.DataTypeColumns().ChangeDataType("SMALLINT", strColumn, strTable, instanceName, strDataBase);
+            return new Capa_Conexion.DataTypeColumns().ChangeDataType("BYTE", strColumn, strTable, instanceName, strDataBase);
         }
         #endregion
     }
