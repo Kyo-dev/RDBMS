@@ -82,6 +82,18 @@ namespace Capa_Negocios {
             }
             return cantBe;
         }
+
+        public static double porcenByte (DataColumn dC){
+            int intTotal = dC.Table.Rows.Count;
+            int isByte = 0;
+            foreach (DataRow row in dC.Table.Rows) {
+                if (!row.Equals(1) && !row.Equals(0)) {
+                    isByte++;
+                }
+            }
+            return intTotal / isByte * 100;
+        }
+
         #endregion
 
         #region DataType TinyInt
