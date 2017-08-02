@@ -47,6 +47,7 @@
             // btnEntrar
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.LightGray;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.Location = new System.Drawing.Point(220, 152);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(85, 23);
@@ -58,6 +59,7 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.LightGray;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Location = new System.Drawing.Point(324, 152);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(85, 23);
@@ -68,6 +70,7 @@
             // 
             // btnInstancias
             // 
+            this.btnInstancias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInstancias.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInstancias.FlatAppearance.BorderSize = 0;
             this.btnInstancias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
