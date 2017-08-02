@@ -26,6 +26,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoad));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbMensaje = new MetroFramework.Controls.MetroLabel();
+            this.spSpinner = new MetroFramework.Controls.MetroProgressSpinner();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +51,24 @@
             this.lbMensaje.Text = "Por favor espere";
             this.lbMensaje.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // spSpinner
+            // 
+            this.spSpinner.Location = new System.Drawing.Point(314, 59);
+            this.spSpinner.Maximum = 100;
+            this.spSpinner.Name = "spSpinner";
+            this.spSpinner.Size = new System.Drawing.Size(102, 79);
+            this.spSpinner.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.spSpinner.TabIndex = 2;
+            this.spSpinner.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.spSpinner.UseSelectable = true;
+            this.spSpinner.Value = 10;
+            // 
             // frmLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 180);
+            this.Controls.Add(this.spSpinner);
             this.Controls.Add(this.lbMensaje);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
@@ -74,5 +88,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lbMensaje;
+        private MetroFramework.Controls.MetroProgressSpinner spSpinner;
     }
 }
