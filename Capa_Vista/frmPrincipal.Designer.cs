@@ -39,7 +39,7 @@
             this.lbTablas = new System.Windows.Forms.ListBox();
             this.cboDataBases = new MetroFramework.Controls.MetroComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnPorcentajes = new MetroFramework.Controls.MetroButton();
             this.labMin = new MetroFramework.Controls.MetroLabel();
             this.labMax = new MetroFramework.Controls.MetroLabel();
             this.labCantRegistros = new MetroFramework.Controls.MetroLabel();
@@ -172,7 +172,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.metroButton2);
+            this.panel1.Controls.Add(this.btnPorcentajes);
             this.panel1.Controls.Add(this.labMin);
             this.panel1.Controls.Add(this.labMax);
             this.panel1.Controls.Add(this.labCantRegistros);
@@ -186,18 +186,19 @@
             this.panel1.Size = new System.Drawing.Size(935, 513);
             this.panel1.TabIndex = 0;
             // 
-            // metroButton2
+            // btnPorcentajes
             // 
-            this.metroButton2.BackColor = System.Drawing.Color.LightGray;
-            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButton2.Location = new System.Drawing.Point(758, 210);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(159, 29);
-            this.metroButton2.TabIndex = 19;
-            this.metroButton2.Text = "Mostrar Porcentajes";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2.UseSelectable = true;
+            this.btnPorcentajes.BackColor = System.Drawing.Color.LightGray;
+            this.btnPorcentajes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPorcentajes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPorcentajes.Location = new System.Drawing.Point(758, 210);
+            this.btnPorcentajes.Name = "btnPorcentajes";
+            this.btnPorcentajes.Size = new System.Drawing.Size(159, 29);
+            this.btnPorcentajes.TabIndex = 19;
+            this.btnPorcentajes.Text = "Mostrar Porcentajes";
+            this.btnPorcentajes.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnPorcentajes.UseSelectable = true;
+            this.btnPorcentajes.Click += new System.EventHandler(this.btnPorcentajes_Click);
             // 
             // labMin
             // 
@@ -333,6 +334,6 @@
         private MetroFramework.Controls.MetroLabel labTable;
         private MetroFramework.Controls.MetroLabel labMin;
         private MetroFramework.Controls.MetroLabel labMax;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnPorcentajes;
     }
 }

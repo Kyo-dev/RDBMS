@@ -82,7 +82,9 @@ namespace Capa_Vista {
                         lbColumas.DisplayMember = "COLUMN_NAME";
                         lbColumas.ValueMember = "COLUMN_NAME";
                         lbColumas.DataSource = objDT;
+                        frm = new frmLoad("Cargando registros");
                         DataTable Dt =  await new Capa_Negocios.clsTables().loadRegisters(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
+                        frm.Close();
                         dgvInfoRegistros.DataSource = Dt;
                         labCantRegistros.Text = "Cantidad de registros: " + dgvInfoRegistros.Rows.Count;
                     } else {
@@ -127,8 +129,8 @@ namespace Capa_Vista {
                         frmMessageBoxError.Show("Imposible obtener esquema de la tabla.");
                         lbColumas.Enabled = false;
                         lbTablas.Enabled = false;
-                        lbColumas.Items.Clear ();
-                        lbTablas.Items.Clear ();
+                        lbColumas.DataSource = null;
+                        lbTablas.DataSource = null;
                         labDataBase.Text = "";
                         
                     }
@@ -137,6 +139,14 @@ namespace Capa_Vista {
                 frmMessageBoxError.Show("Seleccione una base de datos.");
 
             }
+        }
+
+        private void btnPorcentajes_Click(object sender, EventArgs e) {
+            if(lbColumas.SelectedValue == null) {
+                frmMessageBoxError.Show("Seleccione una columna, tabla y \nbase de datos primero");
+                return;
+            }
+            new frmPorcentajes(((DataTable)dgvInfoRegistros.DataSource).Columns[lbColumas.SelectedValue.ToString()]).ShowDialog();
         }
     }
 }

@@ -28,6 +28,8 @@
             this.lbTinyint = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lbDate = new MetroFramework.Controls.MetroLabel();
+            this.lbBit = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // lbChar
@@ -43,7 +45,7 @@
             // lbSmallint
             // 
             this.lbSmallint.AutoSize = true;
-            this.lbSmallint.Location = new System.Drawing.Point(38, 165);
+            this.lbSmallint.Location = new System.Drawing.Point(38, 139);
             this.lbSmallint.Name = "lbSmallint";
             this.lbSmallint.Size = new System.Drawing.Size(58, 19);
             this.lbSmallint.TabIndex = 1;
@@ -53,7 +55,7 @@
             // lbTinyint
             // 
             this.lbTinyint.AutoSize = true;
-            this.lbTinyint.Location = new System.Drawing.Point(38, 211);
+            this.lbTinyint.Location = new System.Drawing.Point(38, 158);
             this.lbTinyint.Name = "lbTinyint";
             this.lbTinyint.Size = new System.Drawing.Size(49, 19);
             this.lbTinyint.TabIndex = 2;
@@ -65,7 +67,7 @@
             this.metroButton1.BackColor = System.Drawing.Color.LightGray;
             this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButton1.Location = new System.Drawing.Point(268, 306);
+            this.metroButton1.Location = new System.Drawing.Point(321, 120);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(159, 29);
             this.metroButton1.TabIndex = 13;
@@ -83,11 +85,33 @@
             this.metroLabel1.Text = "Tipo de dato recomendado:";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Location = new System.Drawing.Point(38, 177);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(65, 19);
+            this.lbDate.TabIndex = 15;
+            this.lbDate.Text = "Datetime:";
+            this.lbDate.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // lbBit
+            // 
+            this.lbBit.AutoSize = true;
+            this.lbBit.Location = new System.Drawing.Point(38, 196);
+            this.lbBit.Name = "lbBit";
+            this.lbBit.Size = new System.Drawing.Size(24, 19);
+            this.lbBit.TabIndex = 16;
+            this.lbBit.Text = "Bit";
+            this.lbBit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // frmPorcentajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 369);
+            this.ClientSize = new System.Drawing.Size(514, 314);
+            this.Controls.Add(this.lbBit);
+            this.Controls.Add(this.lbDate);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.lbTinyint);
@@ -97,6 +121,7 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Porcentajes";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Load += new System.EventHandler(this.frmPorcentajes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +134,7 @@
         private MetroFramework.Controls.MetroLabel lbTinyint;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lbDate;
+        private MetroFramework.Controls.MetroLabel lbBit;
     }
 }
