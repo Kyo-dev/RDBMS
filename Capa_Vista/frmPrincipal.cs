@@ -65,10 +65,14 @@ namespace Capa_Vista {
             frmMessageBoxError frmError = new frmMessageBoxError("Error...  ");
             if(cboDataBases.SelectedItem != null && lbTablas.SelectedValue != null) {
                 DataTable objDT = await new Capa_Negocios.clsColumns().getColumns(lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
-
-                if(lbTablas.Enabled) {
-                    if(objDT.Rows.Count > 0) {
-
+                if (objDT is null) {
+                    frmMessageBoxError.Show ("Error al cargar las columnas");
+                    return;
+                }
+                if (lbTablas.Enabled)
+                {
+                    if (objDT.Rows.Count > 0)
+                    {
                         lbColumas.ClearSelected();
                         lbColumas.Enabled = true;
                         lbColumas.DisplayMember = "COLUMN_NAME";
