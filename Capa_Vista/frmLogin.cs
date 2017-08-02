@@ -17,7 +17,9 @@ namespace Capa_Vista {
 
 
         private async void btnCargar_Click(object sender, EventArgs e) {
+            frmLoad frm = new frmLoad ("Cargando instancias...");
             cboInstancias.DataSource = await new Capa_Negocios.clsDatabases().getInstancesName();
+            frm.Close ();
         }
 
         private async void btnEntrar_Click(object sender, EventArgs e) {
