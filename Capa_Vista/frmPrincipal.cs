@@ -41,15 +41,15 @@ namespace Capa_Vista
         {
             frmMessageBoxError frmError = new frmMessageBoxError ("Error... ");
             DataTable objDT = await new Capa_Negocios.clsTables().getTables(instanceName, cboDataBases.SelectedValue.ToString());
-            lbTablas.ClearSelected();
-            lbColumas.ClearSelected();
+            lbTablas.Items.Clear();
+            lbColumas.Items.Clear();
             if (cboDataBases.Enabled)
             {
                 if (objDT.Rows.Count > 0)
                 {
                     lbTablas.Enabled = true;
                     lbColumas.Enabled = false;
-                    lbColumas.ClearSelected();
+                    lbColumas.Items.Clear();
                     lbTablas.DataSource = objDT;
                     lbTablas.DisplayMember = "TABLE_NAME";
                     lbTablas.ValueMember = "TABLE_NAME";
@@ -65,8 +65,8 @@ namespace Capa_Vista
                     lbTablas.Enabled = false;
                     lbColumas.Enabled = false;
                     labDataBase.Text = String.Empty;
-                    lbTablas.ClearSelected();
-                    lbColumas.ClearSelected();
+                    lbTablas.Items.Clear();
+                    lbColumas.Items.Clear();
                 }
             }
         }
@@ -86,7 +86,7 @@ namespace Capa_Vista
                     if (objDT.Rows.Count > 0)
                     {
 
-                        lbColumas.ClearSelected();
+                        lbColumas.Items.Clear();
                         lbColumas.Enabled = true;
                         lbColumas.DisplayMember = "COLUMN_NAME";
                         lbColumas.ValueMember = "COLUMN_NAME";
@@ -104,7 +104,7 @@ namespace Capa_Vista
                         lbTablas.DataSource = objDT;
                         lbColumas.Enabled = false;
                         labDataBase.Text = "";
-                        lbColumas.ClearSelected();
+                        lbColumas.Items.Clear();
                     }
                 }
             }
@@ -152,9 +152,10 @@ namespace Capa_Vista
                         frmMessageBoxError.Show("Imposible obtener esquema de la tabla.");
                         lbColumas.Enabled = false;
                         lbTablas.Enabled = false;
+                        lbColumas.Items.Clear ();
+                        lbTablas.Items.Clear ();
                         labDataBase.Text = "";
-                        lbColumas.ClearSelected();
-                        lbTablas.ClearSelected();
+                        
                     }
                 }
             }
@@ -163,9 +164,6 @@ namespace Capa_Vista
                 frmMessageBoxError.Show ("Seleccione una base de datos.");
 
             }
-
         }
     }
 }
-
-// hacer un metodo que limpie todos los label
