@@ -25,7 +25,7 @@ namespace Capa_Negocios {
                     string instanceName = source["InstanceName"].ToString();
 
                     if(!string.IsNullOrEmpty(instanceName)) {
-                        servername = source["InstanceName"] + "\\" + source["ServerName"];
+                        servername = source["ServerName"] + "\\" + source["InstanceName"];
                     } else {
                         servername = source["ServerName"].ToString();
                     }
