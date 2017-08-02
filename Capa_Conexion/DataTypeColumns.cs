@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Capa_Conexion {
-    class DataTypeColumns {
-        public String SelectMax(String strColumn, String strTable, String instanceName, String dataBase = "master") {
+    public class DataTypeColumns {
+        public DataTable SelectMax(String strColumn, String strTable, String instanceName, String dataBase = "master") {
             SqlCommand oSQLC = new SqlCommand($"SELECT MAX({strColumn}) Maximo FROM {strTable};");
-            oCM.CommandType = CommandType.Text;
-            return new clsConnection(instanceName: instanceName, database: dataBase).Select(oSQLC, dataBase);
+            oSQLC.CommandType = CommandType.Text;
+            return new clsConnection(instanceName: instanceName, database: dataBase).Select(oSQLC);
         }
     }
 }

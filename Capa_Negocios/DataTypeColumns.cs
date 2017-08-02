@@ -139,7 +139,7 @@ namespace Capa_Negocios
 
         #region Max y Min
         public String SelectMax(String strColumn, String strTable, String instanceName, String strDataBase = "master") {
-            return 
+            return (String)new Capa_Conexion.DataTypeColumns().SelectMax(strColumn, strTable, instanceName, strDataBase).Rows[0]["Maximo"];
         }
 #endregion
 
