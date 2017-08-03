@@ -146,7 +146,7 @@ namespace Capa_Vista {
                 frmMessageBoxError.Show("Seleccione una columna, tabla y \nbase de datos primero");
                 return;
             }
-            new frmPorcentajes(((DataTable)dgvInfoRegistros.DataSource).Columns[lbColumas.SelectedValue.ToString()]).ShowDialog();
+            new frmPorcentajes(((DataTable)dgvInfoRegistros.DataSource).Columns[lbColumas.SelectedValue.ToString()], cboDataBases.SelectedValue.ToString(), instanceName).ShowDialog();
         }
         public void limpiar() {
 

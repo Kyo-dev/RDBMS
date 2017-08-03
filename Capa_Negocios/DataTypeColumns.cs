@@ -40,13 +40,13 @@ namespace Capa_Negocios {
             foreach(DataRow row in dC.Table.Rows) { //Recorre cada registro.
 
                 bool isNumber = true;
-                foreach(char c in (String)row[dC]) { //Valida que cada char sea numerico
+                foreach(char c in Convert.ToString(row[dC])) { //Valida que cada char sea numerico
                     if(!Char.IsNumber(c)) {
                         isNumber = false;
                     }
                 }
 
-                Int64 num = Convert.ToInt64(row[dC]); //Necesito convertirlo a dato numero para la comprobar, se cambia al dato entero mas grande
+                Int64 num = Convert.ToInt64(Convert.ToString(row[dC])); //Necesito convertirlo a dato numero para la comprobar, se cambia al dato entero mas grande
                 if((num < -2147483648 || num > 2147483648) && isNumber) { //Si el dato es completamente numerico verifico el tamaño INT (Ver tabla de tipos de datos en la pagina de Microsoft)
                     cantBe = false;
                 }
@@ -60,45 +60,21 @@ namespace Capa_Negocios {
             foreach(DataRow row in dC.Table.Rows) { //Recorre cada registro.
 
                 bool isNumber = true;
-                foreach(char c in (String)row[dC]) { //Valida que cada char sea numerico
+                foreach(char c in Convert.ToString(row[dC])) { //Valida que cada char sea numerico
                     if(!Char.IsNumber(c)) {
                         isNumber = false;
                     }
                 }
 
-                Int64 num = Convert.ToInt64(row[dC]); //Necesito convertirlo a dato numero para la comprobar, se cambia al dato entero mas grande
-                if((num < -2147483648 || num > 2147483648) && isNumber) { //Si el dato es completamente numerico verifico el tamaño INT (Ver tabla de tipos de datos en la pagina de Microsoft)
-                    isInt++;
+                if(isNumber) {
+                    Int64 num = Convert.ToInt64(Convert.ToString(row[dC])); //Necesito convertirlo a dato numero para la comprobar, se cambia al dato entero mas grande
+                    if((num < -2147483648 || num > 2147483648) && isNumber) { //Si el dato es completamente numerico verifico el tamaño INT (Ver tabla de tipos de datos en la pagina de Microsoft)
+                        isInt++;
+                    }
                 }
             }
             if(isInt == 0) return 0;
             return isInt * 100 / douTotal;
-        }
-
-        #endregion
-
-        #region DataType Byte
-        public bool canBeByte(DataColumn dC) {
-            bool cantBe = true;
-            foreach(DataRow row in dC.Table.Rows) { //Recorre cada registro.
-
-                if(Convert.ToInt32(row) != 0 && Convert.ToInt32(row) != 1) {
-                    cantBe = false;
-                }
-            }
-            return cantBe;
-        }
-
-        public double porcenByte(DataColumn dC) {
-            int intTotal = dC.Table.Rows.Count;
-            int isByte = 0;
-            foreach(DataRow row in dC.Table.Rows) {
-                if(Convert.ToInt32(row[dC]) == 0 || Convert.ToInt32(row[dC]) == 1) {
-                    isByte++;
-                }
-            }
-            if(isByte == 0) return 0;
-            return isByte * 100 / intTotal;
         }
 
         #endregion
@@ -108,12 +84,12 @@ namespace Capa_Negocios {
             bool cantBe = true;
             foreach(DataRow row in dC.Table.Rows) {
                 bool isNumber = true;
-                foreach(char c in (String)row[dC]) {
+                foreach(char c in Convert.ToString(row[dC])) {
                     if(!Char.IsNumber(c) && row[dC] != null) {
                         isNumber = false;
                     }
                 }
-                Int64 num = Convert.ToInt64(row[dC]);
+                Int64 num = Convert.ToInt64(Convert.ToString(row[dC]));
                 if((num < 0 || num > 255) && isNumber) {
                     cantBe = false;
                 }
@@ -183,7 +159,7 @@ namespace Capa_Negocios {
         public bool canbeChar(DataColumn dC) {
             bool cantBe = true;
             foreach(DataRow row in dC.Table.Rows) {
-                if(((String)row[dC]).Length != 1 && row[dC] != null) {
+                if(Convert.ToString(row[dC]).Length != 1 && (Convert.ToString(row[dC]) != "true" && Convert.ToString(row[dC]) != "false")) {
                     cantBe = false;
                 }
             }
@@ -194,7 +170,7 @@ namespace Capa_Negocios {
             int intTotal = dC.Table.Rows.Count;
             int isChar = 0;
             foreach(DataRow row in dC.Table.Rows) {
-                if((Convert.ToString(row[dC])).Length == 1 || row[dC] == null) {
+                if((Convert.ToString(row[dC])).Length == 1) {
                     isChar++;
                 }
             }
@@ -234,5 +210,9 @@ namespace Capa_Negocios {
             return new Capa_Conexion.DataTypeColumns().ChangeDataType("BYTE", strColumn, strTable, instanceName, strDataBase);
         }
         #endregion
+
+        public bool ejecCMD(String CMD, String database, String instance) {
+            return new Capa_Conexion.clsConnection(instance, database).CMD(new System.Data.SqlClient.SqlCommand(CMD));
+        }
     }
 }

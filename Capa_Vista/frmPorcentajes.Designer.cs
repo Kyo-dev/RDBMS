@@ -26,10 +26,11 @@
             this.lbChar = new MetroFramework.Controls.MetroLabel();
             this.lbSmallint = new MetroFramework.Controls.MetroLabel();
             this.lbTinyint = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnEject = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lbDate = new MetroFramework.Controls.MetroLabel();
-            this.lbBit = new MetroFramework.Controls.MetroLabel();
+            this.lbInt = new MetroFramework.Controls.MetroLabel();
+            this.txtConsult = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // lbChar
@@ -45,7 +46,7 @@
             // lbSmallint
             // 
             this.lbSmallint.AutoSize = true;
-            this.lbSmallint.Location = new System.Drawing.Point(38, 139);
+            this.lbSmallint.Location = new System.Drawing.Point(38, 154);
             this.lbSmallint.Name = "lbSmallint";
             this.lbSmallint.Size = new System.Drawing.Size(58, 19);
             this.lbSmallint.TabIndex = 1;
@@ -55,25 +56,26 @@
             // lbTinyint
             // 
             this.lbTinyint.AutoSize = true;
-            this.lbTinyint.Location = new System.Drawing.Point(38, 158);
+            this.lbTinyint.Location = new System.Drawing.Point(38, 173);
             this.lbTinyint.Name = "lbTinyint";
             this.lbTinyint.Size = new System.Drawing.Size(49, 19);
             this.lbTinyint.TabIndex = 2;
             this.lbTinyint.Text = "Tinyint:";
             this.lbTinyint.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroButton1
+            // btnEject
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.LightGray;
-            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.metroButton1.Location = new System.Drawing.Point(321, 120);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(159, 29);
-            this.metroButton1.TabIndex = 13;
-            this.metroButton1.Text = "Cambiar tipo de dato";
-            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1.UseSelectable = true;
+            this.btnEject.BackColor = System.Drawing.Color.LightGray;
+            this.btnEject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEject.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEject.Location = new System.Drawing.Point(314, 366);
+            this.btnEject.Name = "btnEject";
+            this.btnEject.Size = new System.Drawing.Size(159, 29);
+            this.btnEject.TabIndex = 13;
+            this.btnEject.Text = "Ejecutar";
+            this.btnEject.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btnEject.UseSelectable = true;
+            this.btnEject.Click += new System.EventHandler(this.btnEject_Click);
             // 
             // metroLabel1
             // 
@@ -88,32 +90,67 @@
             // lbDate
             // 
             this.lbDate.AutoSize = true;
-            this.lbDate.Location = new System.Drawing.Point(38, 177);
+            this.lbDate.Location = new System.Drawing.Point(38, 192);
             this.lbDate.Name = "lbDate";
             this.lbDate.Size = new System.Drawing.Size(65, 19);
             this.lbDate.TabIndex = 15;
             this.lbDate.Text = "Datetime:";
             this.lbDate.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // lbBit
+            // lbInt
             // 
-            this.lbBit.AutoSize = true;
-            this.lbBit.Location = new System.Drawing.Point(38, 196);
-            this.lbBit.Name = "lbBit";
-            this.lbBit.Size = new System.Drawing.Size(24, 19);
-            this.lbBit.TabIndex = 16;
-            this.lbBit.Text = "Bit";
-            this.lbBit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lbInt.AutoSize = true;
+            this.lbInt.Location = new System.Drawing.Point(38, 139);
+            this.lbInt.Name = "lbInt";
+            this.lbInt.Size = new System.Drawing.Size(26, 19);
+            this.lbInt.TabIndex = 17;
+            this.lbInt.Text = "Int:";
+            this.lbInt.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtConsult
+            // 
+            // 
+            // 
+            // 
+            this.txtConsult.CustomButton.Image = null;
+            this.txtConsult.CustomButton.Location = new System.Drawing.Point(407, 2);
+            this.txtConsult.CustomButton.Name = "";
+            this.txtConsult.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtConsult.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtConsult.CustomButton.TabIndex = 1;
+            this.txtConsult.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtConsult.CustomButton.UseSelectable = true;
+            this.txtConsult.CustomButton.Visible = false;
+            this.txtConsult.Lines = new string[0];
+            this.txtConsult.Location = new System.Drawing.Point(38, 304);
+            this.txtConsult.MaxLength = 32767;
+            this.txtConsult.Name = "txtConsult";
+            this.txtConsult.PasswordChar = '\0';
+            this.txtConsult.PromptText = "Ejecutar una consulta";
+            this.txtConsult.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConsult.SelectedText = "";
+            this.txtConsult.SelectionLength = 0;
+            this.txtConsult.SelectionStart = 0;
+            this.txtConsult.ShortcutsEnabled = true;
+            this.txtConsult.Size = new System.Drawing.Size(435, 30);
+            this.txtConsult.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtConsult.TabIndex = 18;
+            this.txtConsult.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txtConsult.UseSelectable = true;
+            this.txtConsult.WaterMark = "Ejecutar una consulta";
+            this.txtConsult.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtConsult.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // frmPorcentajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 314);
-            this.Controls.Add(this.lbBit);
+            this.ClientSize = new System.Drawing.Size(490, 428);
+            this.Controls.Add(this.txtConsult);
+            this.Controls.Add(this.lbInt);
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btnEject);
             this.Controls.Add(this.lbTinyint);
             this.Controls.Add(this.lbSmallint);
             this.Controls.Add(this.lbChar);
@@ -132,9 +169,10 @@
         private MetroFramework.Controls.MetroLabel lbChar;
         private MetroFramework.Controls.MetroLabel lbSmallint;
         private MetroFramework.Controls.MetroLabel lbTinyint;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnEject;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lbDate;
-        private MetroFramework.Controls.MetroLabel lbBit;
+        private MetroFramework.Controls.MetroLabel lbInt;
+        private MetroFramework.Controls.MetroTextBox txtConsult;
     }
 }
