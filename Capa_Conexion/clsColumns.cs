@@ -21,7 +21,7 @@ namespace Capa_Conexion {
             objSQL.CommandType = CommandType.Text;
             objSQL.CommandText = String.Format("SELECT TABLE_NAME AS [Nombre de la tabla]," +
                                  "COLUMN_NAME AS [Nombre de la columna]" +
-                                 ",DATA_TYPE AS [Tipo de dato]" +
+                                 ",DATA_TYPE" +
                                  ",CHARACTER_MAXIMUM_LENGTH AS [Largo Maximo]" +
                                  ",COLUMN_DEFAULT AS [Valor por defecto] " +
                                  "FROM INFORMATION_SCHEMA.COLUMNS " +

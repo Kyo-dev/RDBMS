@@ -104,11 +104,10 @@ namespace Capa_Vista {
             if(lbTablas.SelectedItem != null) {
                 frmLoad frm = new frmLoad ("Cargando esquema... ");
                 DataTable objDT = await new Capa_Negocios.clsColumns().EsquemeInfo(lbColumas.SelectedValue.ToString(), lbTablas.SelectedValue.ToString(), instanceName, cboDataBases.SelectedValue.ToString());
-                
                 frm.Close ();
                 if(lbColumas.Enabled) {
                     if(objDT.Rows.Count > 0) {
-                        labEsquema.Text = "Tipo de dato: " + objDT.Columns["Tipo de dato"];
+                        lbTipoDato.Text = "Tipo de dato: " + Convert.ToString(objDT.Rows[0][2]);
                         labDataBase.Text = "Base de Datos: " + cboDataBases.SelectedValue.ToString();
                         labTable.Text = "Tabla seleccionada: " + lbTablas.SelectedValue.ToString();
                         labEsquema.Text = "Esquema de columna: " + lbColumas.SelectedValue.ToString();
