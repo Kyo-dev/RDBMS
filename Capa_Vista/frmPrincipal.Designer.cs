@@ -47,6 +47,7 @@
             this.labEsquema = new MetroFramework.Controls.MetroLabel();
             this.labDataBase = new MetroFramework.Controls.MetroLabel();
             this.dgvInfoRegistros = new System.Windows.Forms.DataGridView();
+            this.lbTipoDato = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.sc)).BeginInit();
             this.sc.Panel1.SuspendLayout();
             this.sc.Panel2.SuspendLayout();
@@ -172,6 +173,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbTipoDato);
             this.panel1.Controls.Add(this.btnPorcentajes);
             this.panel1.Controls.Add(this.labMin);
             this.panel1.Controls.Add(this.labMax);
@@ -289,6 +291,16 @@
             this.dgvInfoRegistros.Size = new System.Drawing.Size(935, 244);
             this.dgvInfoRegistros.TabIndex = 8;
             // 
+            // lbTipoDato
+            // 
+            this.lbTipoDato.AutoSize = true;
+            this.lbTipoDato.Location = new System.Drawing.Point(415, 140);
+            this.lbTipoDato.Name = "lbTipoDato";
+            this.lbTipoDato.Size = new System.Drawing.Size(92, 19);
+            this.lbTipoDato.TabIndex = 20;
+            this.lbTipoDato.Text = "Tipo de dato: ";
+            this.lbTipoDato.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,5 +347,6 @@
         private MetroFramework.Controls.MetroLabel labMin;
         private MetroFramework.Controls.MetroLabel labMax;
         private MetroFramework.Controls.MetroButton btnPorcentajes;
+        private MetroFramework.Controls.MetroLabel lbTipoDato;
     }
 }
